@@ -1,0 +1,98 @@
+.main_wrapper {
+  padding: calc(var(--index) * 3) calc(var(--index) * 2) calc(var(--index) * 5)
+    calc(var(--index) * 2);
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--bg-color);
+}
+/* card container */
+.card_wrapper {
+  background-color: #fbfbfb;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    200deg,
+    rgba(251, 251, 251, 1) 73%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  padding: calc(var(--index) * 2);
+  width: calc(var(--index) * 30);
+  border-radius: calc(var(--index) * 0.5);
+  height: calc(var(--index) * 17);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  border: 1px solid var(--bg-green);
+  box-shadow: 0 0 10px var(--light-grey);
+}
+.card_wrapper:hover {
+  box-shadow: var(--box-shadow);
+}
+/* title */
+.title {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: calc(var(--index) * 1);
+  margin-bottom: calc(var(--index) * 1);
+  position: relative;
+  display: inline-block;
+}
+.card_wrapper:hover .title {
+  color: var(--green);
+}
+.title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: var(--bg-grey);
+  left: 0;
+  bottom: -75%;
+}
+/* paragraph */
+.description {
+  font-size: calc(var(--index) * 0.75);
+  color: var(--light-grey);
+  width: 60%;
+}
+/* button */
+.btn {
+  background-color: var(--light-green);
+  color: var(--bg-grey);
+  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.75);
+  border: 1px solid var(--bg-color);
+  font-size: calc(var(--index) * 0.75);
+  border-radius: calc(var(--index) * 0.35);
+  display: inline-block;
+  width: max-content;
+  transform: translateY(-25px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.card_wrapper:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* img */
+.img_1,
+.img_2 {
+  position: absolute;
+  opacity: 0.9;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  width: 55%;
+}
+.img_1 {
+  bottom: -20%;
+  right: -15%;
+}
+.img_2 {
+  bottom: -10%;
+  right: -25%;
+}
+.card_wrapper:hover img {
+  transform: scale(1.1) translateX(-15px);
+}

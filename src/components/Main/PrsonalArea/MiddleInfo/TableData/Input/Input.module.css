@@ -1,0 +1,33 @@
+.radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.radio small {
+  margin-right: 5px;
+  font-size: calc(var(--index) * 0.7);
+  color: var(--black);
+}
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: calc(var(--index) * 0.7);
+  color: var(--dark-grey);
+  width: calc(var(--index) * 13);
+}
+.inputLabel small,
+span {
+  margin-bottom: calc(var(--index) * 0.3);
+}
+.inputLabel input {
+  border: 1px solid var(--green);
+  margin-bottom: calc(var(--index) * 1);
+  border-radius: calc(var(--index) * 2);
+  padding: 7px 10px;
+  text-align: center;
+  background-color: #fff;
+}
+input:focus {
+  box-shadow: 0 0 5px var(--light-grey);
+}

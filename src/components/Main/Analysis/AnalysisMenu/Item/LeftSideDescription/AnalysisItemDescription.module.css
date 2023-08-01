@@ -1,0 +1,62 @@
+/* analys id */
+.analys_article {
+  display: inline-block;
+  font-size: calc(var(--index) * 0.65);
+  margin-bottom: calc(var(--index) * 0.5);
+  color: var(--light-grey);
+}
+/* analys title */
+a.analys_title {
+  display: block;
+  margin-bottom: calc(var(--index) * 2);
+  font-size: calc(var(--index) * 1);
+  font-weight: 700;
+  color: var(--green);
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+a.analys_title:hover {
+  color: var(--fv-green);
+  transform: translateY(-1px);
+}
+a.analys_title:active {
+  transform: translateY(1px) scale(0.99);
+  opacity: 0.6;
+}
+/* yellow line */
+.analys_description::after {
+  width: calc(var(--index) * 6);
+  height: 2px;
+  content: '';
+  position: absolute;
+  top: calc(var(--index) * -1);
+  left: 0%;
+  background-color: var(--yellow);
+  z-index: 5;
+  opacity: 0.5;
+}
+/* analys description */
+.analys_description {
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.9);
+  margin: 0 calc(var(--index) * 5) calc(var(--index) * 0.75) 0;
+  position: relative;
+}
+/* description of time and possibilities */
+.span {
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 0.65);
+}
+.span:first-child {
+  margin-right: calc(var(--index) * 1);
+}
+.span_icon {
+  font-size: calc(var(--index) * 1);
+  margin-right: 2px;
+}
+/* experience (for cases with doctors) */
+.analys_description_experience {
+  font-size: calc(var(--index) * 0.65);
+  color: var(--light-grey);
+  margin-bottom: calc(var(--index) * 1);
+}

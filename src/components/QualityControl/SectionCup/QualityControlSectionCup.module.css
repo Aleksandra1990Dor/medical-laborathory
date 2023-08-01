@@ -1,0 +1,29 @@
+.cup_wrapper {
+  padding: calc(var(--index) * 2) calc(var(--index) * 5);
+  background-color: var(--bg-green);
+  position: relative;
+  height: calc(var(--index) * 18);
+  margin-bottom: calc(var(--index) * 5);
+}
+/* description */
+.description {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--index) * 1.2);
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+.description span {
+  color: var(--green);
+  display: inline;
+}
+/* img */
+.img {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  opacity: 0.7;
+}

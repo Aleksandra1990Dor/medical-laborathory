@@ -1,0 +1,183 @@
+.header_right_side {
+  display: flex;
+  position: relative;
+  font-size: calc(var(--index) * 1.2);
+  color: var(--dark-grey);
+}
+@media (max-width: 767px) {
+  .header_right_side {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}
+/* phones style */
+.header_right_side h4 {
+  cursor: pointer;
+}
+.header_right_side h4:hover {
+  transform: scale(1.005);
+}
+.phones_icon {
+  padding: 3px;
+  margin-bottom: -3px;
+}
+/* hidden div with phones style */
+.more {
+  z-index: 30;
+  position: absolute;
+  left: 25%;
+  top: 130%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--index) * 0.7) calc(var(--index) * 1.2);
+  width: calc(var(--index) * 15);
+  box-shadow: var(--box-shadow);
+  animation: showMore 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: calc(var(--index) * 2);
+}
+.more::before {
+  z-index: 1;
+  display: block;
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 50%;
+  background-color: #fff;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 15%;
+  height: 15%;
+}
+/* text under phones */
+.more span {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 0.45);
+  color: var(--light-grey);
+  font-weight: 600;
+}
+/* phones items in hidden div */
+a.phones_item {
+  font-size: calc(var(--index) * 1.3);
+  text-align: center;
+  display: inline-block;
+  width: 120%;
+  padding: calc(var(--index) * 0.8);
+  padding-top: 0;
+  border-radius: 4px;
+  color: var(--green);
+  font-weight: 700;
+}
+a.phones_item:hover {
+  transform: scale(1.01);
+  color: var(--black);
+}
+.phones_item:active {
+  transform: scale(0.97);
+}
+/* hidden icon style */
+.hidden__icon {
+  fill: var(--green);
+  margin-bottom: 5px;
+}
+/* city  */
+.city {
+  align-self: end;
+  position: relative;
+  font-size: calc(var(--index) * 0.65);
+  color: var(--light-grey);
+  margin-right: calc(var(--index) * 0.8);
+  margin-bottom: 3px;
+  z-index: 30;
+}
+
+.city__icon {
+  fill: var(--light-grey);
+  font-size: calc(var(--index) * 0.7);
+  margin-bottom: -3px;
+}
+/* button with city name */
+.btn {
+  color: var(--dark-grey);
+  font-size: calc(var(--index) * 0.7);
+}
+
+.btn:hover {
+  transform: scale(1.01);
+}
+
+/* hidden block change city */
+.choose_city {
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 1.2);
+  width: calc(var(--index) * 13);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: var(--light-grey);
+  font-weight: 500;
+  padding: calc(var(--index) * 0.75);
+  box-shadow: var(--box-shadow);
+  animation: showMore 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: calc(var(--index) * 2);
+}
+/* hidden city item */
+.city_item {
+  font-weight: 700;
+  padding: calc(var(--index) * 0.5);
+  text-align: center;
+  color: var(--light-grey);
+  border-bottom: 1px solid var(--bg-color);
+  position: relative;
+  display: inline-block;
+  width: max-content;
+}
+.city_item:hover {
+  color: var(--dark-green);
+  transform: scale(1.01);
+}
+.city_item::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--index) * 0.5);
+  background-color: none;
+}
+.city_item:hover::after {
+  background-color: var(--green);
+}
+/* animated class when div is hiding */
+.hideMore {
+  animation: hideMore 0.5s ease;
+}
+@keyframes showMore {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 130%;
+  }
+}
+@keyframes hideMore {
+  0% {
+    opacity: 1;
+    top: 130%;
+  }
+  100% {
+    opacity: 0;
+    top: 60%;
+  }
+}

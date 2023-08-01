@@ -1,0 +1,118 @@
+.wrapper {
+  padding: calc(var(--index) * 5) calc(var(--index) * 2.5);
+  display: flex;
+  background-color: #fdfdfd;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    200deg,
+    rgba(251, 251, 251, 1) 73%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  justify-content: space-between;
+}
+/* block wrapper */
+.block_wrapper,
+.block_wrapper_map {
+  background-color: var(--bg-color);
+  background: rgb(250, 250, 250);
+  background: linear-gradient(
+    120deg,
+    rgba(250, 250, 250, 1) 50%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  width: calc(var(--index) * 12);
+  height: calc(var(--index) * 13);
+  border-radius: calc(var(--index) * 2);
+  border: 2px solid var(--bg-green);
+  overflow: hidden;
+  position: relative;
+  padding: calc(var(--index) * 2) calc(var(--index) * 1);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--bg-grey);
+}
+.block_wrapper_map {
+  width: calc(var(--index) * 20);
+  flex-direction: column;
+  justify-content: start;
+  background-color: none;
+  background: none;
+}
+.block_wrapper:hover,
+.block_wrapper_map:hover {
+  box-shadow: var(--box-shadow);
+}
+
+/* city block */
+.city {
+  position: relative;
+  z-index: 2;
+  font-size: calc(var(--index) * 0.8);
+  display: flex;
+  align-items: center;
+  color: var(--dark-grey);
+}
+.city_icon {
+  margin-right: calc(var(--index) * 0.3);
+}
+
+/* title */
+.title {
+  color: var(--dark-grey);
+  font-weight: 600;
+  font-size: calc(var(--index) * 0.8);
+  z-index: 2;
+  position: relative;
+}
+.block_wrapper_map .title {
+  margin-bottom: calc(var(--index) * 1);
+}
+/* img */
+.img {
+  position: absolute;
+  bottom: -5%;
+  left: -12%;
+  transition: all 0.8s ease;
+  will-change: transform;
+  opacity: 0.7;
+}
+/* img map */
+.img_map {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+.img:hover,
+.img_map:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+/* icon 'show more' */
+.icon_more {
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  fill: var(--fv-green);
+  font-size: calc(var(--index) * 2);
+  display: block;
+  border-radius: 50%;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 9;
+}
+.block_wrapper_map .icon_more {
+  top: 63%;
+  left: 18%;
+}
+.block_wrapper_map:hover .icon_more,
+.block_wrapper:hover .icon_more {
+  opacity: 0.6;
+  transform: translateX(0);
+}

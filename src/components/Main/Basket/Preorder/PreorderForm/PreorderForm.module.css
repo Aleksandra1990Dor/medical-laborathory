@@ -1,0 +1,8 @@
+.merch {
+  display: flex;
+  justify-content: start;
+}
+.merch input:nth-child(1),
+.merch input:nth-child(3) {
+  margin-right: calc(var(--index) * 1);
+}

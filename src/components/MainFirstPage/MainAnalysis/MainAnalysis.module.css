@@ -1,0 +1,15 @@
+.wrapper {
+  padding: calc(var(--index) * 3) calc(var(--index) * 2) calc(var(--index) * 2)
+    calc(var(--index) * 5);
+  color: var(--dark-grey);
+}
+.wrapper h3 {
+  font-size: var(--title-fz);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 4);
+}
+.analysis_wrapper {
+  display: flex;
+  justify-content: space-around;
+}

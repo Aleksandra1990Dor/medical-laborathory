@@ -1,0 +1,25 @@
+.order_items_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.order_item {
+  margin-bottom: calc(var(--index) * 1);
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+.order_item:last-child {
+  margin-bottom: 0;
+}
+.order_item small {
+  background-color: var(--bg-color);
+  margin-right: calc(var(--index) * 0.5);
+  color: var(--grey);
+  font-size: calc(var(--index) * 0.45);
+  padding: calc(var(--index) * 0.15);
+}
+.order_icon {
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.5);
+  fill: var(--light-grey);
+}

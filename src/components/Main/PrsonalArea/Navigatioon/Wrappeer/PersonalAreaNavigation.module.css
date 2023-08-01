@@ -1,0 +1,16 @@
+/* navigation container styles */
+.navWrapper {
+  background-color: var(--green);
+  height: 100%;
+  border-right: 1px solid var(--yellow);
+}
+/* container with position sticky */
+.navContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: calc(var(--index) * 5) 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

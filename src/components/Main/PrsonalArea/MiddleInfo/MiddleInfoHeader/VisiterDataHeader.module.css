@@ -1,0 +1,53 @@
+/*
+ visiter greeting  styles 
+ */
+
+/* container styles */
+.visiterGreeting {
+  text-align: center;
+  font-size: calc(var(--index) * 1);
+  color: var(--dark-green);
+  font-weight: 600;
+  position: relative;
+  margin-bottom: calc(var(--index) * 1);
+}
+/* yellow line */
+.visiterGreeting::after {
+  width: 20%;
+  height: 1px;
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: 40%;
+  background-color: var(--yellow);
+  z-index: 5;
+}
+/* information about visiter name styles */
+.visiterName {
+  margin-bottom: calc(var(--index) * 1);
+  display: flex;
+  align-items: center;
+}
+/* brilliant icon style */
+.visiterNameIcon {
+  fill: var(--black);
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.5);
+}
+
+/* 
+  
+  visiter name info styles
+  
+  */
+.visiterNameText {
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  color: var(--black);
+}
+/* link "change user" styles */
+.visiterName .visiterNameLink {
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 500;
+  color: var(--dark-green);
+}

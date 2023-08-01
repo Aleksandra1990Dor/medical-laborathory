@@ -1,0 +1,6 @@
+/* main wrapper */
+.analysis {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  border-top: 1px solid #cacaca2d;
+}

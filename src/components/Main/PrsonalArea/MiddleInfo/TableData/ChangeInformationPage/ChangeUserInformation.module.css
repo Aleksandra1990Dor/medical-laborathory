@@ -1,0 +1,47 @@
+/* form main container */
+.changeInfoContainer {
+  position: relative;
+  background-color: #fff;
+  padding: calc(var(--index) * 2) calc(var(--index) * 2);
+  border-radius: calc(var(--index) * 2);
+  border: 3px solid var(--green);
+  box-shadow: var(--box-shadow);
+}
+/* form wrapper */
+.changeInfoContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* closing icon styles */
+.closeIcon {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+  fill: var(--grey);
+  font-size: calc(var(--index) * 0.8);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+.closeIcon:hover {
+  transform: scale(1.2);
+}
+/* button styles */
+.infoTitleBtn {
+  padding: calc(var(--index) * 0.3);
+  font-size: calc(var(--index) * 0.7);
+  background-color: #fff;
+  border: 1px solid var(--green);
+  color: var(--green);
+  border-radius: calc(var(--index) * 0.65);
+  cursor: pointer;
+}
+.infoTitleBtn:hover {
+  background-color: var(--green);
+  color: #fff;
+}
+.infoTitleBtn:active {
+  transform: scale(0.95);
+}

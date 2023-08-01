@@ -1,0 +1,30 @@
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+.loader::after {
+  content: '';
+  width: 65px;
+  height: 65px;
+  border: 7px solid var(--bg-green);
+  border: 7px solid #fff;
+  border-top-color: var(--fv-green);
+  border-top-color: #2aa49865;
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

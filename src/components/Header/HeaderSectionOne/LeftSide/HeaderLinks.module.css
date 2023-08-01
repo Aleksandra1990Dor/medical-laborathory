@@ -1,0 +1,97 @@
+.header__links {
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header__links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .link_item {
+    display: none;
+  }
+  a.link_item {
+    display: inline-block;
+    font-size: calc(var(--index) * 0.9);
+  }
+  a.link_item:last-child {
+    margin-right: 0;
+  }
+}
+/* Links styles */
+a.link_item,
+.link_item {
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: calc(var(--index) * 0.6);
+  margin-right: calc(var(--index) * 2.5);
+  letter-spacing: calc(var(--index) * 0.07);
+  /* word-spacing: calc(var(--index) * 0.07); */
+  color: var(--light-grey);
+  text-transform: uppercase;
+}
+a.link_item_active {
+  color: var(--red);
+  cursor: text;
+}
+a.link_item:hover,
+.link_item:hover {
+  color: var(--dark-grey);
+}
+a.link_item_active:hover {
+  color: var(--red);
+}
+/* icon 'show more contacts' style */
+.link_icon {
+  font-size: calc(var(--index) * 1.2);
+  margin-bottom: -7px;
+  padding: 3px;
+  color: var(--light-grey);
+}
+/* hidden div styles */
+.hidden {
+  display: none;
+}
+.about {
+  position: absolute;
+  z-index: 30;
+  width: calc(var(--index) * 18);
+  left: 60%;
+  top: 120%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--index) * 0.5) 0;
+  box-shadow: var(--box-shadow);
+  animation: showMore 0.3s ease;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  border-radius: calc(var(--index) * 0.5);
+}
+.header__links .about a {
+  color: var(--light-grey);
+}
+.hideMore {
+  animation: hideMore 0.5s ease;
+}
+@keyframes showMore {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 130%;
+  }
+}
+@keyframes hideMore {
+  0% {
+    opacity: 1;
+    top: 130%;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+.linkWrapper .back {
+  font-size: calc(var(--index) * 0.75);
+  color: var(--light-grey);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: calc(var(--index) * 0.85);
+}

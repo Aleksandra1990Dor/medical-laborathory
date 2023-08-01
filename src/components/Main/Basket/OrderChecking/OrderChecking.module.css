@@ -1,0 +1,22 @@
+.wrapper {
+  padding: calc(var(--index) * 2);
+  background-color: var(--bg-grey);
+  margin-bottom: calc(var(--index) * 2);
+  text-align: left;
+  border-radius: calc(var(--index) * 1);
+}
+.wrapper h1 {
+  font-size: calc(var(--index) * 1.75);
+  line-height: calc(var(--index) * 1.9);
+  padding: 0 0 0 calc(var(--index) * 5);
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 2.5);
+  color: var(--black);
+  position: relative;
+  text-align: left;
+}
+.order_small {
+  font-size: calc(var(--index) * 0.6);
+  margin-bottom: calc(var(--index) * 2);
+  color: var(--black);
+}

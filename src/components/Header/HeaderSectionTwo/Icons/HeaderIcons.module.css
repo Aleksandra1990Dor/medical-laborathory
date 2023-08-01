@@ -1,0 +1,96 @@
+/* icons wrapper styles */
+.icons_wrapper {
+  display: flex;
+}
+/* every icon container */
+.icons_container {
+  position: relative;
+}
+/* icon style */
+.icon {
+  cursor: pointer;
+  font-size: calc(var(--index) * 1.4);
+  fill: var(--grey);
+  margin-bottom: calc(var(--index) * 0.5);
+}
+.icon:first-child {
+  margin-right: 5px;
+}
+.icon:hover {
+  transform: scale(1.05);
+  fill: #5a5a5a;
+}
+/* hide icon discription */
+.hidden {
+  display: none;
+}
+/* show icon discription */
+.icon_discription {
+  z-index: 50;
+  color: var(--green);
+  background-color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  text-align: center;
+  padding: 15px 5px;
+  font-size: calc(var(--index) * 0.65);
+  text-transform: uppercase;
+  width: max-content;
+  padding: calc(var(--index) * 0.95);
+  box-shadow: var(--box-shadow);
+  border-radius: calc(var(--index) * 2);
+}
+.icon_discription::before {
+  z-index: 1;
+  display: block;
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 11px;
+  background-color: #fff;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 15%;
+  height: 28%;
+}
+.media_icons_container {
+  display: none;
+}
+@media (max-width: 767px) {
+  .icon_discription,
+  .icon_discription::before {
+    display: none;
+  }
+  .media_icons_container {
+    display: block;
+  }
+}
+.basket_wrapper {
+  position: relative;
+}
+.basket_info {
+  position: absolute;
+  font-size: 9px;
+  background-color: var(--fv-green);
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  top: -3px;
+  right: 0px;
+  animation: addToBasket 0.2s ease-in-out;
+}
+
+@keyframes addToBasket {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

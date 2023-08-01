@@ -1,0 +1,29 @@
+/* analys container style */
+.analys_item_wrapper {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: calc(var(--index) * 0.75);
+  animation: showPage 0.5s ease-in-out;
+  cursor: pointer;
+}
+.analys_item_wrapper:hover {
+  box-shadow: 0 0 10px #cacaca;
+}
+/* animation page appearing */
+@keyframes showPage {
+  0% {
+    opacity: 0;
+    transform: translateX(40%);
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

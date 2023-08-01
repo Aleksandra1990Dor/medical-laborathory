@@ -1,0 +1,16 @@
+.basket_wrapper {
+  display: grid;
+  grid-template-columns: 1fr calc(var(--index) * 18);
+  grid-template-areas: 'l r';
+  padding: 0 calc(var(--index) * 2);
+}
+.basket {
+  text-align: center;
+  position: relative;
+  margin-bottom: calc(var(--index) * 2);
+  overflow: hidden;
+}
+.basket_title {
+  grid-area: l;
+  padding: 0 calc(var(--index) * 2);
+}

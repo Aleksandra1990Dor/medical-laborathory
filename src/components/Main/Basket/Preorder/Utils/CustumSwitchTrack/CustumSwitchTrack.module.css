@@ -1,0 +1,67 @@
+.switch_label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--bg-green);
+  margin-bottom: calc(var(--index) * 3);
+  border-radius: calc(var(--index) * 0.45);
+  padding: 13px;
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  background-color: var(--bg-color);
+  width: 70%;
+  color: var(--black);
+}
+.switch_label_wrapper {
+  display: flex;
+  align-items: center;
+}
+.switch_label_icon {
+  fill: var(--light-green);
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.75);
+}
+.custom_switch:checked + label,
+.custom_switch:not(:checked) + label {
+  width: calc(var(--index) * 3);
+  height: calc(var(--index) * 1.5);
+  cursor: pointer;
+  border-radius: calc(var(--index) * 3);
+  position: relative;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+.custom_switch:not(:checked) + label {
+  border: 2px solid var(--light-grey);
+}
+.custom_switch:checked + label {
+  border: 2px solid #4ad1a1;
+}
+.custom_switch:checked + label::after,
+.custom_switch:not(:checked) + label::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  transition: all 0.7s ease;
+}
+.custom_switch:not(:checked) + label {
+  background-color: var(--bg-color);
+}
+.custom_switch:not(:checked) + label::after {
+  left: 5%;
+  background-color: var(--light-grey);
+}
+.custom_switch:checked + label::after {
+  right: 5%;
+  background-color: #4ad1a1;
+}
+.custom_switch {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}

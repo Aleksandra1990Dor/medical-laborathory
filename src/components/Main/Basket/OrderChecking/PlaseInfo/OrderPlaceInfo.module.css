@@ -1,0 +1,11 @@
+.info_main_information {
+  display: flex;
+  align-items: center;
+  font-size: calc(var(--index) * 0.85);
+  margin-bottom: calc(var(--index) * 1.2);
+}
+.order_icon {
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.5);
+  fill: var(--light-grey);
+}

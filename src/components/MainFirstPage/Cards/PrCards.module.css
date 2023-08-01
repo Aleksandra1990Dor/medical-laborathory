@@ -1,0 +1,145 @@
+.prCards {
+  z-index: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 calc(var(--index) * 2.5);
+  margin-bottom: calc(var(--index) * 1.2);
+  cursor: pointer;
+  width: 100%;
+}
+.prCards__cardContainer {
+  width: calc(var(--index) * 17.78);
+  height: calc(var(--index) * 13.3);
+  overflow: hidden;
+  margin-right: calc(var(--index) * 0.2);
+  box-shadow: 0px 0px 10px var(--light-grey);
+  position: relative;
+  z-index: 0;
+  border-radius: 5%;
+}
+@media (max-width: 767px) {
+  .prCards {
+    padding: 0;
+  }
+}
+.prCards__cardContainer:hover {
+  z-index: 0;
+}
+.prCards__cardContainer:last-child {
+  margin-right: 0;
+}
+.prCards__cardImg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  object-fit: cover;
+}
+.prCards__cardImg:hover {
+  transform: scale(1.11);
+  z-index: 0;
+}
+.prCards__cardHidden {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  padding: calc(var(--index) * 1.5);
+  color: white;
+  animation: hidden-info-appears 0.7s ease-in-out;
+  border-radius: 5%;
+}
+@keyframes hidden-info-appears {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hide_info {
+  animation: hidden-info-hiding 0.7s ease-in-out;
+}
+@keyframes hidden-info-hiding {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+.prCards__cardHidden::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--green);
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+}
+.prCards__cardHidden h3 {
+  font-size: calc(var(--index) * 2);
+  font-weight: 700;
+  color: var(--bg-color);
+  text-shadow: 0 0 7px var(--dark-grey);
+  margin-bottom: calc(var(--index) * 1.2);
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+.hidden {
+  display: none;
+}
+.prCards__cardHidden h6 {
+  margin-bottom: calc(var(--index) * 0.2);
+  font-size: calc(var(--index) * 0.6);
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+.prCards__cardHidden small {
+  font-size: calc(var(--index) * 1);
+  margin-bottom: calc(var(--index) * 1);
+  text-shadow: 0 0 7px var(--dark-grey);
+  text-align: center;
+  color: var(--bg-color);
+  font-weight: 600;
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+.prCards__cardHidden small:hover {
+  color: var(--bg-color);
+}
+.prCards__cardHidden_btn {
+  background-color: #a67244;
+  color: var(--bg-color);
+  padding: calc(var(--index) * 1.7) calc(var(--index) * 0.5);
+  border: 1px solid var(--bg-color);
+  border-radius: calc(var(--index) * 50);
+  border-radius: 50%;
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+.prCards__cardHidden_btn:hover {
+  background-color: var(--red);
+  color: #fefdfa;
+}
+.prCards__cardHidden .prCards__cardHidden_btn_privat {
+  background-color: var(--bg-color);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: calc(var(--index) * 0.5);
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 600;
+}
+.prCards__cardHidden_btn_privat:hover {
+  background-color: var(--bg-color);
+  color: #10a46d;
+  border-color: #10a46d;
+}

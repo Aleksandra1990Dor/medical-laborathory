@@ -1,0 +1,28 @@
+/* right side wrapper */
+.right_side_wrapper {
+  padding: calc(var(--index) * 1.5) calc(var(--index) * 2);
+}
+
+/* item styles */
+.city_item {
+  margin-bottom: calc(var(--index) * 2);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--green);
+  width: fit-content;
+}
+.city_item:last-child {
+  margin-bottom: 0;
+}
+.city_item strong {
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.95);
+  color: var(--black);
+}
+
+/* icon */
+.city_icon {
+  font-size: calc(var(--index) * 1.5);
+  fill: var(--dark-green);
+}

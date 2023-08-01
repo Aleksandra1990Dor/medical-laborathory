@@ -1,0 +1,59 @@
+.custom_radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom_radio:not(:checked) + label {
+  display: inline-block;
+  color: var(--light-green);
+  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.75);
+  border-radius: calc(var(--index) * 0.3);
+  border: 1px solid var(--light-green);
+  width: fit-content;
+  font-weight: 700;
+  margin-right: calc(var(--index) * 1);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom_radio:checked + label {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--light-green);
+  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.75);
+  border-radius: calc(var(--index) * 0.3);
+  border: 1px solid var(--light-green);
+  width: fit-content;
+  font-weight: 700;
+  margin-right: calc(var(--index) * 1);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.custom_radio:not(:checked) + label:hover {
+  color: #fff;
+  background-color: var(--light-green);
+}
+.custom_radio:not(:checked) + label:active {
+  opacity: 0.5;
+  transform: scale(0.99);
+}
+
+.btn_wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: calc(var(--index) * 2);
+  justify-content: start;
+}
+label.btn_label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: calc(var(--index) * 0.7);
+  color: var(--black);
+  width: calc(var(--index) * 20);
+  margin-bottom: calc(var(--index) * 0.65);
+  font-weight: 600;
+}
+label.btn_label :last-child {
+  margin-right: 0;
+}

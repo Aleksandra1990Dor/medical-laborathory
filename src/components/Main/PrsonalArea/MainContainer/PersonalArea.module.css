@@ -1,0 +1,6 @@
+.personalAreaWrapper {
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,35 @@
+.error {
+  font-weight: 600;
+  margin-bottom: calc(var(--index) * 1);
+  color: red;
+}
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.input_wrapper input {
+  border: 2px solid var(--bg-green);
+  margin-bottom: calc(var(--index) * 1);
+  border-radius: calc(var(--index) * 0.45);
+  padding: 13px;
+  font-size: calc(var(--index) * 0.75);
+  background-color: #fff;
+  width: calc(var(--index) * 18);
+}
+.input_wrapper input:focus {
+  border-color: #4ad1a1;
+}
+.input_wrapper input:valid {
+  background-color: var(--bg-color);
+}
+.input_wrapper label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: calc(var(--index) * 0.7);
+  color: var(--black);
+  width: calc(var(--index) * 20);
+  margin-bottom: calc(var(--index) * 0.65);
+  font-weight: 600;
+}

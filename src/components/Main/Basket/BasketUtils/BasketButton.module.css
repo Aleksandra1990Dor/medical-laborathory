@@ -1,0 +1,25 @@
+a.btn_order,
+button.btn_order {
+  display: inline-block;
+  background-color: var(--light-green);
+  color: #fff;
+  padding: calc(var(--index) * 0.75) calc(var(--index) * 1);
+  text-transform: uppercase;
+  border-radius: calc(var(--index) * 0.5);
+  width: fit-content;
+  font-weight: 700;
+}
+a.btn_order:hover,
+button.btn_order:hover {
+  transform: translateY(-1px);
+  background-color: var(--dark-green);
+  box-shadow: 0 0 10px var(--light-grey);
+}
+a.btn_order:active,
+button.btn_order:active {
+  transform: scale(0.99);
+  opacity: 0.5;
+}
+button.btn_order {
+  border: 1px solid #fff;
+}

@@ -1,0 +1,4 @@
+/* middle side wrapper */
+.infoWrapper {
+  padding: 0 calc(var(--index) * 2);
+}

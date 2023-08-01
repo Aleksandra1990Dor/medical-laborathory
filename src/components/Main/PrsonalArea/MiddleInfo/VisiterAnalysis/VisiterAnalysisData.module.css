@@ -1,0 +1,8 @@
+/* middle side wrapper */
+.infoWrapper {
+  padding: 0 calc(var(--index) * 2);
+}
+.infoWrapper strong {
+  font-weight: 500;
+  font-size: calc(var(--index) * 0.75);
+}

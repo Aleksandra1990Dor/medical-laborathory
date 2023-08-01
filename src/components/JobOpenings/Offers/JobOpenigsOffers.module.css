@@ -1,0 +1,16 @@
+.section_offers {
+  padding: 0 calc(var(--index) * 3);
+  margin-bottom: calc(var(--index) * 5);
+  color: var(--dark-grey);
+}
+/* title */
+.section_offers h3 {
+  font-size: calc(var(--index) * 1.2);
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 3);
+  text-align: center;
+}
+/* offers */
+.offers {
+  font-size: calc(var(--index) * 0.75);
+}

@@ -1,0 +1,29 @@
+.license_block {
+  margin-bottom: calc(var(--index) * 5);
+}
+/* title */
+.license_title {
+  background-color: var(--bg-green);
+  padding: calc(var(--index) * 1) calc(var(--index) * 2);
+  border-radius: calc(var(--index) * 1);
+  font-size: calc(var(--index) * 1.2);
+  line-height: calc(var(--index) * 1.5);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--index) * 2);
+  font-weight: 700;
+}
+/* icon */
+.license_title_icon_star {
+  font-size: calc(var(--index) * 2);
+  margin-right: calc(var(--index) * 2);
+  fill: var(--yellow);
+}
+/* description */
+.license_description {
+  color: var(--black);
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.9);
+  margin-bottom: calc(var(--index) * 2);
+}

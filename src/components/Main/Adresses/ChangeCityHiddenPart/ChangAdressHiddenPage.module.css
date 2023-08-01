@@ -1,0 +1,60 @@
+/* form main container */
+.changeInfoMainContainer {
+  position: relative;
+  /* overflow: hidden; */
+  border: 3px solid var(--green);
+  border-radius: calc(var(--index) * 2);
+  max-height: 100%;
+  overflow: auto;
+}
+.changeInfoContainer {
+  background-color: #fff;
+  padding: calc(var(--index) * 2);
+  box-shadow: var(--box-shadow);
+}
+.changeInfoMainContainer::-webkit-scrollbar {
+  width: 0;
+}
+/* closing icon styles */
+.closeIcon {
+  position: absolute;
+  right: 7%;
+  top: 3%;
+  fill: var(--grey);
+  font-size: calc(var(--index) * 0.8);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+.closeIcon:hover {
+  transform: scale(1.2);
+}
+.changeInfoContainer h5 {
+  margin-bottom: calc(var(--index) * 0.75);
+  font-size: calc(var(--index) * 0.75);
+  color: var(--dark-grey);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.city_item {
+  background-color: #fff;
+  border: 1px solid var(--light-grey);
+  margin-bottom: 5px;
+  padding: calc(var(--index) * 0.75) calc(var(--index) * 2);
+  text-align: left;
+  border-radius: calc(var(--index) * 0.75);
+  cursor: pointer;
+}
+.city_item:last-child {
+  margin-bottom: 0;
+}
+.city_item:hover {
+  background-color: var(--bg-green);
+}
+.city_item strong {
+  font-size: calc(var(--index) * 0.75);
+  color: var(--dark-green);
+}
+.city_item:hover strong {
+  color: var(--dark-grey);
+}
