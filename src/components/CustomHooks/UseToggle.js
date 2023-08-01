@@ -18,7 +18,7 @@ export const useToggle = (
       value !== `${hiddenAnimationClass} ${mainClass}`
     ) {
       setValue(mainClass);
-    } else {
+    } else if (value === mainClass) {
       setValue(`${hiddenAnimationClass} ${mainClass}`);
     }
   };
