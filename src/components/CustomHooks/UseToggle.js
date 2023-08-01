@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import { timeOut } from '../Helpers/helpers';
 export const useToggle = (
   mainClass,
   hiddenClass,
@@ -11,7 +10,7 @@ export const useToggle = (
     if (value === `${hiddenAnimationClass} ${mainClass}`) {
       setTimeout(() => setValue(hiddenClass), time);
     }
-  }, [value]);
+  }, [value, hiddenAnimationClass, mainClass, time, hiddenClass]);
   const toggle = () => {
     if (
       value === hiddenClass &&
@@ -24,7 +23,7 @@ export const useToggle = (
   };
   return [value, toggle];
 };
-
+// better version of useToggle
 export const useToggleClass = (
   mainClass,
   hiddenClass,
@@ -45,13 +44,12 @@ export const useToggleClass = (
     if (value === `${mainClass} ${hiddenAnimationClass}`) {
       setTimeout(() => setValue(hiddenClass), time);
     }
-  }, [hiddenSygnal]);
+  }, [hiddenSygnal, value, mainClass, hiddenClass, time, hiddenAnimationClass]);
   const hideItems = () => {
     if (value === mainClass) {
       setHiddenSygnal(!hiddenSygnal);
       setValue(`${mainClass} ${hiddenAnimationClass}`);
     }
   };
-
   return [value, showItems, hideItems];
 };

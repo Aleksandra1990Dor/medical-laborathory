@@ -6,7 +6,7 @@
 .input_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .input_wrapper input {
   border: 2px solid var(--bg-green);

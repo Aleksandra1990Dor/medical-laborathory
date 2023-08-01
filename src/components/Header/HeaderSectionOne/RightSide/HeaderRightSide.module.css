@@ -28,7 +28,7 @@
   z-index: 30;
   position: absolute;
   left: 25%;
-  top: 130%;
+  top: 110%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -39,18 +39,6 @@
   animation: showMore 0.3s ease;
   transition: all 0.3s ease;
   border-radius: calc(var(--index) * 0.75);
-}
-.more::before {
-  z-index: 1;
-  display: block;
-  content: '';
-  position: absolute;
-  top: -12px;
-  right: 50%;
-  background-color: #fff;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  width: 15%;
-  height: 15%;
 }
 /* text under phones */
 .more span {
@@ -147,7 +135,7 @@ a.phones_item:hover {
 }
 .city_item::after {
   content: '';
-  width: 100%;
+  width: 80%;
   height: 1px;
   position: absolute;
   bottom: 0;

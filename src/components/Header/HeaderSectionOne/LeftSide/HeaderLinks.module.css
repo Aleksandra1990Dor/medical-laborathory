@@ -1,6 +1,6 @@
 .header__links {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   position: relative;
 }
 @media (max-width: 767px) {

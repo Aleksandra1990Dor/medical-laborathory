@@ -31,8 +31,8 @@
   width: calc(var(--index) * 20);
   height: calc(var(--index) * 10);
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .section_title_img img {
   width: 100%;

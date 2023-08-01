@@ -2,7 +2,7 @@
 .infoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: calc(var(--index) * 5) 0;
   background-color: var(--bg-color);

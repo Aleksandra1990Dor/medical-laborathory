@@ -41,7 +41,7 @@
   height: calc(var(--index) * 10);
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 /* img */
 .title_img img {

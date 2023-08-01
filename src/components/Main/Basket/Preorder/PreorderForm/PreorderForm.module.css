@@ -1,6 +1,6 @@
 .merch {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .merch input:nth-child(1),
 .merch input:nth-child(3) {

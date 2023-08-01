@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styles from './PrCards.module.css';
 import Button from '../../Utils/Button';
 import Preloader from '../../Utils/Preloader';
@@ -10,7 +10,10 @@ const PrCard = ({ src, alt, text, price, activeStyle, href }) => {
     styles.hide_info,
     600
   );
-  useEffect(() => activeStyle && setToggleClassList(), [activeStyle]);
+  useEffect(
+    () => activeStyle && setToggleClassList(),
+    [activeStyle, setToggleClassList]
+  );
   return (
     <div
       className={styles.prCards__cardContainer}
@@ -41,6 +44,7 @@ const PrCard = ({ src, alt, text, price, activeStyle, href }) => {
           />
         ) : (
           <Button
+            href="../login"
             text="Войти в личный кабинет"
             toggleClass={styles.prCards__cardHidden_btn_privat}
           />
