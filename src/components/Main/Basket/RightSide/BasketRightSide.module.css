@@ -4,11 +4,11 @@
   height: 100%;
   width: 100%;
   border-radius: calc(var(--index) * 1);
-  /* border-left: 1px solid var(--bg-color); */
   grid-area: r;
   position: relative;
   background-color: var(--bg-color);
 }
+
 /* green container */
 .basket_price_view {
   background-color: var(--green);
@@ -19,12 +19,14 @@
   padding: calc(var(--index) * 2) calc(var(--index) * 3);
   width: max-content;
 }
+
 /* city */
 .order_city {
   color: #c4f0eb;
   font-size: calc(var(--index) * 1);
   margin-bottom: calc(var(--index) * 2);
 }
+
 /* price */
 .order_price {
   color: var(--bg-color);
@@ -42,6 +44,34 @@
   font-size: calc(var(--index) * 2);
   position: relative;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .basket_order {
+    display: none;
+  }
+  .basket_price_view {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    align-items: center;
+    padding: 10px;
+  }
+  .order_city {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .order_price {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  .order_price h2 {
+    margin-bottom: 5px;
+  }
+  .order_price h3 {
+    font-size: 12px;
+    font-weight: 700;
+  }
 }
 .basket_order h3::after {
   content: '';

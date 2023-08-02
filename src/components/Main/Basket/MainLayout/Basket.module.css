@@ -3,7 +3,9 @@
   grid-template-columns: 1fr calc(var(--index) * 18);
   grid-template-areas: 'l r';
   padding: 0 calc(var(--index) * 2);
+  min-height: 70vh;
 }
+
 .basket {
   text-align: center;
   position: relative;
@@ -13,4 +15,11 @@
 .basket_title {
   grid-area: l;
   padding: 0 calc(var(--index) * 2);
+}
+@media (max-width: 767px) {
+  .basket_wrapper {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0 5px;
+  }
 }

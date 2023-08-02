@@ -2,6 +2,7 @@
   font-weight: 600;
   margin-bottom: calc(var(--index) * 1);
   color: red;
+  font-size: calc(var(--index) * 0.75);
 }
 .input_wrapper {
   display: flex;
@@ -17,6 +18,7 @@
   background-color: #fff;
   width: calc(var(--index) * 18);
 }
+
 .input_wrapper input:focus {
   border-color: #4ad1a1;
 }
@@ -32,4 +34,19 @@
   width: calc(var(--index) * 20);
   margin-bottom: calc(var(--index) * 0.65);
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .input_wrapper input {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    width: 90%;
+  }
+  .input_wrapper label {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+  .error {
+    font-size: 8px;
+  }
 }

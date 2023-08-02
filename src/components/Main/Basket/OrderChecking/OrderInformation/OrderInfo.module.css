@@ -4,6 +4,7 @@
 }
 .order_item {
   margin-bottom: calc(var(--index) * 1);
+  font-size: calc(var(--index) * 0.75);
   display: flex;
   align-items: center;
   color: var(--black);
@@ -17,6 +18,14 @@
   color: var(--grey);
   font-size: calc(var(--index) * 0.45);
   padding: calc(var(--index) * 0.15);
+}
+@media (max-width: 767px) {
+  .order_item {
+    font-size: 8px;
+  }
+  .order_items_wrapper small {
+    font-size: 6px;
+  }
 }
 .order_icon {
   font-size: calc(var(--index) * 1);

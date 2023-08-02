@@ -16,3 +16,9 @@
   margin-right: calc(var(--index) * 0.5);
   fill: var(--light-grey);
 }
+@media (max-width: 767px) {
+  .info_information {
+    font-size: 6px;
+    width: 100%;
+  }
+}

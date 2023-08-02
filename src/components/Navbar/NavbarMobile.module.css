@@ -51,19 +51,27 @@ a.item_container {
 }
 .nav_container {
   position: relative;
-  padding-top: 10%;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 10% 45% 35% 10%;
+  grid-template-rows: 12% 43% 35% 10%;
 }
 .closing_icon {
   position: absolute;
   right: 3%;
-  top: 10%;
+  top: 10px;
   z-index: 60;
   font-size: 25px;
   fill: #fff;
+}
+@media (max-width: 426px) {
+  .nav_container {
+    position: relative;
+    padding-top: 20%;
+  }
+  .closing_icon {
+    top: 90px;
+  }
 }
 .closing_icon:hover {
   fill: var(--dark-grey);

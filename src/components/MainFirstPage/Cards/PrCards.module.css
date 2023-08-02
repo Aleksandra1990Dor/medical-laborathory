@@ -17,9 +17,17 @@
   z-index: 0;
   border-radius: 5%;
 }
-@media (max-width: 767px) {
+@media (max-width: 426px) {
   .prCards {
     padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .prCards__cardContainer {
+    width: 95%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 0;
   }
 }
 .prCards__cardContainer:hover {

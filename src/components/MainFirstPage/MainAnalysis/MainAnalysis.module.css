@@ -13,3 +13,16 @@
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 426px) {
+  .wrapper {
+    padding: 15px 5px;
+  }
+  .wrapper h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .analysis_wrapper {
+    flex-wrap: wrap;
+  }
+}

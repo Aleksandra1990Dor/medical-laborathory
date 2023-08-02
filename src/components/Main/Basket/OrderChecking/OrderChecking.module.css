@@ -20,3 +20,11 @@
   margin-bottom: calc(var(--index) * 2);
   color: var(--black);
 }
+@media (max-width: 767px) {
+  .wrapper h1 {
+    padding: 0;
+  }
+  .order_small {
+    font-size: 6px;
+  }
+}

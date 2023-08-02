@@ -12,6 +12,7 @@
   padding: calc(var(--index) * 2);
   /* margin-bottom: calc(var(--index) * 3.5); */
 }
+
 /* achivment item */
 .item_wrapper {
   margin-right: calc(var(--index) * 1);
@@ -19,6 +20,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 /* achivments title */
 .item_title {
   color: var(--dark-grey);
@@ -29,6 +31,7 @@
   margin-right: calc(var(--index) * 0.5);
   margin-bottom: calc(var(--index) * 0.2);
 }
+
 /* achivments text */
 .item_text {
   color: var(--light-grey);
@@ -36,6 +39,7 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
 /* icons */
 .icon {
   font-size: calc(var(--index) * 1.3);
@@ -48,4 +52,33 @@
 }
 .icon_red {
   fill: var(--brown);
+}
+@media (max-width: 426px) {
+  .achivments {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid var(--bg-color);
+  }
+  .item_wrapper {
+    width: 30%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .item_wrapper:nth-child(4),
+  .item_wrapper:nth-child(5) {
+    margin-bottom: 0;
+  }
+  .item_title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  .item_text {
+    font-size: 8px;
+    text-align: center;
+  }
+  .icon {
+    font-size: 12px;
+  }
 }

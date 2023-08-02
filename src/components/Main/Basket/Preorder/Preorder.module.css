@@ -29,8 +29,18 @@
   border-radius: calc(var(--index) * 0.5);
   width: 70%;
   margin-bottom: calc(var(--index) * 2);
+
   box-shadow: 0 0 5px var(--light-grey);
 }
 .at_home input {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .at_home {
+    width: 90%;
+    padding: 10px 5px 0 5px;
+  }
+  .wrapper h1 {
+    padding: 0;
+  }
 }

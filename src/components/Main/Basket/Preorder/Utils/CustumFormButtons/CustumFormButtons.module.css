@@ -11,6 +11,7 @@
   border: 1px solid var(--light-green);
   width: fit-content;
   font-weight: 700;
+  font-size: calc(var(--index) * 0.75);
   margin-right: calc(var(--index) * 1);
   text-transform: uppercase;
   cursor: pointer;
@@ -25,6 +26,7 @@
   border: 1px solid var(--light-green);
   width: fit-content;
   font-weight: 700;
+  font-size: calc(var(--index) * 0.75);
   margin-right: calc(var(--index) * 1);
   text-transform: uppercase;
   cursor: pointer;
@@ -54,6 +56,15 @@ label.btn_label {
   margin-bottom: calc(var(--index) * 0.65);
   font-weight: 600;
 }
-label.btn_label :last-child {
+label.btn_label:last-child {
   margin-right: 0;
+}
+@media (max-width: 767px) {
+  label.btn_label {
+    font-size: 8px;
+  }
+  .custom_radio:checked + label,
+  .custom_radio:not(:checked) + label {
+    font-size: 10px;
+  }
 }

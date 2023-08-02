@@ -3,6 +3,7 @@
   margin-bottom: calc(var(--index) * 2);
   padding-left: calc(var(--index) * 2);
 }
+
 .basket_header .back {
   font-size: calc(var(--index) * 0.65);
   font-weight: 600;
@@ -21,6 +22,7 @@
   transition: all 0.5s ease;
   opacity: 0;
 }
+
 .basket_header .back:hover .icon_back {
   transform: translateX(-20px);
   opacity: 1;
@@ -49,6 +51,7 @@
   background-color: var(--bg-green);
   z-index: 5;
 }
+
 /* clear bascet button */
 a.clear_basket {
   font-size: calc(var(--index) * 0.75);
@@ -78,4 +81,18 @@ a.clear_basket {
 .clear_basket_icon {
   font-size: calc(var(--index) * 1);
   margin-left: 7px;
+}
+@media (max-width: 767px) {
+  .basket_header .back,
+  .icon_back {
+    display: none;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .title::after {
+    bottom: -70%;
+    width: 50%;
+  }
 }

@@ -8,6 +8,8 @@
     background-color: var(--bg-grey);
     margin-bottom: 10px;
     padding: 10px 5px;
+    border-top: 2px solid var(--bg-green);
+    border-bottom: 2px solid var(--bg-green);
   }
 }
 .mobile_section_two {

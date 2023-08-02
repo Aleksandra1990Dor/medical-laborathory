@@ -6,6 +6,7 @@ button.btn_order {
   padding: calc(var(--index) * 0.75) calc(var(--index) * 1);
   text-transform: uppercase;
   border-radius: calc(var(--index) * 0.5);
+  font-size: calc(var(--index) * 0.8);
   width: fit-content;
   font-weight: 700;
 }
@@ -22,4 +23,10 @@ button.btn_order:active {
 }
 button.btn_order {
   border: 1px solid #fff;
+}
+@media (max-width: 767px) {
+  a.btn_order,
+  button.btn_order {
+    font-size: 8px;
+  }
 }

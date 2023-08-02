@@ -1,20 +1,10 @@
-import { useSelector } from 'react-redux';
-import { RiMapPinLine } from 'react-icons/ri';
+import BasketMainInformation from './BasketMainInformation';
 import styles from './BasketRightSide.module.css';
 
 const BasketRightSide = ({ priceSum }) => {
-  const city = useSelector((state) => state.mainInfoReduser.visiterInfo.city);
   return (
     <div className={styles.basket_order}>
-      <div className={styles.basket_price_view}>
-        <div className={styles.order_city}>
-          <RiMapPinLine /> <span>{city}</span>
-        </div>
-        <div className={styles.order_price}>
-          <h2>Сумма заказа:</h2>
-          <h3>{priceSum} ₽</h3>
-        </div>
-      </div>
+      <BasketMainInformation priceSum={priceSum} />
     </div>
   );
 };

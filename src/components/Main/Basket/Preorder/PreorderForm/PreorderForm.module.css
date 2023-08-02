@@ -1,8 +1,15 @@
 .merch {
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
 }
 .merch input:nth-child(1),
 .merch input:nth-child(3) {
   margin-right: calc(var(--index) * 1);
+}
+@media (max-width: 767px) {
+  .merch {
+    flex-direction: column;
+    margin-right: 0;
+  }
 }
