@@ -71,3 +71,15 @@
 .footer_links_wrapper {
   display: flex;
 }
+@media (max-width: 767px) {
+  /* .footer_wrapper {
+    width: 100%;
+    display: block;
+  } */
+  .footer_right {
+    display: none;
+  }
+  .footer_left {
+    display: none;
+  }
+}

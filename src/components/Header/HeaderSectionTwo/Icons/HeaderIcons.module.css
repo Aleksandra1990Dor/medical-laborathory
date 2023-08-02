@@ -57,18 +57,6 @@
 .media_icons_container {
   display: none;
 }
-@media (max-width: 767px) {
-  .icon_discription,
-  .icon_discription::before {
-    display: none;
-  }
-  .media_icons_container {
-    display: block;
-  }
-}
-.basket_wrapper {
-  position: relative;
-}
 .basket_info {
   position: absolute;
   font-size: 9px;
@@ -84,6 +72,32 @@
   top: -3px;
   right: 0px;
   animation: addToBasket 0.2s ease-in-out;
+}
+@media (max-width: 767px) {
+  .icon_discription::before {
+    display: none;
+  }
+  .media_icons_container {
+    display: block;
+  }
+  .icon {
+    font-size: 20px;
+    fill: var(--black);
+    display: inline-block;
+    margin-right: 35px;
+  }
+  .icon:first-child {
+    margin-right: 20px;
+  }
+  .icon:hover {
+    fill: var(--dark-green);
+  }
+  .basket_info {
+    right: 25%;
+  }
+}
+.basket_wrapper {
+  position: relative;
 }
 
 @keyframes addToBasket {

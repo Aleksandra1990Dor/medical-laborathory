@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import styles from './HeaderLinks.module.css';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { HiddenNavbarElement } from '../../../Navbar/NavbarItem';
+import HiddenNavbarElement from '../../../Navbar/HiddenItem/HiddenNavbarElement';
 
 const AboutCompanyHiddenList = ({ toggleClass }) => {
   const links = useSelector((state) => state.linksReduser.headerHiddenLinks);

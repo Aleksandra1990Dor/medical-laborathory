@@ -25,6 +25,12 @@
 .chat .chat_icon {
   font-size: calc(var(--index) * 1.3);
 }
+@media (max-width: 767px) {
+  .chat {
+    bottom: 15%;
+    right: 8%;
+  }
+}
 /* chat apearing animation */
 @keyframes chat-apears {
   0% {

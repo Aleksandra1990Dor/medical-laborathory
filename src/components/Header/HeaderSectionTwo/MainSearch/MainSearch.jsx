@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
+import { useRef } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import styles from './MainSearch.module.css';
 import SearchingItem from './SearchingItem';
@@ -9,6 +10,10 @@ const MainSearch = ({
   toggleClassList,
 }) => {
   let [searchParams, setSearchParams] = useSearchParams();
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current.focus();
+  };
   return (
     <div>
       <div className={styles.main_search}>
@@ -19,6 +24,7 @@ const MainSearch = ({
             setSearchParams({});
             hideItems();
           }}
+          ref={ref}
           onChange={(e) => {
             let filter = e.target.value;
             if (filter) {
@@ -28,19 +34,16 @@ const MainSearch = ({
           }}
           className={styles.search_input}
           type="search"
-          // placeholder="Поиск по сайту"
         />
         <label
           htmlFor="main-search"
+          onClick={handleClick}
           className={styles.main_search_placeholder}
         >
           Поиск по сайту
         </label>
         <BsSearch className={styles.search_icon} />
-        <div
-          className={toggleClassList}
-          // onMouseLeave={hideItems}
-        >
+        <div className={toggleClassList}>
           {searchFilter.map((el) => {
             if (el === 'Ничего не найдено') {
               return (

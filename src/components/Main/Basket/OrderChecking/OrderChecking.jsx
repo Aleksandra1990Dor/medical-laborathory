@@ -30,7 +30,7 @@ const OrderChecking = () => {
         onClick={() => {
           dispatch(clearBasketAC());
         }}
-        to="/preorder/complete/№=41898-427534"
+        to="../../preorder/complete/№=41898-427534"
       >
         Оплатить в диагностическом центре
       </BasketButton>

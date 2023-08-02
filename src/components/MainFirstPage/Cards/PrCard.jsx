@@ -10,10 +10,11 @@ const PrCard = ({ src, alt, text, price, activeStyle, href }) => {
     styles.hide_info,
     600
   );
-  useEffect(
-    () => activeStyle && setToggleClassList(),
-    [activeStyle, setToggleClassList]
-  );
+  useEffect(() => {
+    if (activeStyle === true) {
+      setToggleClassList();
+    }
+  }, [activeStyle, setToggleClassList]);
   return (
     <div
       className={styles.prCards__cardContainer}

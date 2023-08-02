@@ -47,7 +47,7 @@
   font-size: calc(var(--index) * 1.2);
   fill: #12bb7d62;
   position: absolute;
-  top: calc(var(--index) * 0.55);
+  top: calc(var(--index) * 0.5);
   right: calc(var(--index) * 1);
   display: inline-block;
 }
@@ -55,33 +55,7 @@
   fill: var(--green);
   cursor: pointer;
 }
-@media (max-width: 767px) {
-  .main_search {
-    margin-right: 0;
-  }
-  .search_input {
-    width: calc(var(--index) * 40);
-    padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
-    font-size: calc(var(--index) * 1);
-  }
-  .search_input:not(:placeholder-shown) ~ .main_search_placeholder {
-    top: 33%;
-    font-size: calc(var(--index) * 1);
-  }
-  .search_input:focus ~ .main_search_placeholder  /* фокус на input */ {
-    transform: translateY(-145%) translateX(-10%) scale(0.85);
-  }
-  .search_icon {
-    top: calc(var(--index) * 1);
-  }
-}
-@media (max-width: 425px) {
-  .search_input {
-    width: calc(var(--index) * 25);
-    padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
-    font-size: calc(var(--index) * 1);
-  }
-}
+
 .search_input:focus .search_icon {
   fill: var(--green);
 }
@@ -129,6 +103,45 @@
   background-color: var(--bg-color);
   /* border-color: var(--green); */
   color: var(--fv-green);
+}
+@media (max-width: 767px) {
+  .main_search {
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .search_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 0;
+    border-radius: 7px;
+    border: 2px solid var(--bg-green);
+  }
+  .search_input:focus {
+    border: 2px solid var(--dark-green);
+  }
+  .search_input:not(:placeholder-shown) ~ .main_search_placeholder {
+    top: 25%;
+    left: 12%;
+    font-size: 16px;
+  }
+  .search_input:focus ~ .main_search_placeholder  /* фокус на input */ {
+    transform: translateY(-115%) translateX(-5%) scale(0.85);
+  }
+  .search_icon {
+    top: 25%;
+    right: 15%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 425px) {
+  .search_input {
+    width: 80%;
+  }
 }
 /* class for hidden aniimation */
 .hideInfo {

@@ -11,19 +11,17 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--bg-grey);
   padding: calc(var(--index) * 0.5) calc(var(--index) * 2.5) 0
     calc(var(--index) * 2.5);
   margin-bottom: calc(var(--index) * 1.5);
 }
 @media (max-width: 767px) {
   .section_one {
-    padding: calc(var(--index) * 1.5) calc(var(--index) * 1.5)
-      calc(var(--index) * 1) calc(var(--index) * 1.5);
+    padding: 10px;
+    margin-bottom: 0;
   }
   .section_two {
-    padding: calc(var(--index) * 1) calc(var(--index) * 1.5)
-      calc(var(--index) * 1) calc(var(--index) * 1.5);
-    justify-content: space-between;
+    display: none;
   }
 }

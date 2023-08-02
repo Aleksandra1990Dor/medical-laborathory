@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import styles from './MainSearch.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setResultsAC } from '../../../store/mainInfoReduser';
 import { analysisSearching } from '../../../Helpers/helpers';
 import MainSearch from './MainSearch';
-import { useToggle } from '../../../CustomHooks/UseToggle';
+import { useToggleClass } from '../../../CustomHooks/UseToggle';
 
 const MainSearchContainer = () => {
   //get results and analysis from state
@@ -20,7 +19,7 @@ const MainSearchContainer = () => {
     dispatch(setResultsAC(results));
   };
   // show or hide searching results DIV
-  const [toggleClassList, setToggleClassList] = useToggle(
+  const [toggleClassList, showItems, hideItems] = useToggleClass(
     styles.results_block,
     styles.hidden,
     styles.hideInfo,
@@ -31,7 +30,7 @@ const MainSearchContainer = () => {
     if (value) {
       analysisFilterData(value);
       if (value.length === 1) {
-        setToggleClassList();
+        showItems();
       }
     }
   };
@@ -39,7 +38,7 @@ const MainSearchContainer = () => {
     <MainSearch
       searchFilter={searchFilter}
       toggleClassList={toggleClassList}
-      hideItems={setToggleClassList}
+      hideItems={hideItems}
       searching={searching}
       analysisFilterData={analysisFilterData}
     />

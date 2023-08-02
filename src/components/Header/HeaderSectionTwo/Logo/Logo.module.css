@@ -6,6 +6,8 @@
   text-align: center;
   color: var(--green);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 .logotype {
   color: var(--green);
@@ -14,7 +16,7 @@
   line-height: calc(var(--index) * 1);
   text-shadow: 1px 1px 1px var(--light-grey);
   margin-bottom: calc(var(--index) * 0.35);
-  /* display: inline-block; */
+  display: inline-block;
 }
 .logo_container small {
   font-size: calc(var(--index) * 0.35);
@@ -28,6 +30,9 @@
     display: none;
   }
   .logotype {
-    font-size: calc(var(--index) * 1.8);
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 0;
   }
 }

@@ -1,9 +1,10 @@
 import { BsChevronDown } from 'react-icons/bs';
-import styles from './HeaderRightSide.module.css';
 import { useSelector } from 'react-redux';
-import Cities from './Cities';
 import { NavLink } from 'react-router-dom';
 import { useToggleClass } from '../../../CustomHooks/UseToggle';
+import Cities from './Cities';
+import styles from './HeaderRightSide.module.css';
+
 const City = ({ city }) => {
   const cities = useSelector((state) => state.mainInfoReduser.cities);
   const auth = useSelector((state) => state.mainInfoReduser.visiterInfo.isAuth);
