@@ -3,6 +3,10 @@
   display: grid;
   grid-template-columns: 25% 1fr;
   border-top: 1px solid #cacaca2d;
+  min-height: 50vh;
+}
+.mobile_navigation_wrapper {
+  display: none;
 }
 
 /* right side with analysis data */
@@ -11,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 /* link go home style */
 .home {
@@ -40,4 +45,91 @@
   width: 60%;
   display: flex;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .analysis {
+    display: flex;
+    border-top: none;
+  }
+  .mobile_navigation_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--light-grey);
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .mobile_navigation_wrapper h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .mobile_navigation {
+    position: absolute;
+    top: 180%;
+    left: 2.5%;
+    width: 95%;
+    background-color: var(--bg-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    padding: 20px 10px;
+    color: var(--dark-grey);
+    animation: show-info 0.3s ease-in-out;
+    border: 2px solid var(--bg-green);
+    border-radius: 8px;
+  }
+  .mobile_navigation a {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 0;
+    width: max-content;
+    border-bottom: 1px solid var(--bg-green);
+    display: inline-block;
+  }
+  .city {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}
+/* class for hidden aniimation */
+.hideInfo {
+  animation: hide-info 0.4s ease-in-out;
+}
+
+/*
+
+ animations for show and hide blocks
+ 
+ */
+
+/* show block */
+@keyframes show-info {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* hide block */
+@keyframes hide-info {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
 }

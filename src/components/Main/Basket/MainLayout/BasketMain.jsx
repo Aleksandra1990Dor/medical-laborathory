@@ -12,7 +12,11 @@ const BasketMain = () => {
     <>
       <div className={styles.basket_title}>
         <BasketHeader />
-        {!!priceSum && <BasketMainInformation priceSum={priceSum} />}
+        {!!priceSum && (
+          <div className={styles.basket_main_information_wrapper}>
+            <BasketMainInformation priceSum={priceSum} />
+          </div>
+        )}
         <BasketItemsWrapper />
       </div>
     </>

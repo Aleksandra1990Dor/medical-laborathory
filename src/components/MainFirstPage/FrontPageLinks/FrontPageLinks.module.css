@@ -26,6 +26,7 @@
   border-radius: calc(var(--index) * 2);
   border: 2px solid var(--bg-green);
   overflow: hidden;
+  z-index: 5;
   position: relative;
   padding: calc(var(--index) * 2) calc(var(--index) * 1);
   display: flex;
@@ -135,6 +136,7 @@
   .img {
     width: 50%;
     height: 50%;
+    z-index: 2;
   }
   .title {
     font-size: 10px;
@@ -158,6 +160,8 @@
     padding-bottom: 50px;
     padding: 20px 10px;
     margin-right: 0;
+    overflow: hidden;
+    z-index: 5;
   }
   .block_wrapper_map {
     align-items: center;

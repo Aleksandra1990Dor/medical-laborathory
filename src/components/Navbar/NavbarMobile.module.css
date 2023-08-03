@@ -4,13 +4,13 @@
 .hidden_animation {
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer_mobile {
     display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 50;
+    z-index: 90;
     width: 100%;
     background-color: var(--green);
     justify-content: space-between;
@@ -26,6 +26,7 @@
     width: 100vw;
     background-color: var(--bg-color);
     animation: show-info 1.1s ease-in-out;
+    overflow: hidden;
   }
   .hidden {
     display: none;
@@ -67,6 +68,7 @@ a.item_container {
 @media (max-width: 426px) {
   .nav_container {
     position: relative;
+    z-index: 90;
     padding-top: 20%;
   }
   .closing_icon {

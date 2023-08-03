@@ -19,7 +19,7 @@
 .navbar__item:hover .navbar__item_wrapper {
   color: var(--dark-green);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar {
     display: block;
   }

@@ -30,9 +30,14 @@
     display: none;
   }
   .logotype {
-    font-size: 20px;
+    font-size: 30px;
     padding: 5px;
     margin-bottom: 5px;
     line-height: 0;
+  }
+}
+@media (max-width: 426px) {
+  .logotype {
+    font-size: 26px;
   }
 }

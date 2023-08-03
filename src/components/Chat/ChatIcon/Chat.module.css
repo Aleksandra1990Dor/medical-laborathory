@@ -27,8 +27,14 @@
 }
 @media (max-width: 767px) {
   .chat {
+    width: 35px;
+    height: 35px;
     bottom: 15%;
     right: 8%;
+    z-index: 10;
+  }
+  .chat .chat_icon {
+    font-size: 18px;
   }
 }
 /* chat apearing animation */

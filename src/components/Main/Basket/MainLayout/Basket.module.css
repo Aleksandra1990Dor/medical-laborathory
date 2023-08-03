@@ -16,10 +16,16 @@
   grid-area: l;
   padding: 0 calc(var(--index) * 2);
 }
-@media (max-width: 767px) {
+.basket_main_information_wrapper {
+  display: none;
+}
+@media (max-width: 768px) {
   .basket_wrapper {
     display: block;
     margin-bottom: 50px;
     padding: 0 5px;
+  }
+  .basket_main_information_wrapper {
+    display: block;
   }
 }

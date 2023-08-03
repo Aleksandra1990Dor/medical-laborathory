@@ -4,11 +4,11 @@
   width: calc(var(--index) * 20);
   height: calc(var(--index) * 31);
   background-color: #fff;
-
   display: grid;
   grid-template-rows: 13% 67% 20%;
   box-shadow: var(--box-shadow);
 }
+
 /* 
 dialogs header
  */
@@ -36,6 +36,7 @@ dialogs header
   transform: scale(1.1);
   fill: #fff;
 }
+
 /*
  all messages (middle side)
   */
@@ -65,6 +66,7 @@ dialogs header
   font-size: calc(var(--index) * 0.7);
   box-shadow: var(--box-shadow);
 }
+
 .message_wrapper_lft {
   justify-self: start;
   background-color: var(--light-green);
@@ -140,4 +142,30 @@ dialogs header
 .create_message_icon:hover {
   fill: var(--fv-green);
   transform: scale(1.02);
+}
+@media (max-width: 767px) {
+  .dialog_window {
+    width: 60vw;
+    height: 95vh;
+  }
+  .closeIcon {
+    font-size: 16px;
+  }
+  .message_wrapper_lft,
+  .message_wrapper_rght {
+    font-size: 10px;
+  }
+  .create_message_textarea,
+  .create_message_textarea::placeholder,
+  .dialogs_header {
+    font-size: 10px;
+  }
+  .create_message_icon {
+    font-size: 25px;
+  }
+}
+@media (max-width: 426px) {
+  .dialog_window {
+    width: 90vw;
+  }
 }

@@ -4,6 +4,11 @@
   height: 100%;
   border-right: 1px solid var(--yellow);
 }
+@media (max-width: 767px) {
+  .analysis_nav_wrapper {
+    display: none;
+  }
+}
 .analysis_nav {
   position: sticky;
   top: 0;

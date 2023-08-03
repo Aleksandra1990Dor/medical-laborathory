@@ -3,4 +3,11 @@
   display: grid;
   grid-template-columns: 25% 1fr;
   border-top: 1px solid #cacaca2d;
+  min-height: 50vh;
+}
+@media (max-width: 767px) {
+  .analysis {
+    display: flex;
+    border-top: none;
+  }
 }

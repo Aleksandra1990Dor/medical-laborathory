@@ -1,13 +1,27 @@
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../Utils/Button';
 import HeaderIcons from '../HeaderSectionTwo/Icons/HeaderIcons';
 import Logo from '../HeaderSectionTwo/Logo/Logo';
 import MainSearchContainer from '../HeaderSectionTwo/MainSearch/MainSearchContainer';
 import styles from './HeaderMobileSection.module.css';
 const HeaderMobileSection = () => {
+  const navigate = useNavigate();
+  const auth = useSelector((state) => state.mainInfoReduser.visiterInfo.isAuth);
   return (
     <div className={styles.mobile_section}>
       <div className={styles.mobile_section_two}>
         <Logo />
-        <HeaderIcons />
+        <div className={styles.links_wrapper}>
+          <HeaderIcons />
+          <Button
+            text="Получить результат"
+            toggleClass={styles.btn_brown}
+            onClick={() => {
+              auth ? navigate('private-area/analysis') : navigate('login');
+            }}
+          />
+        </div>
       </div>
       <MainSearchContainer />
     </div>

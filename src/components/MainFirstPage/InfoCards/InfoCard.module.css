@@ -20,6 +20,7 @@
   border-radius: calc(var(--index) * 0.5);
   height: calc(var(--index) * 17);
   position: relative;
+  z-index: 2;
   overflow: hidden;
   display: flex;
   flex-direction: column;

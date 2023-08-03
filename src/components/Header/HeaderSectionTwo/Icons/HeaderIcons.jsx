@@ -4,7 +4,6 @@ import IconInfo from './IconInfo';
 import { NavLink } from 'react-router-dom';
 import { checkGoods } from '../../../Helpers/helpers';
 import { quitAuthAC } from '../../../store/mainInfoReduser';
-import { RiSendPlaneLine } from 'react-icons/ri';
 const HeaderIcons = () => {
   const dispatch = useDispatch();
   const basket = useSelector(
@@ -14,19 +13,6 @@ const HeaderIcons = () => {
   const goods = checkGoods(basket);
   return (
     <div className={styles.icons_wrapper}>
-      <NavLink
-        to={auth ? '.' : 'login'}
-        end={auth ? true : false}
-        onClick={() => {
-          if (auth) {
-            dispatch(quitAuthAC());
-          }
-        }}
-      >
-        <div className={styles.media_icons_container}>
-          <RiSendPlaneLine className={styles.icon} />
-        </div>
-      </NavLink>
       <NavLink
         to={auth ? '.' : 'login'}
         end={auth ? true : false}
@@ -47,7 +33,7 @@ const HeaderIcons = () => {
           <IconInfo
             text={
               basket?.length
-                ? 'У вас в корзине  ' + `${basket.length} ${goods}`
+                ? `У вас в корзине ${basket.length} ${goods}`
                 : 'Ваша корзина пуста'
             }
             discription="bag"

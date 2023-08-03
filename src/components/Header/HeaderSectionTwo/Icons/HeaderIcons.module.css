@@ -13,9 +13,6 @@
   fill: var(--grey);
   margin-bottom: calc(var(--index) * 0.5);
 }
-.icon:first-child {
-  margin-right: 5px;
-}
 .icon:hover {
   transform: scale(1.05);
   fill: #5a5a5a;
@@ -73,6 +70,9 @@
   right: 0px;
   animation: addToBasket 0.2s ease-in-out;
 }
+.basket_wrapper .icon {
+  margin-left: calc(var(--index) * 0.5);
+}
 @media (max-width: 767px) {
   .icon_discription::before {
     display: none;
@@ -84,10 +84,11 @@
     font-size: 20px;
     fill: var(--black);
     display: inline-block;
-    margin-right: 35px;
+    margin-bottom: 0;
+    margin-right: 10px;
   }
-  .icon:first-child {
-    margin-right: 20px;
+  .basket_wrapper .icon {
+    margin-left: 0;
   }
   .icon:hover {
     fill: var(--dark-green);
