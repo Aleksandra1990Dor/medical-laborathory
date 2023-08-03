@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/medical-laborathory/static/css/main.bc17d1ac.css",
-    "main.js": "/medical-laborathory/static/js/main.c1ac056f.js",
+    "main.css": "/medical-laborathory/static/css/main.cb729a4b.css",
+    "main.js": "/medical-laborathory/static/js/main.9aa73096.js",
     "static/media/team.png": "/medical-laborathory/static/media/team.8946ae529e75605409dd.png",
     "static/media/job-opening-nurce.png": "/medical-laborathory/static/media/job-opening-nurce.b33474feaa5b2ab663f7.png",
     "static/media/test-tubes.png": "/medical-laborathory/static/media/test-tubes.a89993cbc8a3f4d69007.png",
@@ -38,11 +38,11 @@
     "static/media/quality-1.svg": "/medical-laborathory/static/media/quality-1.8dd6af6051bd8239245acfd5297b33f3.svg",
     "static/media/quality-2.svg": "/medical-laborathory/static/media/quality-2.610270db74aa02907cdb3a59aecc3829.svg",
     "index.html": "/medical-laborathory/index.html",
-    "main.bc17d1ac.css.map": "/medical-laborathory/static/css/main.bc17d1ac.css.map",
-    "main.c1ac056f.js.map": "/medical-laborathory/static/js/main.c1ac056f.js.map"
+    "main.cb729a4b.css.map": "/medical-laborathory/static/css/main.cb729a4b.css.map",
+    "main.9aa73096.js.map": "/medical-laborathory/static/js/main.9aa73096.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc17d1ac.css",
-    "static/js/main.c1ac056f.js"
+    "static/css/main.cb729a4b.css",
+    "static/js/main.9aa73096.js"
   ]
 }
