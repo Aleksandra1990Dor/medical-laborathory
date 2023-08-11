@@ -1,12 +1,8 @@
 import styles from './Preorder.module.css';
-import { useState, useLayoutEffect } from 'react';
+import { useState } from 'react';
 import PreorderForm from './PreorderForm/PreorderForm';
 
 const Preorder = () => {
-  // scroll to top in the begining
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
   // classes for hidden div
   const [atHome, setAtHome] = useState(styles.hidden);
   // show or hide hidden form

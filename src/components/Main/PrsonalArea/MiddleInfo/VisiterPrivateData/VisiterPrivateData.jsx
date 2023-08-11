@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import TableDataContainer from '../TableData/TableDataContainer';
 import styles from './VisiterPrivateData.module.css';
 import { useEffect } from 'react';
-import VisiterDataHeader from '../MiddleInfoHeader/VisiterDataHeader';
 
 const VisiterPrivateData = () => {
   const navigate = useNavigate();
@@ -23,9 +22,14 @@ const VisiterPrivateData = () => {
     'редактировать',
   ];
   //   array with visiter adresses for table
-  const userAdresses = [];
+  const userAdresses = useSelector(
+    (state) => state.mainInfoReduser.visiterInfo.myAdresses
+  );
   //array with visiter centers for table
-  const userCenters = [];
+  const userCenters = useSelector(
+    (state) => state.mainInfoReduser.visiterInfo.myCenters
+  );
+
   // if user not autorized redirect to login
   useEffect(() => {
     if (!info.isAuth) {
@@ -34,7 +38,6 @@ const VisiterPrivateData = () => {
   });
   return (
     <div className={styles.infoWrapper}>
-      <VisiterDataHeader />
       <TableDataContainer
         title={'Персоналные данные'}
         tableTitles={['ФИО', 'Дата рождения', 'Пол', 'Телефон', 'email', ' ']}

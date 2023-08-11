@@ -36,15 +36,19 @@
   font-weight: 600;
 }
 @media (max-width: 767px) {
+  .input_wrapper {
+    width: 90%;
+  }
   .input_wrapper input {
     margin-bottom: 5px;
-    padding: 5px 10px;
-    font-size: 12px;
-    width: 90%;
+    padding: 7px 10px;
+    font-size: 14px;
+    width: 95%;
   }
   .input_wrapper label {
     margin-bottom: 5px;
-    font-size: 8px;
+    width: 100%;
+    font-size: 10px;
   }
   .error {
     font-size: 8px;

@@ -1,0 +1,23 @@
+.mobile_navigation {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile_navigation {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-around;
+    font-size: 10px;
+  }
+  .mobile_navigation .navItem {
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    padding: 4px 5px;
+    font-weight: 700;
+    color: var(--grey);
+  }
+  .mobile_navigation .navItem_active {
+    color: var(--dark-green);
+    border-bottom: 1px solid var(--green);
+  }
+}

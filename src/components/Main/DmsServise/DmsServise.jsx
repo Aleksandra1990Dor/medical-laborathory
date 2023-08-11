@@ -2,13 +2,15 @@ import document from '../../../img/document.png';
 import calendar from '../../../img/calendar.png';
 import fanendoscop from '../../../img/fanendoskop.png';
 import dna from '../../../img/dna-test.png';
-import jantung from '../../../img/Shield-test.png';
 import styles from './DmsServise.module.css';
 const DmsServise = () => {
   return (
     <div className={styles.dms_container}>
       <div className={styles.bg_image_1}>
-        <img src={dna} />
+        <img
+          src={dna}
+          alt="днк"
+        />
       </div>
       <div className={styles.dms_title_wrapper}>
         <h2>Прием по ДМС</h2>
@@ -20,18 +22,27 @@ const DmsServise = () => {
       </div>
       <div className={styles.dms_wrapper}>
         <div className={styles.dms_item}>
-          <img src={fanendoscop} />
+          <img
+            src={fanendoscop}
+            alt="фанендоскоп"
+          />
           <p>Обратитесь в свою страховую компанию</p>
         </div>
         <div className={styles.dms_item}>
-          <img src={calendar} />
+          <img
+            src={calendar}
+            alt="календарь"
+          />
           <p>
             Согласуйте со страховой компанией список анализов, а также формат
             визита: в Центры Victoria или вызов Мобильной службы на дом
           </p>
         </div>
         <div className={styles.dms_item}>
-          <img src={document} />
+          <img
+            src={document}
+            alt="документ"
+          />
           <p>Ваш заказ будет оплачен страховой компанией</p>
         </div>
       </div>

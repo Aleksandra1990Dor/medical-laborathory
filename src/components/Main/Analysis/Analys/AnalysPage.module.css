@@ -156,4 +156,5 @@
 .added {
   color: #fff;
   margin-bottom: calc(var(--index) * 1);
+  font-size: calc(var(--index) * 0.65);
 }

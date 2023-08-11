@@ -6,6 +6,7 @@ const MainCaruselSection = () => {
   return (
     <section className={styles.wrapper}>
       <img
+        alt="лаборатория"
         className={styles.bg_img}
         src={bgMicroscope}
       />

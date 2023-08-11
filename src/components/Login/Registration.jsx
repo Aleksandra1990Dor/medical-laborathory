@@ -147,25 +147,29 @@ const Registration = () => {
                 />
               )}
             />
-            <label>
-              <span>Ваш город: </span>
-              <select
-                onChange={(e) => {
-                  setCity(e.target.value);
-                }}
-              >
-                {cities.map((city, index) => {
-                  return (
-                    <option
-                      value={city}
-                      key={index}
-                    >
-                      {city}
-                    </option>
-                  );
-                })}
-              </select>
+            <label
+              className={styles.select_label}
+              htmlFor="select"
+            >
+              Ваш город:
             </label>
+            <select
+              id="select"
+              onChange={(e) => {
+                setCity(e.target.value);
+              }}
+            >
+              {cities.map((city, index) => {
+                return (
+                  <option
+                    value={city}
+                    key={index}
+                  >
+                    {city}
+                  </option>
+                );
+              })}
+            </select>
           </div>
         </div>
         <div className={styles.btnWrapper}>

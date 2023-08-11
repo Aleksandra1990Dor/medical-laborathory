@@ -167,5 +167,6 @@ dialogs header
 @media (max-width: 426px) {
   .dialog_window {
     width: 90vw;
+    height: 90vh;
   }
 }

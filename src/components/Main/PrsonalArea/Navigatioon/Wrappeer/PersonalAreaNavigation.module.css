@@ -14,3 +14,8 @@
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  .navWrapper {
+    display: none;
+  }
+}

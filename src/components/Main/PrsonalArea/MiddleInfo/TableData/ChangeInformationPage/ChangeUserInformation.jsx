@@ -1,9 +1,11 @@
 import { AiOutlineClose } from 'react-icons/ai';
 import styles from './ChangeUserInformation.module.css';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { changeVisiterInfoAC } from '../../../../../store/mainInfoReduser';
 import { useDispatch } from 'react-redux';
-import Input from '../Input/Input';
+import CustumInput from '../../../../Basket/Preorder/Utils/CustumInput/CustumInput';
+import CustumFormButtons from '../../../../Basket/Preorder/Utils/CustumFormButtons/CustumFormButtons';
+import { BasketButtonSubmit } from '../../../../Basket/BasketUtils/BasketButton';
 
 const ChangeUserInformation = ({
   toggleClass,
@@ -11,60 +13,104 @@ const ChangeUserInformation = ({
   title,
   tableTitles,
 }) => {
-  // get dispatch
   const dispatch = useDispatch();
-  //   get register and handleSubmit functions from useForm
-  const { register, handleSubmit } = useForm({
-    defaultValues: {},
-  });
-  // function for submit form
+  const { handleSubmit, control, setValue } = useForm({ mode: 'onSubmit' });
   const submitHandler = (data) => {
-    // distructure of object with data
     const { fatherName, dateOfBurn, sex, phone, email } = { ...data };
-    // if form is "changing personal info" - set new info to state
     if (title === 'Персоналные данные') {
       dispatch(changeVisiterInfoAC(fatherName, dateOfBurn, sex, phone, email));
     }
-    // close form in the end
     showOrHideMore();
-  };
-  //   array with names for inputs
-  const inputValues = ['fatherName', 'dateOfBurn', 'sex', 'phone', 'email'];
-  //   function checking values of input and returning type of input
-  const switchInputType = (title) => {
-    if (title === 'Дата рождения') {
-      return 'date';
-    } else {
-      return 'text';
-    }
   };
   return (
     <div className={toggleClass}>
       <div className={styles.changeInfoContainer}>
-        {/* closing icon */}
         <AiOutlineClose
           className={styles.closeIcon}
           onClick={showOrHideMore}
         />
-        {/* form */}
         <form onSubmit={handleSubmit(submitHandler)}>
-          {/* maping titles as a name of inputs */}
-          {tableTitles.map((title, index) => {
-            // there is empty area of table return false
-            if (title === ' ') {
-              return false;
-            }
-            return (
-              <Input
-                switchInputType={switchInputType}
-                title={title}
-                initialValue={inputValues[index]}
-                key={index}
-                register={register}
+          <div className={styles.merch}>
+            <Controller
+              name="fatherName"
+              control={control}
+              defaultValue={''}
+              render={({ field: { onChange, onBlur, value, name, ref } }) => (
+                <CustumInput
+                  title="Отчество"
+                  name={name}
+                  inputRef={ref}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
+            />
+            <Controller
+              name="dateOfBurn"
+              control={control}
+              defaultValue={''}
+              render={({ field: { onChange, onBlur, value, name, ref } }) => (
+                <CustumInput
+                  title="Дата рождения"
+                  name={name}
+                  inputRef={ref}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
+            />
+          </div>
+          <Controller
+            name="sex"
+            control={control}
+            defaultValue="мужской"
+            render={({ field: { onChange, onBlur, value, name, ref } }) => (
+              <CustumFormButtons
+                title="Пол"
+                name={name}
+                inputRef={ref}
+                onBlur={onBlur}
+                value={value}
+                onChange={onChange}
+                setValue={setValue}
               />
-            );
-          })}
-          <button className={styles.infoTitleBtn}>сохранить</button>
+            )}
+          />
+          <div className={styles.merch}>
+            <Controller
+              name="phone"
+              control={control}
+              defaultValue={''}
+              render={({ field: { onChange, onBlur, value, name, ref } }) => (
+                <CustumInput
+                  title="Телефон"
+                  name={name}
+                  inputRef={ref}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
+            />
+            <Controller
+              name="email"
+              control={control}
+              defaultValue={''}
+              render={({ field: { onChange, onBlur, value, name, ref } }) => (
+                <CustumInput
+                  title="E-mail"
+                  name={name}
+                  inputRef={ref}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  value={value}
+                />
+              )}
+            />
+          </div>
+          <BasketButtonSubmit>сохранить</BasketButtonSubmit>
         </form>
       </div>
     </div>

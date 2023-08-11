@@ -20,7 +20,10 @@ const StepsForOrder = () => {
           <Buttons />
         </div>
         <div className={styles.home_servise_title_img}>
-          <img src={saveTime} />
+          <img
+            src={saveTime}
+            alt="экономия времени"
+          />
         </div>
       </div>
       <Steps />
@@ -37,21 +40,30 @@ export const Steps = () => {
         <div className={styles.step}>
           <div className={styles.stepNumber}>1</div>
           <div className={styles.iconWrapper}>
-            <img src={probirka} />
+            <img
+              src={probirka}
+              alt="пробирка"
+            />
           </div>
           <small>Выберите необходимые анализы</small>
         </div>
         <div className={styles.step}>
           <div className={styles.stepNumber}>2</div>
           <div className={styles.iconWrapper}>
-            <img src={calendar} />
+            <img
+              src={calendar}
+              alt="кальендарь"
+            />
           </div>
           <small>Оформите заказ и укажите удобное время</small>
         </div>
         <div className={styles.step}>
           <div className={styles.stepNumber}>3</div>
           <div className={styles.iconWrapper}>
-            <img src={check} />
+            <img
+              src={check}
+              alt="проверка"
+            />
           </div>
           <small>
             В назначенное время к вам на дом приедет медратниик и возьмет
@@ -61,7 +73,10 @@ export const Steps = () => {
         <div className={styles.step}>
           <div className={styles.stepNumber}>4</div>
           <div className={styles.iconWrapper}>
-            <img src={computer} />
+            <img
+              src={computer}
+              alt="компьюютер"
+            />
           </div>
           <small> Получите результат в личном кабинете</small>
         </div>

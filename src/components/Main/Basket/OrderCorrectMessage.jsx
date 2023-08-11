@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import styles from './OrderCorrectMessage.module.css';
+import { BasketButton } from './BasketUtils/BasketButton';
 
 const OrderCorrectMessage = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const OrderCorrectMessage = () => {
         На указанный электронный адрес выслано письмо с данными предварительного
         заказа.
       </div>
+      <BasketButton to="/medical-laborathory/">На главную</BasketButton>
     </div>
   );
 };

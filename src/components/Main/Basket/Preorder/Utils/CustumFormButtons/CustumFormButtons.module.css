@@ -61,10 +61,11 @@ label.btn_label:last-child {
 }
 @media (max-width: 767px) {
   label.btn_label {
-    font-size: 8px;
+    font-size: 10px;
   }
   .custom_radio:checked + label,
   .custom_radio:not(:checked) + label {
-    font-size: 10px;
+    padding: 10px;
+    font-size: 12px;
   }
 }

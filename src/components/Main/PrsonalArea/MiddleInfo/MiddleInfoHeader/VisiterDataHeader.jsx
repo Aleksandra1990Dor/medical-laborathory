@@ -9,7 +9,6 @@ const VisiterDataHeader = () => {
   const info = useSelector((state) => state.mainInfoReduser.visiterInfo);
   return (
     <>
-      {/* link 'back to main page' */}
       <BackLink />
       {/* greeting div with name and line */}
       <div className={styles.visiterGreeting}>
@@ -21,10 +20,10 @@ const VisiterDataHeader = () => {
         {/* visiter name */}
         <span className={styles.visiterNameText}>
           {`${info.name} ${info.surName} `}
-          {/* link chane user redirect to login */}
+          {/* link change user redirect to login */}
           <NavLink
             className={styles.visiterNameLink}
-            to="/login"
+            to="/medical-laborathory/login"
           >
             (изменить)
           </NavLink>

@@ -10,7 +10,14 @@ const AdressesPageLeftSide = ({ city, showOrHideMore }) => {
         <small onClick={showOrHideMore}>(изменить)</small>:
       </h4>
       <div className={styles.img_conteiner}>
-        {geolocation ? <img src={geolocation} /> : <Preloader />}
+        {geolocation ? (
+          <img
+            src={geolocation}
+            alt="геолокация"
+          />
+        ) : (
+          <Preloader />
+        )}
       </div>
     </div>
   );

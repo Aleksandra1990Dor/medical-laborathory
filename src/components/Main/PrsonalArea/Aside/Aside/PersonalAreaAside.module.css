@@ -9,6 +9,11 @@
   border-left: 1px solid var(--yellow);
   height: 100%;
 }
+@media (max-width: 767px) {
+  .infoContainer {
+    display: none;
+  }
+}
 /* brown aside hidden container */
 .infoWrapper {
   position: absolute;

@@ -8,3 +8,8 @@
   font-size: calc(var(--index) * 1.5);
   margin-bottom: calc(var(--index) * 2);
 }
+@media (max-width: 767px) {
+  .actions {
+    padding: 10px;
+  }
+}

@@ -37,6 +37,7 @@ export const analysisSearching = (analysis, value) => {
     ) {
       return analys;
     }
+    return null;
   });
   //if array is empty pushing result 'no surch value'
   if (!searchResult.length) searchResult.push('Ничего не найдено');

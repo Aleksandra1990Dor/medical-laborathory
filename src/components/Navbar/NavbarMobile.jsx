@@ -6,7 +6,7 @@ import { FaAmbulance } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { useToggleClass } from '../CustomHooks/UseToggle';
 import { useSelector } from 'react-redux';
-import City from '../Header/HeaderSectionOne/RightSide/City';
+import { ChoseCity } from '../Header/HeaderSectionOne/RightSide/City';
 const NavbarMobile = () => {
   const [toggleClassList, showItems, hideItems] = useToggleClass(
     styles.hidden_animation,
@@ -51,7 +51,7 @@ const NavbarMobile = () => {
               onClick={hideItems}
               className={styles.closing_icon}
             />
-            <City city={city} />
+            <ChoseCity city={city} />
             <div className={styles.main_navigation}>
               {links.navLinks.map((link, index) => {
                 if (index === 0 || index === 1 || index === 4) {

@@ -1,4 +1,14 @@
 /* middle side wrapper */
 .infoWrapper {
   padding: 0 calc(var(--index) * 2);
+  min-height: 60vh;
+  position: relative;
+  overflow: visible;
+}
+@media (max-width: 767px) {
+  .infoWrapper {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 50px;
+  }
 }

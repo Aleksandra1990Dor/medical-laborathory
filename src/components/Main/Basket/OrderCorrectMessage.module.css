@@ -8,7 +8,7 @@
 
 .wrapper h1 {
   font-size: calc(var(--index) * 2);
-  line-height: calc(var(--index) * 1.9);
+  line-height: calc(var(--index) * 2.2);
   font-weight: 700;
   margin-bottom: calc(var(--index) * 3);
   color: var(--black);

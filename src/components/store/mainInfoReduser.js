@@ -10,6 +10,9 @@ const LOGIN = 'LOGIN';
 const REGISTRATION = 'REGISTRATION';
 const CHANGE_VISITER_INFO = 'CHANGE_VISITER_INFO';
 const SET_ORDER_INFORMATION = 'SET_ORDER_INFORMATION';
+const ADD_CENTER = 'ADD_CENTER';
+const DELETE_CENTER = 'DELETE_CENTER';
+const ADD_ADRESS = 'ADD_ADRESS';
 const initialState = {
   orderInformation: {
     fullName: null,
@@ -38,6 +41,8 @@ const initialState = {
     sex: null,
     phone: null,
     email: null,
+    myCenters: [],
+    myAdresses: [],
   },
   searchFilter: [],
   cities: [
@@ -158,6 +163,19 @@ const mainInfoReduser = (state = initialState, action) => {
           priceSum: (state.visiterInfo.priceSum -= action.price),
         },
       };
+    case DELETE_CENTER:
+      return {
+        ...state,
+        visiterInfo: {
+          ...state.visiterInfo,
+          myCenters: state.visiterInfo.myCenters.filter(
+            (center) => center !== action.center
+          ),
+          myAdresses: state.visiterInfo.myAdresses.filter(
+            (center) => center !== action.center
+          ),
+        },
+      };
     case PRICE_SUM:
       return {
         ...state,
@@ -191,6 +209,22 @@ const mainInfoReduser = (state = initialState, action) => {
           sex: null,
           phone: null,
           email: null,
+        },
+      };
+    case ADD_CENTER:
+      return {
+        ...state,
+        visiterInfo: {
+          ...state.visiterInfo,
+          myCenters: [...state.visiterInfo.myCenters, action.center],
+        },
+      };
+    case ADD_ADRESS:
+      return {
+        ...state,
+        visiterInfo: {
+          ...state.visiterInfo,
+          myAdresses: [...state.visiterInfo.myAdresses, action.adress],
         },
       };
     case LOGIN:
@@ -253,6 +287,9 @@ const mainInfoReduser = (state = initialState, action) => {
       return state;
   }
 };
+export const deleteCenterAC = (center) => ({ type: DELETE_CENTER, center });
+export const addAdressAC = (adress) => ({ type: ADD_ADRESS, adress });
+export const addCenterAC = (center) => ({ type: ADD_CENTER, center });
 export const setOrderInformationAC = (
   fullName,
   dateOfBurn,

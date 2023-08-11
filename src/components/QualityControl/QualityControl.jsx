@@ -2,10 +2,6 @@ import styles from './QualityControl.module.css';
 import QualityControlTitleSection from './TitleSection/QualityControlTitleSection';
 import QualityControlSteps from './StepsSection/QualityControlSteps';
 import QualityControlSectionCup from './SectionCup/QualityControlSectionCup';
-import stepOne from '../../img/quality-1.svg';
-import stepTwo from '../../img/quality-2.svg';
-import stepThree from '../../img/quality-3.svg';
-import cup from '../../img/cup.png';
 
 const QualityControl = () => {
   return (

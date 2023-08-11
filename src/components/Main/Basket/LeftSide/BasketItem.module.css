@@ -50,6 +50,7 @@
   font-weight: 700;
   margin-right: 10px;
   font-size: calc(var(--index) * 1.1);
+  width: max-content;
 }
 /* delete icon */
 .delete_item {

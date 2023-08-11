@@ -4,3 +4,9 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .personalAreaWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

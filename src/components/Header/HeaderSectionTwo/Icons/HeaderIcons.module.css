@@ -67,7 +67,7 @@
   border-radius: 50%;
   font-weight: 700;
   top: -3px;
-  right: 0px;
+  right: -4px;
   animation: addToBasket 0.2s ease-in-out;
 }
 .basket_wrapper .icon {

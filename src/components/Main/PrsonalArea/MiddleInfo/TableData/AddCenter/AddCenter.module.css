@@ -5,13 +5,8 @@
   padding: calc(var(--index) * 2) calc(var(--index) * 2);
   border: 3px solid var(--green);
   box-shadow: var(--box-shadow);
-}
-/* form wrapper */
-.changeInfoContainer form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 70%;
+  height: 80%;
 }
 /* closing icon styles */
 .closeIcon {
@@ -27,32 +22,23 @@
 .closeIcon:hover {
   transform: scale(1.2);
 }
-/* button styles */
-.infoTitleBtn {
-  padding: calc(var(--index) * 0.3);
-  font-size: calc(var(--index) * 0.7);
-  background-color: #fff;
-  border: 1px solid var(--green);
-  color: var(--green);
-  border-radius: calc(var(--index) * 0.65);
+.changeInfoContainer h3 {
+  margin-bottom: calc(var(--index) * 1.2);
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 1);
   cursor: pointer;
 }
-.infoTitleBtn:hover {
-  background-color: var(--green);
-  color: #fff;
+.info_table_row {
+  font-weight: 600;
+  color: var(--black);
+  font-size: calc(var(--index) * 0.65);
+  margin-bottom: calc(var(--index) * 0.75);
+  cursor: pointer;
 }
-.infoTitleBtn:active {
-  transform: scale(0.95);
+.info_table_row:last-of-type {
+  margin-bottom: 0;
 }
-.merch {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-.merch input:nth-child(1),
-.merch input:nth-child(3) {
-  margin-right: calc(var(--index) * 1);
-}
+
 @media (max-width: 767px) {
   .changeInfoContainer {
     padding: 20px;
@@ -67,10 +53,5 @@
     cursor: pointer;
     transition: transform 0.2s ease;
     will-change: transform;
-  }
-  .merch {
-    flex-direction: column;
-    margin-right: 0;
-    width: 100%;
   }
 }

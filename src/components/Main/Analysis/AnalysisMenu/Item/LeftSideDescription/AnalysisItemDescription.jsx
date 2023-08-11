@@ -4,7 +4,11 @@ import styles from './AnalysisItemDescription.module.css';
 
 const AnalysisItemDescription = ({ analys, navigate, noLink }) => {
   return (
-    <div onClick={() => navigate(noLink ? '' : `../../analys/${analys?.id}`)}>
+    <div
+      onClick={() =>
+        navigate(noLink ? '' : `/medical-laborathory/analys/${analys?.id}`)
+      }
+    >
       <h2 className={styles.analys_article}>№ {analys?.id}</h2>
       <NavLink className={styles.analys_title}>{analys?.title}</NavLink>
       <p className={styles.analys_description}>

@@ -1,7 +1,10 @@
 import styles from './InfoCard.module.css';
-const InfoCard = ({ children, title, src, alt }) => {
+const InfoCard = ({ children, title, src, alt, onClick }) => {
   return (
-    <div className={styles.card_wrapper}>
+    <div
+      className={styles.card_wrapper}
+      onClick={onClick}
+    >
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{children}</p>
       <img

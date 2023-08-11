@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .loginContainer {
   padding: calc(var(--index) * 3);
   background-color: #fff;
@@ -21,6 +22,7 @@
   position: relative;
   box-shadow: var(--box-shadow);
 }
+
 .loginContainer h5 {
   font-weight: 700;
   margin-bottom: calc(var(--index) * 1.2);
@@ -28,29 +30,7 @@
   color: var(--dark-grey);
   font-size: calc(var(--index) * 1);
 }
-.loginContainer label {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: calc(var(--index) * 0.7);
-  color: var(--light-grey);
-  width: calc(var(--index) * 13);
-}
-.loginContainer label span {
-  margin-bottom: calc(var(--index) * 0.3);
-}
-.loginContainer input {
-  border: 1px solid var(--green);
-  margin-bottom: calc(var(--index) * 1);
-  border-radius: calc(var(--index) * 2);
-  font-size: calc(var(--index) * 0.85);
-  padding: 7px 10px;
-  text-align: center;
-  color: var(--black);
-}
-input:focus {
-  box-shadow: 0 0 5px var(--light-grey);
-}
+
 .loginContainer button {
   margin-bottom: calc(var(--index) * 0.75);
 }
@@ -75,7 +55,6 @@ input:focus {
   position: absolute;
   right: 7%;
   top: 7%;
-
   fill: var(--grey);
   font-size: calc(var(--index) * 0.8);
   cursor: pointer;
@@ -84,4 +63,26 @@ input:focus {
 }
 .closeIcon:hover {
   transform: scale(1.2);
+}
+@media (max-width: 767px) {
+  .loginContainer {
+    width: 90vw;
+    min-height: 50vh;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .loginContainer h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .closeIcon {
+    font-size: 16px;
+  }
+  .error {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .loginContainer small {
+    font-size: 12px;
+  }
 }

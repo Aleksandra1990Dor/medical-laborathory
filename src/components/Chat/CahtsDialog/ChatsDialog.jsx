@@ -2,7 +2,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { BsFillSendFill } from 'react-icons/bs';
 import { useState } from 'react';
 import styles from './ChatsDialog.module.css';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addAdminMessageAC,
@@ -13,7 +12,6 @@ const ChatsDialog = ({ toggleClass, showDialog }) => {
   const allMessages = useSelector((state) => state.dialogsReduser);
   const dispatch = useDispatch();
   const [value, setValue] = useState('');
-  const navigate = useNavigate();
   return (
     <div className={toggleClass}>
       <div className={styles.dialog_window}>

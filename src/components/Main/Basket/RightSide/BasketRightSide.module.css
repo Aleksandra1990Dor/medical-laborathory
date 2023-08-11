@@ -50,11 +50,14 @@
     display: none;
   }
   .basket_price_view {
-    width: 100%;
+    width: 50%;
     height: auto;
-    margin-bottom: 5px;
     align-items: center;
     padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: var(--block-shadow);
   }
   .order_city {
     font-size: 12px;
@@ -69,8 +72,10 @@
     margin-bottom: 5px;
   }
   .order_price h3 {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 700;
+    padding: 0 3px;
+    border-bottom: 1px solid var(--bg-color);
   }
 }
 .basket_order h3::after {

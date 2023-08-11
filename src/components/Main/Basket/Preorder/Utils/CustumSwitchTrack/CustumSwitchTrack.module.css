@@ -70,9 +70,21 @@
 @media (max-width: 767px) {
   .switch_label {
     width: 90%;
-    font-size: 6px;
+    padding: 10px;
+    font-size: 10px;
   }
   .switch_label_icon {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  .custom_switch:checked + label,
+  .custom_switch:not(:checked) + label {
+    width: 33px;
+    height: 18px;
+  }
+  .custom_switch:checked + label::after,
+  .custom_switch:not(:checked) + label::after {
+    top: 11%;
+    width: 40%;
+    height: 80%;
   }
 }
