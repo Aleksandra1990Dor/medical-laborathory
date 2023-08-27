@@ -1,3 +1,6 @@
+import { BiSolidBabyCarriage } from 'react-icons/bi';
+import { TbDisabled, TbOld } from 'react-icons/tb';
+
 const SET_ORIENTATION = 'SET_ORIENTATION';
 const CHANGE_CITY = 'CHANGE_CITY';
 const SET_FILTER = 'SET_FILTER';
@@ -53,7 +56,7 @@ const initialState = {
     'Псков ',
     'Уфа ',
     'Стерлитамак ',
-    'Ростов на дону',
+    'Ростов-на-Дону',
     'Белгород ',
   ],
   adresses: {
@@ -103,13 +106,27 @@ const initialState = {
       'ул. Шафиева, 1, Стерлитамак, Респ. Башкортостан, Россия, 453126',
       'ул. Голикова, 1, помещение III, Стерлитамак, Респ. Башкортостан, Россия, 453103',
     ],
-    'Ростов на дону': [
+    'Ростов-на-Дону': [
       'б-р Комарова, 30, Ростов-на-Дону, Ростовская обл., Россия, 344113',
     ],
     'Белгород ': [
       'ул. Губкина, 25, Белгород, Белгородская обл., Россия, 308036',
     ],
   },
+  adressIconsInfo: [
+    { icon: <TbDisabled />, description: 'Вход для инвлидов' },
+    {
+      icon: <BiSolidBabyCarriage />,
+      description: 'Вход с колясками',
+    },
+    { icon: <TbOld />, description: 'Помощь для пожилых людей' },
+  ],
+  adressesInfoTitles: ['Приём анализов (кроме COVID-19)', 'ПЦР-тесты COVID-19'],
+  schedule: [
+    ['Пн. – пт.', '	7:30 – 17:15'],
+    ['Сб.', '7:30 – 14:15'],
+    ['Вс.', 'Выходной'],
+  ],
   phones: [
     {
       phone: '8-800-05-50-05',
@@ -145,6 +162,9 @@ const mainInfoReduser = (state = initialState, action) => {
         searchFilter: action.results,
       };
     case ADD_SERVIS:
+      if (state.visiterInfo.basket.includes(action.servis)) {
+        return state;
+      }
       return {
         ...state,
         visiterInfo: {
@@ -212,6 +232,9 @@ const mainInfoReduser = (state = initialState, action) => {
         },
       };
     case ADD_CENTER:
+      if (state.visiterInfo.myCenters.includes(action.center)) {
+        return state;
+      }
       return {
         ...state,
         visiterInfo: {

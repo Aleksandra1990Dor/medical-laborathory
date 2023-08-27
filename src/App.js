@@ -10,30 +10,24 @@ import AnalysisPage from './components/Main/Analysis/AnalysisMenu/AnalysisPage';
 import Chat from './components/Chat/ChatIcon/Chat';
 import Analysis from './components/Main/Analysis/AnalysisMenu/Analysis';
 import Basket from './components/Main/Basket/MainLayout/Basket';
-import HomeServise from './components/Main/ForPations/HomeServise';
 import ActionsPage from './components/Main/ActionsPage/ActionsPage';
 import Login from './components/Login/Login';
 import AuthOutMsg from './components/Login/AuthOutMsg';
 import Registration from './components/Login/Registration';
 import PersonalArea from './components/Main/PrsonalArea/MainContainer/PersonalArea';
-import AdressesPage from './components/Main/Adresses/MainContainer/AdressesPage';
 import DoctorsServisePage from './components/Main/DoctorsServicePage/DoctorsServisePage';
 import OtherServisesPage from './components/Main/OtherServises/OtherServisesPage';
 import MainLayout from './components/MainLayout/MainLayout';
-import DmsServise from './components/Main/DmsServise/DmsServise';
 import Analys from './components/Main/Analysis/Analys/Analys';
 import ChatsDialog from './components/Chat/CahtsDialog/ChatsDialog';
 import Preorder from './components/Main/Basket/Preorder/Preorder';
 import OrderChecking from './components/Main/Basket/OrderChecking/OrderChecking';
 import BasketMain from './components/Main/Basket/MainLayout/BasketMain';
-import Contacts from './components/Contacts/Contacts';
-import Licenses from './components/Lisenses/Licenses';
-import QualityControl from './components/QualityControl/QualityControl';
 import OrderCorrectMessage from './components/Main/Basket/OrderCorrectMessage';
 import VisiterPrivateData from './components/Main/PrsonalArea/MiddleInfo/VisiterPrivateData/VisiterPrivateData';
 import VisiterAnalysisData from './components/Main/PrsonalArea/MiddleInfo/VisiterAnalysis/VisiterAnalysisData';
 import VisiterDynamicData from './components/Main/PrsonalArea/MiddleInfo/VisiterDynamicData/VisiterDynamicData';
-import JobOpenigs from './components/JobOpenings/JobOpenigs';
+import About from './components/About/About';
 const App = () => {
   const [toggleClass, setToggleClass] = useToggle(
     'dialog_wrapper',
@@ -124,47 +118,25 @@ const App = () => {
               path="for-doctors"
               element={<MainForDoctors />}
             />
-            <Route
-              path="contacts"
-              element={<Contacts />}
-            />
-            <Route
-              path="licenses"
-              element={<Licenses />}
-            />
-            <Route
-              path="quality-control"
-              element={<QualityControl />}
-            />
-            <Route
-              path="job-openings"
-              element={<JobOpenigs />}
-            />
+
             <Route
               path="for-organisations"
               element={<MainForOrganisations />}
             />
             <Route
-              path="dms"
-              element={<DmsServise />}
+              path="about/*"
+              element={<About />}
             />
-
             <Route
               path="preorder/complete/№=41898-427534"
               element={<OrderCorrectMessage />}
             />
-            <Route
-              path="home-servis"
-              element={<HomeServise />}
-            />
+
             <Route
               path="other-servises"
               element={<OtherServisesPage />}
             />
-            <Route
-              path="adresses"
-              element={<AdressesPage />}
-            />
+
             <Route
               path="actions-page"
               element={<ActionsPage />}

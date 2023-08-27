@@ -27,9 +27,7 @@ const Login = () => {
     }
   };
   const redirect = () => {
-    return auth
-      ? navigate('/medical-laborathory/private-area')
-      : navigate('../');
+    return auth ? navigate('/medical-laborathory/private-area') : navigate(-1);
   };
   return (
     <div className={styles.loginWrapper}>

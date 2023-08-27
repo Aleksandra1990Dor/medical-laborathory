@@ -1,0 +1,37 @@
+/* shelude wrapper */
+.schedule {
+  margin-bottom: calc(var(--index) * 1);
+}
+/* schedule title */
+.schedule_title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: calc(var(--index) * 0.5);
+}
+/* icon show or hide schedule */
+.icon_more {
+  margin-left: calc(var(--index) * 0.15);
+  font-size: calc(var(--index) * 0.75);
+}
+/* row in schedule */
+.row {
+  display: flex;
+  padding: 0 calc(var(--index) * 0.75);
+  margin-bottom: calc(var(--index) * 0.35);
+}
+.row:last-of-type {
+  margin-bottom: 0;
+}
+/* row title */
+.row_title {
+  margin-right: calc(var(--index) * 0.7);
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}

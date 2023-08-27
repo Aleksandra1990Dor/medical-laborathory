@@ -1,0 +1,57 @@
+/* icon wrapper */
+.icon_wrapper {
+  position: relative;
+  margin-right: calc(var(--index) * 0.5);
+}
+.icon_wrapper:last-of-type {
+  margin-right: 0;
+}
+/* icon container */
+.icon_container {
+  padding: calc(var(--index) * 0.15) calc(var(--index) * 0.3);
+  background-color: var(--brown);
+  color: #fff;
+  font-size: calc(var(--index) * 1);
+  border-radius: 50%;
+}
+/* hidden icon descrioption */
+.icon_description {
+  position: absolute;
+  bottom: 130%;
+  left: -100%;
+  width: max-content;
+  padding: calc(var(--index) * 0.5);
+  background-color: #fff;
+  color: var(--brown);
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  border: 1px solid var(--bg-grey);
+  border-radius: calc(var(--index) * 0.5);
+}
+.hidden {
+  display: none;
+}
+.hide_info_animation {
+  animation: hideInfo 0.4s ease;
+}
+@media (max-width: 767px) {
+  .icon_description {
+    display: none;
+  }
+}
+@keyframes showInfo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideInfo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

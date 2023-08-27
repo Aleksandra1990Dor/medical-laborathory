@@ -120,7 +120,7 @@ const initialState = {
       title: 'Выезд на дом',
       src: bagTest,
       alt: 'выезд на дом',
-      link: 'home-servis',
+      link: 'about/home-servis',
     },
     {
       id: 3,
@@ -134,7 +134,7 @@ const initialState = {
       title: 'Адреса и время работы ',
       src: map,
       alt: 'карта',
-      link: 'adresses',
+      link: 'about/adresses',
     },
   ],
   cardsForPations: [

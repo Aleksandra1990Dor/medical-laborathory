@@ -20,7 +20,7 @@ const InfoAside = ({ ToggleClass, setToggleClass, showHiddenInfo }) => {
       </strong>
       <button
         className={styles.infoBtn}
-        onClick={() => Navigate('../dms')}
+        onClick={() => Navigate('../about/dms')}
       >
         Больше информации
       </button>

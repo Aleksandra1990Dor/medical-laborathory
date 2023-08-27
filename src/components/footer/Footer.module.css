@@ -72,10 +72,11 @@
   display: flex;
 }
 @media (max-width: 767px) {
-  /* .footer_wrapper {
+  .footer_wrapper {
     width: 100%;
     display: block;
-  } */
+    padding-bottom: 80px;
+  }
   .footer_right {
     display: none;
   }

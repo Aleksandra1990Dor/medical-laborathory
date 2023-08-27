@@ -15,10 +15,10 @@ const HeaderMobileSection = () => {
         <div className={styles.links_wrapper}>
           <HeaderIcons />
           <Button
-            text="Получить результат"
+            text="личный кабинет"
             toggleClass={styles.btn_brown}
             onClick={() => {
-              auth ? navigate('private-area/analysis') : navigate('login');
+              auth ? navigate('private-area/') : navigate('login');
             }}
           />
         </div>

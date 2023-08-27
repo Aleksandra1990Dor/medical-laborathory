@@ -20,7 +20,7 @@ const InfoCardWrapper = () => {
       <InfoCard
         title="Сдать анализы по ДМС"
         src={privateArea}
-        onClick={() => navigate('dms')}
+        onClick={() => navigate('about/dms')}
         alt="сдать по дмс"
       >
         Анализы в Лабораторной службе Victoria можно выполнить по полису

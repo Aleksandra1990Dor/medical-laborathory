@@ -1,0 +1,115 @@
+/* item styles */
+.adress_item {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: calc(var(--index) * 0.75);
+  background-color: var(--bg-color);
+  border: 2px solid var(--bg-green);
+  border-radius: calc(var(--index) * 0.5);
+  margin-bottom: 5px;
+}
+.adress_item:last-child {
+  margin-bottom: 0;
+}
+/* main section wrapper */
+.main_section_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* title wrapper */
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--index) * 1);
+}
+/* adress name */
+.adress_title {
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.95);
+  color: var(--black);
+}
+
+/* circle icon */
+.icon_circle {
+  font-size: calc(var(--index) * 1.5);
+  fill: var(--dark-green);
+}
+/* icons section */
+.icons_section {
+  display: flex;
+  padding: 0 calc(var(--index) * 2);
+}
+/* schelude information wrrapper */
+.schedule_wrapper {
+  padding: 0 calc(var(--index) * 1.5);
+  color: var(--black);
+  font-size: calc(var(--index) * 0.65);
+  margin-bottom: calc(var(--index) * 0.5);
+}
+
+/* add to favorites wrapper  */
+.add_to_favorites {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* description add to favorites icon */
+.add_to_favoriles_icon_description {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  width: max-content;
+  background-color: #fff;
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 0.75);
+  padding: calc(var(--index) * 0.5);
+  font-weight: 600;
+  border: 1px solid var(--bg-grey);
+  border-radius: calc(var(--index) * 0.75);
+  animation: showInfo 0.3s ease;
+}
+/* star icon */
+.icon_star,
+.icon_star_active {
+  cursor: pointer;
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 1.2);
+  opacity: 0.5;
+}
+.icon_star:hover {
+  color: var(--yellow);
+}
+.icon_star_active {
+  color: var(--yellow);
+}
+.hidden {
+  display: none;
+}
+.hidde_info_animation {
+  animation: hideInfo 0.4s ease;
+}
+@media (max-width: 767px) {
+  .add_to_favoriles_icon_description {
+    display: none;
+  }
+  .icon_star:hover {
+    color: var(--light-grey);
+  }
+}
+@keyframes showInfo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideInfo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,8 +1,8 @@
 .linkWrapper .back {
-  font-size: calc(var(--index) * 0.75);
-  color: var(--light-grey);
-  font-weight: 600;
   display: inline-block;
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
   margin-bottom: calc(var(--index) * 0.85);
 }
 @media (max-width: 767px) {

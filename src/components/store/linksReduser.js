@@ -16,19 +16,19 @@ const initialState = {
   headerHiddenLinks: [
     {
       title: 'Контакты',
-      href: 'contacts',
+      href: 'about/contacts',
     },
     {
       title: 'Лицензии и сертификаты',
-      href: 'licenses',
+      href: 'about/licenses',
     },
     {
       title: 'Контроль качества',
-      href: 'quality-control',
+      href: 'about/quality-control',
     },
     {
       title: 'Вакансии',
-      href: 'job-openings',
+      href: 'about/job-openings',
     },
   ],
   navLinks: [
@@ -133,11 +133,11 @@ const initialState = {
     },
     {
       title: 'Адреса',
-      links: 'adresses',
+      links: 'about/adresses',
     },
     {
       title: 'Выезд на дом',
-      links: 'home-servis',
+      links: 'about/home-servis',
     },
 
     {

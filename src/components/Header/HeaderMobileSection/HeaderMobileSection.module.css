@@ -34,7 +34,8 @@ a.btn_brown {
 @media (max-width: 426px) {
   a.btn_brown {
     font-size: 8px;
-    padding: 10px 5px;
+    padding: 8px 3px;
+    border: 1px solid var(--bg-color);
   }
 }
 .links_wrapper {
