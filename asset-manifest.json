@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/medical-laborathory/static/css/main.b9e3e1e2.css",
-    "main.js": "/medical-laborathory/static/js/main.ba820484.js",
-    "static/media/team.png": "/medical-laborathory/static/media/team.8946ae529e75605409dd.png",
-    "static/media/job-opening-nurce.png": "/medical-laborathory/static/media/job-opening-nurce.b33474feaa5b2ab663f7.png",
-    "static/media/test-tubes.png": "/medical-laborathory/static/media/test-tubes.a89993cbc8a3f4d69007.png",
+    "main.css": "/medical-laborathory/static/css/main.aa3786e5.css",
+    "main.js": "/medical-laborathory/static/js/main.2205bd60.js",
+    "static/media/team.png": "/medical-laborathory/static/media/team.ce4c6ef9b0fd9fb6cb33.png",
+    "static/media/job-opening-nurce.png": "/medical-laborathory/static/media/job-opening-nurce.caa9f65080f2ffd453f9.png",
+    "static/media/test-tubes.png": "/medical-laborathory/static/media/test-tubes.d59b7459df195ba803d5.png",
     "static/media/family.png": "/medical-laborathory/static/media/family.88a5eb706d2f8345d1c0.png",
     "static/media/privateArea.png": "/medical-laborathory/static/media/privateArea.788407c59791f8d720a7.png",
     "static/media/card-genetic.jpg": "/medical-laborathory/static/media/card-genetic.5e8029c8406a3cb872ca.jpg",
-    "static/media/cup.png": "/medical-laborathory/static/media/cup.965dc091561aebfc29f9.png",
+    "static/media/cup.png": "/medical-laborathory/static/media/cup.41d8ac3e91ed65e076a3.png",
     "static/media/card-conferentions.jpg": "/medical-laborathory/static/media/card-conferentions.f59841b0d043748cb7bd.jpg",
     "static/media/card-heartinfo.jpg": "/medical-laborathory/static/media/card-heartinfo.c46926a831907f997b8b.jpg",
     "static/media/card-partners-programs.jpg": "/medical-laborathory/static/media/card-partners-programs.858a1d4f5d4899686ede.jpg",
@@ -37,11 +37,11 @@
     "static/media/quality-1.svg": "/medical-laborathory/static/media/quality-1.8dd6af6051bd8239245acfd5297b33f3.svg",
     "static/media/quality-2.svg": "/medical-laborathory/static/media/quality-2.610270db74aa02907cdb3a59aecc3829.svg",
     "index.html": "/medical-laborathory/index.html",
-    "main.b9e3e1e2.css.map": "/medical-laborathory/static/css/main.b9e3e1e2.css.map",
-    "main.ba820484.js.map": "/medical-laborathory/static/js/main.ba820484.js.map"
+    "main.aa3786e5.css.map": "/medical-laborathory/static/css/main.aa3786e5.css.map",
+    "main.2205bd60.js.map": "/medical-laborathory/static/js/main.2205bd60.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9e3e1e2.css",
-    "static/js/main.ba820484.js"
+    "static/css/main.aa3786e5.css",
+    "static/js/main.2205bd60.js"
   ]
 }
