@@ -1,0 +1,32 @@
+/* main wrapper */
+.basket {
+  display: grid;
+  grid-template-columns: 1fr calc(var(--index) * 18);
+  grid-template-areas: 'l r';
+  padding: calc(var(--index) * 2);
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: calc(var(--index) * 3);
+}
+/* left side wrapper */
+.left_side_wrapper {
+  grid-area: l;
+  margin-right: calc(var(--index) * 1);
+}
+.basket_main_information_wrapper {
+  display: none;
+}
+@media (max-width: 425px) {
+  .basket {
+    display: block;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  }
+  .left_side_wrapper {
+    margin-right: 0;
+  }
+  .basket_main_information_wrapper {
+    display: block;
+  }
+}

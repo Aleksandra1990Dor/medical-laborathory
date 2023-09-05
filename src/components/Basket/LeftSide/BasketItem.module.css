@@ -1,0 +1,107 @@
+.basket_items_wrapper {
+  color: var(--black);
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  text-align: left;
+}
+/* items */
+.basket_item {
+  background-color: var(--bg-color);
+  border: 2px solid var(--bg-green);
+  margin-bottom: calc(var(--index) * 0.75);
+  padding: calc(var(--index) * 0.75);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: calc(var(--index) * 0.5);
+}
+
+.basket_item:last-of-type {
+  margin-bottom: calc(var(--index) * 4);
+}
+/* left side */
+.basket_left {
+  width: 80%;
+}
+/* analys id */
+.basket_left small {
+  display: inline-block;
+  margin-bottom: calc(var(--index) * 0.5);
+  color: var(--light-grey);
+}
+
+/* analys name */
+.basket_item .item_name {
+  display: block;
+  color: var(--black);
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 0.5);
+  transition: all 0.5s ease;
+}
+.item_name:hover {
+  color: var(--dark-green);
+}
+/* right side */
+.basket_item_right {
+  display: flex;
+  align-items: center;
+}
+/* price */
+.basket_item_right h2 {
+  color: var(--dark-green);
+  font-weight: 700;
+  margin-right: 10px;
+  font-size: calc(var(--index) * 1.1);
+  width: max-content;
+}
+
+/* delete icon */
+.delete_item {
+  display: inline-block;
+  cursor: pointer;
+  fill: var(--light-grey);
+  font-size: calc(var(--index) * 1.1);
+}
+.delete_item:hover {
+  fill: var(--grey);
+  transform: scale(1.1);
+}
+.delete_item:active {
+  opacity: 0.5;
+  transform: scale(0.99);
+}
+@media (max-width: 425px) {
+  .basket_items_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .basket_item {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .basket_item:last-of-type {
+    margin-bottom: 40px;
+  }
+  .basket_left small {
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .basket_item_right h2 {
+    font-size: 16px;
+  }
+  .delete_item {
+    font-size: 18px;
+  }
+  .delete_item:hover,
+  .delete_item:active {
+    opacity: 1;
+    transform: none;
+    fill: var(--light-grey);
+  }
+}

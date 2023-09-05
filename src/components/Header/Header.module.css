@@ -11,15 +11,14 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--bg-grey);
+  background-color: var(--bg-header);
   padding: calc(var(--index) * 0.5) calc(var(--index) * 2.5) 0
     calc(var(--index) * 2.5);
   margin-bottom: calc(var(--index) * 1.5);
 }
-@media (max-width: 767px) {
+@media (max-width: 926px) {
   .section_one {
-    padding: 10px;
-    margin-bottom: 0;
+    display: none;
   }
   .section_two {
     display: none;

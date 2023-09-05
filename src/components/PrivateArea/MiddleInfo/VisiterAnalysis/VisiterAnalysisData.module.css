@@ -1,0 +1,19 @@
+/* middle side wrapper */
+.wrapper {
+  padding: 0 calc(var(--index) * 2);
+  min-height: 50vh;
+}
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: calc(var(--index) * 0.75);
+}
+@media (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .title {
+    font-size: 12px;
+  }
+}

@@ -3,8 +3,7 @@
   display: grid;
   grid-template-columns: 80% 20%;
   padding: calc(var(--index) * 0.75);
-  background-color: var(--bg-color);
-  border: 2px solid var(--bg-green);
+  border: 1px solid var(--bg-green);
   border-radius: calc(var(--index) * 0.5);
   margin-bottom: 5px;
 }
@@ -95,6 +94,26 @@
   }
   .icon_star:hover {
     color: var(--light-grey);
+  }
+}
+@media (max-width: 425px) {
+  .adress_item {
+    padding: 15px;
+  }
+
+  .adress_title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+  .schedule_wrapper {
+    font-size: 12px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+  .icon_star,
+  .icon_star_active {
+    font-size: 20px;
   }
 }
 @keyframes showInfo {

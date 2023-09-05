@@ -1,28 +1,36 @@
+/* main wrapper */
 .wrapper {
-  padding: calc(var(--index) * 3) calc(var(--index) * 2) calc(var(--index) * 2)
-    calc(var(--index) * 5);
+  padding: calc(var(--index) * 4);
   color: var(--dark-grey);
 }
+/* title */
 .wrapper h3 {
   font-size: var(--title-fz);
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: calc(var(--index) * 4);
 }
+/* analysis wrapper */
 .analysis_wrapper {
   display: flex;
+  flex-wrap: wrap;
+  height: 120%;
   justify-content: space-around;
 }
-@media (max-width: 426px) {
+@media (max-width: 425px) {
   .wrapper {
-    padding: 15px 5px;
+    padding: 50px 15px;
+    color: var(--black);
+    padding-top: 70px;
   }
   .wrapper h3 {
     font-size: 16px;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 50px;
+    text-align: left;
   }
   .analysis_wrapper {
+    justify-content: space-between;
+    padding: 0 15px;
     flex-wrap: wrap;
   }
 }

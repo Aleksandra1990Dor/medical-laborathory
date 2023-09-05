@@ -1,10 +1,10 @@
 import ForOrganisationsPrCard from './ForOrganisationsPrCard';
 import Achivments from '../../MainFirstPage/Achivments/Achivments';
-import styles from '../../MainFirstPage/Achivments/Achivments.module.css';
+import styles from './ForOrganisations.module.css';
 
 const MainForOrganisations = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <ForOrganisationsPrCard />
       <Achivments iconColor={styles.icon_red} />
     </div>

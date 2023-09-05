@@ -1,11 +1,17 @@
-import styles from './QualityControl.module.css';
+import { useEffect } from 'react';
 import QualityControlTitleSection from './TitleSection/QualityControlTitleSection';
 import QualityControlSteps from './StepsSection/QualityControlSteps';
 import QualityControlSectionCup from './SectionCup/QualityControlSectionCup';
+import BackLink from '../../Utils/BackLink';
+import styles from './QualityControl.module.css';
 
 const QualityControl = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className={styles.wrapper}>
+      <BackLink />
       <QualityControlTitleSection />
       <QualityControlSteps />
       <section className={styles.info}>

@@ -1,5 +1,5 @@
-import styles from './/QualityControlSectionCup.module.css';
 import cup from '../../../../img/cup.png';
+import styles from './/QualityControlSectionCup.module.css';
 
 const QualityControlSectionCup = () => {
   return (

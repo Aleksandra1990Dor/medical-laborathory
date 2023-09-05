@@ -1,0 +1,18 @@
+.main {
+  overflow: hidden;
+  padding-top: calc(var(--index) * 2);
+}
+.mobile_first_page {
+  display: none;
+}
+@media (max-width: 926px) {
+  .main {
+    padding-top: 0;
+  }
+  .desctop {
+    display: none;
+  }
+  .mobile_first_page {
+    display: block;
+  }
+}

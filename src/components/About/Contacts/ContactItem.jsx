@@ -1,5 +1,5 @@
-import styles from './Contacts.module.css';
 import { BsEnvelope, BsTelephone } from 'react-icons/bs';
+import styles from './Contacts.module.css';
 
 const ContactItem = ({ contact, icon }) => {
   return (
@@ -8,18 +8,23 @@ const ContactItem = ({ contact, icon }) => {
         {contact.title}
         {icon}
       </h2>
-      <ul>
+      <ul className={styles.list}>
         {contact.contactFor.map((c, i) => (
-          <li key={i}>{c}</li>
+          <li
+            key={i}
+            className={styles.list_item}
+          >
+            {c}
+          </li>
         ))}
       </ul>
       <div className={styles.contacts}>
         <div>
-          <BsTelephone />
+          <BsTelephone className={styles.icon} />
           {contact.phone}
         </div>
         <div>
-          <BsEnvelope />
+          <BsEnvelope className={styles.icon} />
           {contact.email}
         </div>
       </div>

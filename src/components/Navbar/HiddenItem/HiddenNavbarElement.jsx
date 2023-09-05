@@ -1,6 +1,7 @@
-import styles from '../Navbar.module.css';
 import { NavLink } from 'react-router-dom';
 import { IoMdArrowForward } from 'react-icons/io';
+import styles from './HiddenNavbarItem.module.css';
+
 const HiddenNavbarElement = ({ link, hideMore }) => {
   return (
     <div className={styles.more_item}>

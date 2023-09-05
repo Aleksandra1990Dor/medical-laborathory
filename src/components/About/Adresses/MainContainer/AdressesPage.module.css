@@ -1,10 +1,9 @@
 /* main wrapper */
 .adresses_page_wrapper {
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   padding: calc(var(--index) * 1) calc(var(--index) * 4);
-  background-color: var(--bg-color);
 }
 /* title styles */
 .title {
@@ -20,13 +19,18 @@
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 767px) {
-  .adresses_page_wrapper {
-    padding: 5px 0;
+.mobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  .mobile {
+    display: block;
+    padding: 0 10px;
+    margin-bottom: 20px;
   }
-  .content_wrapper {
-    display: grid;
-    grid-template-columns: 25% 75%;
+  .adresses_page_wrapper {
+    padding: 10px;
+    min-height: 70vh;
   }
   .title {
     margin-bottom: 10px;

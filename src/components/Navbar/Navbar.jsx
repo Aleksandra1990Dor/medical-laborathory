@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import NavbarItem from './NavbarItem';
 import styles from './Navbar.module.css';
-import NavbarMobile from './NavbarMobile';
+import NavbarMobile from './Mobile/NavbarMobile';
+import NavbarItem from './NavbarItem';
 
 const Navbar = () => {
   const navlinks = useSelector((state) => state.linksReduser.navLinks);

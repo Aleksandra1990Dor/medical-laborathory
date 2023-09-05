@@ -2,7 +2,7 @@
 .btn_wrapper {
   display: flex;
 }
-@media (max-width: 767px) {
+@media (max-width: 926px) {
   .btn_wrapper {
     display: none;
   }
@@ -11,42 +11,31 @@
 a.btn_white {
   display: inline-block;
   margin-right: calc(var(--index) * 1);
-  padding: calc(var(--index) * 0.65) calc(var(--index) * 0.6);
-  font-size: calc(var(--index) * 0.6);
-  background-color: #fcfcfc;
+  padding: calc(var(--index) * 0.65) calc(var(--index) * 0.5);
+  font-size: calc(var(--index) * 0.5);
   background-color: #fff;
   color: var(--light-grey);
-  border: 1px solid #ebebeb;
-  box-shadow: 1px 1px 5px var(--light-grey);
+  border: 1px solid #f0f0f0;
   border-radius: calc(var(--index) * 0.3);
   font-weight: 600;
+  text-transform: uppercase;
 }
-.btn_white:hover {
-  background-color: #fff;
-  color: var(--grey);
-  transform: scale(1.02);
-
-  /* box-shadow: var(--box-shadow); */
-}
-/* brown button */
-a.btn_brown {
-  padding: calc(var(--index) * 0.65) calc(var(--index) * 0.6);
-  font-size: calc(var(--index) * 0.6);
+/* green button */
+a.btn_green {
+  padding: calc(var(--index) * 0.65) calc(var(--index) * 0.5);
+  font-size: calc(var(--index) * 0.5);
   display: inline-block;
-  background-color: var(--light-green);
+  background-color: var(--dark-green);
   color: #fff;
   color: var(--bg-color);
   margin-bottom: calc(var(--index) * 0.5);
   margin-right: 5px;
-  border: 1px solid var(--light-green);
-  box-shadow: 1px 1px 5px var(--light-grey);
+  border: 1px solid var(--dark-green);
   border-radius: calc(var(--index) * 0.3);
   font-weight: 600;
+  text-transform: uppercase;
 }
-.btn_brown:hover {
-  background-color: var(--dark-green);
-  color: #fefdfa;
+.btn_green:hover,
+.btn_white:hover {
   transform: scale(1.02);
-
-  /* box-shadow: var(--box-shadow); */
 }

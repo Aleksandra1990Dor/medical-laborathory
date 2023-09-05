@@ -1,0 +1,15 @@
+/* results items */
+.searching_item {
+  display: block;
+  border-bottom: 1px solid var(--bg-green);
+  padding: calc(var(--index) * 0.75);
+}
+.searching_item:hover {
+  background-color: var(--bg-header);
+  color: var(--green);
+}
+@media (max-width: 425px) {
+  .searching_item {
+    padding: 15px;
+  }
+}

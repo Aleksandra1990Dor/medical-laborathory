@@ -1,0 +1,61 @@
+/*  text */
+.info {
+  font-size: calc(var(--index) * 0.75);
+  margin-bottom: calc(var(--index) * 1.5);
+}
+/* closing icon styles */
+.closing_icon {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  fill: var(--yellow);
+  font-size: calc(var(--index) * 1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+.closing_icon:hover {
+  transform: scale(1.2);
+}
+/* span */
+.info span {
+  display: inline-block;
+  position: relative;
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 0.5);
+}
+/* yellow line */
+.info span::after {
+  width: 100%;
+  height: 1px;
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: 0%;
+  background-color: var(--yellow);
+  z-index: 5;
+}
+/* button */
+.btn {
+  padding: calc(var(--index) * 0.5);
+  border: 1px solid #fff;
+  color: #fff;
+  box-shadow: 5px 5px 5px #5a2323;
+  border-radius: calc(var(--index) * 2);
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+/* sum container */
+.sum {
+  background-color: var(--yellow);
+  padding: calc(var(--index) * 0.5) calc(var(--index) * 1.1);
+  border-radius: 50%;
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 900;
+  border: 1px solid #fff;
+  margin-bottom: calc(var(--index) * 1.5);
+}

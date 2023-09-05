@@ -1,27 +1,12 @@
 .wrapper {
-  padding: 0 0 0 calc(var(--index) * 3);
-  margin-bottom: calc(var(--index) * 2);
-  text-align: left;
-  margin-right: calc(var(--index) * 2);
+  padding: calc(var(--index) * 1) calc(var(--index) * 4);
 }
 /* title */
-.wrapper h1 {
-  font-size: calc(var(--index) * 2);
-  line-height: calc(var(--index) * 1.9);
+.title {
+  color: var(--black);
+  font-size: calc(var(--index) * 1.7);
   font-weight: 700;
-  margin-bottom: calc(var(--index) * 3);
-  color: var(--dark-grey);
-  position: relative;
-}
-.wrapper h1::after {
-  width: 20%;
-  height: 1px;
-  content: '';
-  position: absolute;
-  bottom: -70%;
-  left: 0%;
-  background-color: var(--bg-green);
-  z-index: 5;
+  margin-bottom: calc(var(--index) * 2);
 }
 /* all contacts blocks container */
 .contacts_wrapper {
@@ -36,14 +21,13 @@
   flex-direction: column;
   justify-content: space-around;
   padding: calc(var(--index) * 2);
-  border: 1px solid var(--bg-grey);
-  background-color: var(--bg-color);
+  background-color: var(--bg-header);
   border-radius: calc(var(--index) * 1);
   margin-bottom: calc(var(--index) * 2);
   color: var(--black);
   font-weight: 600;
 }
-/* block title */
+/* card title */
 .contact_title {
   font-size: calc(var(--index) * 1.2);
   font-weight: 700;
@@ -59,13 +43,16 @@
   font-size: calc(var(--index) * 1.5);
 }
 /* list */
-.contacts_wrapper ul {
-  margin-bottom: calc(var(--index) * 1);
+.list {
   font-size: calc(var(--index) * 0.7);
   line-height: calc(var(--index) * 0.8);
+  margin-bottom: calc(var(--index) * 1.2);
 }
-.contacts_wrapper ul li {
+.list_item {
   margin-bottom: calc(var(--index) * 0.5);
+}
+.list_item:last-of-type {
+  margin-bottom: 0;
 }
 /* wrapper for phone and email */
 .contacts {
@@ -73,4 +60,51 @@
   justify-content: space-between;
   color: var(--dark-green);
   font-size: calc(var(--index) * 0.8);
+  text-align: right;
+}
+.icon {
+  margin-right: calc(var(--index) * 0.5);
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+  .contact_wrapper {
+    width: 49%;
+  }
+}
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 10px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .contacts_wrapper {
+    flex-direction: column;
+  }
+  .contact_wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  .contact_title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .title_icon {
+    font-size: 25px;
+  }
+  .list {
+    width: 85%;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 20px;
+  }
+  .list_item {
+    margin-bottom: 15px;
+  }
+  .contacts {
+    font-size: 10px;
+  }
 }

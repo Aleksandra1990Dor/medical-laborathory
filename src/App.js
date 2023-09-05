@@ -1,33 +1,23 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useToggle } from './components/CustomHooks/UseToggle';
+import { useToggle } from './CustomHooks/UseToggle';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
-import MainFirstPage from './components/MainFirstPage/MainFirstPage';
 import MainForDoctors from './components/Main/ForDoctors/MainForDoctors';
 import MainForOrganisations from './components/Main/ForOrganisations/MainForOrganisations';
-import Fish from './components/Utils/fish';
-import Footer from './components/footer/Footer';
-import AnalysisPage from './components/Main/Analysis/AnalysisMenu/AnalysisPage';
 import Chat from './components/Chat/ChatIcon/Chat';
-import Analysis from './components/Main/Analysis/AnalysisMenu/Analysis';
-import Basket from './components/Main/Basket/MainLayout/Basket';
-import ActionsPage from './components/Main/ActionsPage/ActionsPage';
-import Login from './components/Login/Login';
-import AuthOutMsg from './components/Login/AuthOutMsg';
-import Registration from './components/Login/Registration';
-import PersonalArea from './components/Main/PrsonalArea/MainContainer/PersonalArea';
-import DoctorsServisePage from './components/Main/DoctorsServicePage/DoctorsServisePage';
-import OtherServisesPage from './components/Main/OtherServises/OtherServisesPage';
+import ChatsDialogContainer from './components/Chat/CahtsDialog/ChatsDialogContainer';
+import MainFirstPage from './components/MainFirstPage/MainFirstPage';
+import Basket from './components/Basket/MainLayout/Basket';
 import MainLayout from './components/MainLayout/MainLayout';
-import Analys from './components/Main/Analysis/Analys/Analys';
-import ChatsDialog from './components/Chat/CahtsDialog/ChatsDialog';
-import Preorder from './components/Main/Basket/Preorder/Preorder';
-import OrderChecking from './components/Main/Basket/OrderChecking/OrderChecking';
-import BasketMain from './components/Main/Basket/MainLayout/BasketMain';
-import OrderCorrectMessage from './components/Main/Basket/OrderCorrectMessage';
-import VisiterPrivateData from './components/Main/PrsonalArea/MiddleInfo/VisiterPrivateData/VisiterPrivateData';
-import VisiterAnalysisData from './components/Main/PrsonalArea/MiddleInfo/VisiterAnalysis/VisiterAnalysisData';
-import VisiterDynamicData from './components/Main/PrsonalArea/MiddleInfo/VisiterDynamicData/VisiterDynamicData';
+import PrivateArea from './components/PrivateArea/MainContainer/PrivateArea';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
+import Fish from './components/Utils/Fish';
+import AuthContainer from './components/AuthBlock/Wrapper/AuthContainer';
+import Servises from './components/Servises/MainContainer/Servises';
+
 const App = () => {
   const [toggleClass, setToggleClass] = useToggle(
     'dialog_wrapper',
@@ -35,7 +25,10 @@ const App = () => {
     'hide_dialog',
     700
   );
-
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <BrowserRouter>
       <div className="App">
@@ -44,114 +37,38 @@ const App = () => {
             path="/medical-laborathory/"
             element={<MainLayout />}
           >
-            {/* route to home with index */}
             <Route
               index
               element={<MainFirstPage />}
             />
-            {/* parent route for navigation in private area*/}
             <Route
               path="private-area/*"
-              element={<PersonalArea />}
-            >
-              <Route
-                index
-                element={<VisiterPrivateData />}
-              />
-              <Route
-                path="analysis"
-                element={<VisiterAnalysisData />}
-              />
-              <Route
-                path="dynamics"
-                element={<VisiterDynamicData />}
-              />
-            </Route>
-            {/* parent route for page with doctors servise */}
-            <Route
-              path="doctors/*"
-              element={<DoctorsServisePage />}
-            >
-              <Route
-                path=":slug"
-                element={<AnalysisPage noLink={true} />}
-              />
-            </Route>
-            {/* parent route for page with analysis */}
-            <Route
-              path="analysis/*"
-              element={<Analysis />}
-            >
-              <Route
-                path=":slug"
-                element={<AnalysisPage />}
-              />
-            </Route>
+              element={<PrivateArea />}
+            />
             <Route
               path="basket/*"
               element={<Basket />}
-            >
-              <Route
-                index
-                element={<BasketMain />}
-              />
-              <Route
-                path="order/step1"
-                element={<Preorder />}
-              />
-              <Route
-                path="order/step2"
-                element={<OrderChecking />}
-              />
-            </Route>
-            {/*
-            
-             regular rotes to pages
-             
-             */}
-            <Route
-              path="login"
-              element={<Login />}
             />
-
             <Route
-              path="for-doctors"
-              element={<MainForDoctors />}
-            />
-
-            <Route
-              path="for-organisations"
-              element={<MainForOrganisations />}
+              path="authorisation/*"
+              element={<AuthContainer />}
             />
             <Route
               path="about/*"
               element={<About />}
             />
             <Route
-              path="preorder/complete/№=41898-427534"
-              element={<OrderCorrectMessage />}
+              path="servises/*"
+              element={<Servises />}
             />
-
+            {/* rotes need refactoring  */}
             <Route
-              path="other-servises"
-              element={<OtherServisesPage />}
-            />
-
-            <Route
-              path="actions-page"
-              element={<ActionsPage />}
+              path="for-doctors"
+              element={<MainForDoctors />}
             />
             <Route
-              path="registration"
-              element={<Registration />}
-            />
-            <Route
-              path="correct-msg"
-              element={<AuthOutMsg />}
-            />
-            <Route
-              path="analys/:id"
-              element={<Analys />}
+              path="for-organisations"
+              element={<MainForOrganisations />}
             />
             <Route
               path="*"
@@ -161,7 +78,7 @@ const App = () => {
         </Routes>
         <Footer />
         <Chat showDialog={setToggleClass} />
-        <ChatsDialog
+        <ChatsDialogContainer
           showDialog={setToggleClass}
           toggleClass={toggleClass}
         />

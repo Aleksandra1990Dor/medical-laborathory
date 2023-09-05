@@ -8,7 +8,8 @@ const MainAnalysisItem = ({ analys }) => {
   return (
     <div
       className={styles.wrapper}
-      onClick={() => navigate(`analys/${analys.id}`)}
+      data-aos="fade-up"
+      onClick={() => navigate(`servises/analysis/analys/${analys.id}`)}
     >
       <div className={styles.icon_wrapper}>
         <BsHeartPulse className={styles.icon_heart} />

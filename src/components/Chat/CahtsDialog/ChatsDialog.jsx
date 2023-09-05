@@ -1,17 +1,17 @@
 import { AiOutlineClose } from 'react-icons/ai';
 import { BsFillSendFill } from 'react-icons/bs';
-import { useState } from 'react';
+import ChatMessage from './message/ChatMessage';
 import styles from './ChatsDialog.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  addAdminMessageAC,
-  addVisiterMessageAC,
-} from '../../store/dialogsReduser';
 
-const ChatsDialog = ({ toggleClass, showDialog }) => {
-  const allMessages = useSelector((state) => state.dialogsReduser);
-  const dispatch = useDispatch();
-  const [value, setValue] = useState('');
+const ChatsDialog = ({
+  toggleClass,
+  showDialog,
+  addVisiterMessage,
+  allMessages,
+  chatParent,
+  setValue,
+  value,
+}) => {
   return (
     <div className={toggleClass}>
       <div className={styles.dialog_window}>
@@ -24,12 +24,11 @@ const ChatsDialog = ({ toggleClass, showDialog }) => {
         </div>
 
         <div className={styles.messages_main_container}>
-          <div className={styles.messages_main_wrapper}>
-            {/* <ChatMessage
-            text="first ytre is a big text of the first message for tesst"
-            toggleclass={styles.message_wrapper_lft}
-          /> */}
-            {allMessages.allDialog.map((message, index) => (
+          <div
+            className={styles.messages_main_wrapper}
+            ref={chatParent}
+          >
+            {allMessages?.allDialog.map((message, index) => (
               <ChatMessage
                 text={message}
                 key={index}
@@ -54,40 +53,12 @@ const ChatsDialog = ({ toggleClass, showDialog }) => {
           <div className={styles.create_message_icon_wrapper}>
             <BsFillSendFill
               className={styles.create_message_icon}
-              onClick={() => {
-                if (value) {
-                  dispatch(addVisiterMessageAC(value));
-                  setValue('');
-                  if (allMessages.visiterMessages.length < 1) {
-                    setTimeout(
-                      () =>
-                        dispatch(
-                          addAdminMessageAC(
-                            'Благодарим за обращение, вам ответит первый освободившийся оператор.'
-                          )
-                        ),
-                      500
-                    );
-                    setTimeout(
-                      () =>
-                        dispatch(
-                          addAdminMessageAC(
-                            'К сожалению сейчас все операторы заняты... Попробуйте связаться с нами позже.'
-                          )
-                        ),
-                      25000
-                    );
-                  }
-                }
-              }}
+              onClick={addVisiterMessage}
             />
           </div>
         </div>
       </div>
     </div>
   );
-};
-const ChatMessage = ({ text, toggleclass }) => {
-  return <div className={toggleclass}>{text}</div>;
 };
 export default ChatsDialog;

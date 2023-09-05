@@ -2,7 +2,6 @@
   margin-right: calc(var(--index) * 0.25);
   padding-top: calc(var(--index) * 0.6);
   margin-bottom: calc(var(--index) * 1);
-  font-family: Lato;
   text-align: center;
   color: var(--green);
   cursor: pointer;
@@ -10,34 +9,36 @@
   flex-direction: column;
 }
 .logotype {
+  font-family: 'Yeseva One', cursive;
   color: var(--green);
   font-weight: 700;
   font-size: calc(var(--index) * 2);
   line-height: calc(var(--index) * 1);
-  text-shadow: 1px 1px 1px var(--light-grey);
-  margin-bottom: calc(var(--index) * 0.35);
+  margin-bottom: calc(var(--index) * 0.5);
   display: inline-block;
 }
 .logo_container small {
-  font-size: calc(var(--index) * 0.35);
+  font-size: calc(var(--index) * 0.3);
   color: var(--green);
   text-transform: uppercase;
   letter-spacing: calc(var(--index) * 0.13);
   word-spacing: calc(var(--index) * 0.1);
 }
-@media (max-width: 767px) {
+@media (max-width: 1180px) {
   .logo_container small {
-    display: none;
+    padding-left: 7px;
+    font-size: 6px;
+    font-weight: 600;
   }
   .logotype {
+    text-align: left;
     font-size: 30px;
     padding: 5px;
-    margin-bottom: 5px;
-    line-height: 0;
+    line-height: 0.5;
   }
 }
 @media (max-width: 426px) {
   .logotype {
-    font-size: 26px;
+    font-size: 30px;
   }
 }

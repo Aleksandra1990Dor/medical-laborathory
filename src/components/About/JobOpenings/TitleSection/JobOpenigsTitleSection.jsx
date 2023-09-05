@@ -1,20 +1,23 @@
+import { BasketButtonSubmit } from '../../../Basket/BasketUtils/BasketButton';
+import nurce from '../../../../img/images/job-opening-nurce.png';
 import styles from './JobOpenigsTitleSection.module.css';
-import nurce from '../../../../img/job-opening-nurce.png';
 
-const JobOpenigsTitleSection = () => {
+const JobOpenigsTitleSection = ({ onClick }) => {
   return (
     <section className={styles.section_title}>
-      <div className={styles.title_description}>
-        <h2>
+      <div className={styles.section_title_wrapper}>
+        <h2 className={styles.title}>
           Возможность роста в одном из наиболее амбициозных проектов в сфере
           российской медицины
         </h2>
-        <p>
-          Своим сотрудникам Лабораторная служба Хеликс предлагает возможность
+        <p className={styles.description}>
+          Своим сотрудникам Лабораторная служба VICTORIA предлагает возможность
           обучения, достойную заработную плату, комфортные условия труда, скидки
           на услуги Компании и высокий уровень корпоративной культуры.
         </p>
-        <button>Смотреть вкансии</button>
+        <BasketButtonSubmit onClick={onClick}>
+          Смотреть вкансии
+        </BasketButtonSubmit>
       </div>
       <div className={styles.title_img}>
         <img

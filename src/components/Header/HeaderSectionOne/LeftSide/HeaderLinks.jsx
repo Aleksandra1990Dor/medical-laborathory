@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './HeaderLinks.module.css';
-import LinksItem from '../../../Utils/LinksItem';
-import AboutCompanyHiddenList from './AboutCompanyHiddenList';
-import { changeOrientationAC } from '../../../store/mainInfoReduser';
+import LinksItem from './LinksItem/LinksItem';
+import AboutCompanyHiddenList from './aboutCompany/AboutCompanyHiddenList';
+import { changeOrientationAC } from '../../../../store/mainInfoReduser';
 
 const HeaderLinks = ({ orientation }) => {
-  const links = useSelector((state) => state.linksReduser.headerMainLinks);
   const dispatch = useDispatch();
+  const links = useSelector((state) => state.linksReduser.headerMainLinks);
+
   return (
     <div className={styles.header__links}>
       {links.map((link, index) => {
@@ -24,7 +25,7 @@ const HeaderLinks = ({ orientation }) => {
           />
         );
       })}
-      <AboutCompanyHiddenList toggleClass={styles.link_item} />
+      <AboutCompanyHiddenList />
     </div>
   );
 };

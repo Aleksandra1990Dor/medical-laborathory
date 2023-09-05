@@ -1,0 +1,98 @@
+/* wrapper */
+.switch_label_wrapper {
+  display: flex;
+  align-items: center;
+}
+/* label */
+.switch_label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--bg-green);
+  margin-bottom: calc(var(--index) * 3);
+  border-radius: calc(var(--index) * 0.45);
+  padding: 13px;
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  background-color: var(--bg-color);
+  width: 70%;
+  color: var(--black);
+}
+
+/* icon */
+.switch_label_icon {
+  fill: var(--light-green);
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.75);
+}
+/* hidden input */
+.custom_switch {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/* ball's wrapper */
+.custom_switch:checked + label,
+.custom_switch:not(:checked) + label {
+  width: calc(var(--index) * 3);
+  height: calc(var(--index) * 1.5);
+  cursor: pointer;
+  border-radius: calc(var(--index) * 3);
+  position: relative;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+.custom_switch:not(:checked) + label {
+  border: 2px solid var(--light-grey);
+}
+/* checked */
+.custom_switch:checked + label {
+  border: 2px solid var(--light-green);
+}
+/* ball */
+.custom_switch:checked + label::after,
+.custom_switch:not(:checked) + label::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  transition: all 0.7s ease;
+}
+/* not checked */
+.custom_switch:not(:checked) + label {
+  background-color: var(--bg-color);
+}
+.custom_switch:not(:checked) + label::after {
+  left: 5%;
+  background-color: var(--light-grey);
+}
+.custom_switch:checked + label::after {
+  right: 5%;
+  background-color: var(--light-green);
+}
+
+@media (max-width: 425px) {
+  .switch_label {
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .switch_label_icon {
+    font-size: 12px;
+  }
+  .custom_switch:checked + label,
+  .custom_switch:not(:checked) + label {
+    width: 33px;
+    height: 18px;
+  }
+  .custom_switch:checked + label::after,
+  .custom_switch:not(:checked) + label::after {
+    top: 11%;
+    width: 40%;
+    height: 80%;
+  }
+}

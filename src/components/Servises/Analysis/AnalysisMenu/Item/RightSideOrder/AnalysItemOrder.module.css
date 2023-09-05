@@ -1,0 +1,103 @@
+/* block where people can order analys */
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+/* price */
+.price {
+  display: inline-block;
+  font-weight: 700;
+  font-size: calc(var(--index) * 1.5);
+  margin-bottom: calc(var(--index) * 1);
+  color: var(--green);
+  text-align: center;
+  width: max-content;
+}
+/* btn for ordering */
+.btn {
+  background-color: var(--green);
+  padding: calc(var(--index) * 0.65) calc(var(--index) * 0.75);
+  font-size: calc(var(--index) * 0.75);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  width: max-content;
+  border-radius: calc(var(--index) * 2);
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--index) * 1.5);
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+.btn:hover {
+  background-color: var(--dark-green);
+  box-shadow: 0 0 5px var(--light-grey);
+  transform: translateY(-2px);
+}
+.btn:active,
+.btn:disabled {
+  background-color: var(--dark-green);
+  opacity: 0.5;
+  box-shadow: 0 0 5px var(--light-grey);
+  transform: translateY(1px);
+}
+.btn:disabled {
+  cursor: text;
+}
+/* icon basket */
+.btn_icon {
+  margin-right: 5px;
+  font-size: calc(var(--index) * 1);
+}
+/* 'ordered' message  */
+.added {
+  color: var(--dark-green);
+  padding: calc(var(--index) * 0.6);
+  font-weight: 700;
+  width: max-content;
+  border: 1px solid var(--dark-green);
+  border-radius: calc(var(--index) * 0.3);
+  box-shadow: var(--block-shadow);
+  animation: showPage 0.2s ease-in-out;
+  font-size: calc(var(--index) * 0.7);
+  margin-bottom: calc(var(--index) * 2);
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 425px) {
+  .order {
+    width: 40%;
+  }
+  .price {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    font-size: 10px;
+    padding: 7px;
+  }
+  .btn_icon {
+    font-size: 12px;
+  }
+  .added {
+    font-size: 7px;
+  }
+}
+@keyframes showPage {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,22 +1,28 @@
 import { useSelector } from 'react-redux';
+import team from '../../../../img/images/team.png';
 import styles from './JobOpenigsBonuses.module.css';
-import team from '../../../../img/team.png';
 
 const JobOpenigsBonuses = () => {
+  // bonuses information from state
   const bonuses = useSelector((state) => state.frontPageReduser.jobBonuses);
   return (
     <section className={styles.section_offers_bonus}>
-      <div className={styles.section_title_img}>
+      <div className={styles.img_wrapper}>
         <img
           src={team}
           alt="Сотрудники компании"
         />
       </div>
       <div className={styles.offers_bonus}>
-        <h4>Работа в VICTORIA – это:</h4>
-        <ul>
+        <h4 className={styles.title}>Работа в VICTORIA – это:</h4>
+        <ul className={styles.list}>
           {bonuses.map((bonus, index) => (
-            <li key={index}>{bonus}</li>
+            <li
+              className={styles.list_item}
+              key={index}
+            >
+              {bonus}
+            </li>
           ))}
         </ul>
       </div>

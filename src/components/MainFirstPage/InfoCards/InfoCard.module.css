@@ -1,9 +1,10 @@
 .main_wrapper {
-  padding: calc(var(--index) * 3) calc(var(--index) * 2) calc(var(--index) * 5)
-    calc(var(--index) * 2);
+  padding: calc(var(--index) * 5) calc(var(--index) * 2);
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--bg-color);
+  background-color: var(--bg-header);
+  overflow: hidden;
+  padding-bottom: calc(var(--index) * 10);
 }
 
 /* card container */
@@ -26,96 +27,17 @@
   flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
-  border: 1px solid var(--bg-green);
+  border: 1px solid var(--green);
   box-shadow: 0 0 10px var(--light-grey);
 }
-
 .card_wrapper:hover {
   box-shadow: var(--box-shadow);
-}
-/* title */
-.title {
-  color: var(--grey);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: calc(var(--index) * 1);
-  margin-bottom: calc(var(--index) * 1);
-  position: relative;
-  display: inline-block;
-}
-
-.card_wrapper:hover .title {
-  color: var(--green);
-}
-.title::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background-color: var(--bg-grey);
-  left: 0;
-  bottom: -75%;
-}
-/* paragraph */
-.description {
-  font-size: calc(var(--index) * 0.75);
-  color: var(--light-grey);
-  width: 60%;
-}
-
-/* button */
-.btn {
-  background-color: var(--light-green);
-  color: var(--bg-grey);
-  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.75);
-  border: 1px solid var(--bg-color);
-  font-size: calc(var(--index) * 0.75);
-  border-radius: calc(var(--index) * 0.35);
-  display: inline-block;
-  width: max-content;
-  transform: translateY(-25px);
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-@media (max-width: 426px) {
-  .btn {
-    opacity: 1;
-    transform: translateY(0);
-    font-size: 10px;
-  }
-  .title {
-    font-size: 12px;
-    line-height: 10px;
-    margin-bottom: 10px;
-    color: var(--green);
-  }
-  .main_wrapper {
-    padding: 10px 5px;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .card_wrapper {
-    width: 95%;
-    height: auto;
-  }
-  .card_wrapper:first-of-type {
-    margin-bottom: 10px;
-  }
-  .description {
-    font-size: 8px;
-    margin-bottom: 10px;
-  }
-}
-.card_wrapper:hover .btn {
-  opacity: 1;
-  transform: translateY(0);
 }
 /* img */
 .img_1,
 .img_2 {
   position: absolute;
-  opacity: 0.9;
+  opacity: 0.8;
   z-index: 1;
   transition: transform 0.5s ease-in-out;
   width: 55%;
@@ -130,4 +52,115 @@
 }
 .card_wrapper:hover img {
   transform: scale(1.1) translateX(-15px);
+}
+/* title */
+.title {
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: calc(var(--index) * 1);
+  margin-bottom: calc(var(--index) * 1);
+  position: relative;
+}
+.card_wrapper:hover .title {
+  color: var(--green);
+}
+/* line after title */
+.title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: var(--bg-grey);
+  left: 0;
+  bottom: -75%;
+}
+/* paragraph */
+.description {
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.85);
+  font-weight: 600;
+  color: var(--light-grey);
+  width: 60%;
+}
+/* button */
+.btn {
+  background-color: var(--dark-green);
+  color: #fff;
+  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.75);
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  border-radius: calc(var(--index) * 0.35);
+  display: inline-block;
+  width: max-content;
+  transform: translateY(-20px);
+  transition: all 0.5s ease-in-out;
+  will-change: transform;
+}
+.card_wrapper:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* mobile */
+@media (max-width: 926px) {
+  .main_wrapper {
+    padding: calc(var(--index) * 7) calc(var(--index) * 2);
+  }
+  .card_wrapper,
+  .card_wrapper:hover {
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  .card_wrapper {
+    width: 45%;
+    height: calc(var(--index) * 18);
+  }
+  .card_wrapper:hover img {
+    transform: none;
+  }
+  .btn {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 426px) {
+  .main_wrapper {
+    padding: 70px 20px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .card_wrapper {
+    width: 95%;
+    padding: 40px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .card_wrapper:first-of-type {
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: var(--black);
+  }
+  .title::after {
+    display: none;
+  }
+  .description {
+    width: 78%;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    transform: translateY(0);
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .img_1,
+  .img_2 {
+    width: 65%;
+  }
 }

@@ -1,5 +1,5 @@
 import { BsDot } from 'react-icons/bs';
-import { useToggleClass } from '../../../../../CustomHooks/UseToggle';
+import { useToggleClass } from '../../../../../../CustomHooks/UseToggle';
 import AddAdressToFavorites from '../AddToFavorites/AddAdressToFavorites';
 import AdressesSchedule from '../Schedule/AdressesSchedule';
 import AdressesIcons from '../Icons/AdressesIcons';

@@ -1,0 +1,23 @@
+.actions {
+  padding: calc(var(--index) * 1) calc(var(--index) * 2);
+  margin-bottom: calc(var(--index) * 8);
+  overflow: hidden;
+}
+/* title */
+.title {
+  color: var(--black);
+  font-weight: 700;
+  font-size: calc(var(--index) * 1.5);
+  margin-bottom: calc(var(--index) * 2.5);
+  padding: calc(var(--index) * 0.5) 0;
+}
+@media (max-width: 767px) {
+  .actions {
+    padding: 10px;
+  }
+  .title {
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}

@@ -2,8 +2,8 @@
 .wrapper {
   padding: calc(var(--index) * 1.5) calc(var(--index) * 2);
 }
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .wrapper {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 }

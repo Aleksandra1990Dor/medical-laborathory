@@ -1,0 +1,114 @@
+/* main container */
+.wrapper {
+  margin-bottom: calc(var(--index) * 5);
+}
+/* title styles */
+.title {
+  color: var(--black);
+  font-size: calc(var(--index) * 1.7);
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 3);
+}
+
+/* cards wrapper */
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* card wrapper */
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  padding: calc(var(--index) * 1.5);
+  background: rgb(202, 239, 252, 0.1);
+  background-color: var(--bg-color);
+  border-radius: calc(var(--index) * 2);
+  box-shadow: 0 0 5px var(--bg-green);
+  text-align: center;
+}
+/* margin right for left cards */
+.card_wrapper:nth-child(1),
+.card_wrapper:nth-child(3) {
+  margin-right: calc(var(--index) * 2);
+}
+/* margin bottom for cards in bottom */
+.card_wrapper:nth-child(1),
+.card_wrapper:nth-child(2) {
+  margin-bottom: calc(var(--index) * 2);
+}
+/* icon wrapper */
+.icon_wrapper {
+  font-size: calc(var(--index) * 3);
+  color: var(--dark-green);
+  margin-bottom: calc(var(--index) * 0.5);
+}
+/* card title */
+.card_title {
+  font-size: calc(var(--index) * 1.2);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: calc(var(--index) * 1.5);
+}
+.card_description {
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 600;
+  color: var(--light-grey);
+}
+@media (max-width: 767px) {
+  .icon_wrapper {
+    font-size: calc(var(--index) * 5);
+  }
+  .card_wrapper {
+    width: 45%;
+    padding: 30px;
+  }
+  .card_title {
+    font-size: 18px;
+  }
+  .card_description {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .wrapper {
+    margin-bottom: calc(var(--index) * 5);
+  }
+  .cards_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card_wrapper {
+    width: 90%;
+    padding: 30px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .card_wrapper:nth-child(1),
+  .card_wrapper:nth-child(3) {
+    margin-right: 0;
+  }
+  .card_wrapper:nth-child(1),
+  .card_wrapper:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .card_wrapper:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .icon_wrapper {
+    font-size: 40px;
+  }
+  .card_title {
+    font-size: 16px;
+  }
+  .card_description {
+    font-size: 12px;
+  }
+}

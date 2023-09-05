@@ -5,8 +5,15 @@
   font-weight: 600;
   margin-bottom: calc(var(--index) * 0.85);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .linkWrapper .back {
-    display: none;
+    font-size: calc(var(--index) * 1);
+    margin-bottom: calc(var(--index) * 1.2);
+  }
+}
+@media (max-width: 425px) {
+  .linkWrapper .back {
+    font-size: 12px;
+    margin-bottom: 20px;
   }
 }

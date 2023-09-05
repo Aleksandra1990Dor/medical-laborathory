@@ -1,0 +1,15 @@
+/* main wrapper */
+.analysis {
+  display: grid;
+  grid-template-columns: 27% 1fr;
+  border-top: 1px solid #cacaca2d;
+  min-height: 100vh;
+}
+@media (max-width: 767px) {
+  .analysis {
+    display: flex;
+    border-top: none;
+    padding: 0;
+    min-height: auto;
+  }
+}

@@ -1,31 +1,32 @@
-import { useSelector, useDispatch } from 'react-redux';
-import styles from './HeaderIcons.module.css';
-import IconInfo from './IconInfo';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { checkGoods } from '../../../Helpers/helpers';
-import { quitAuthAC } from '../../../store/mainInfoReduser';
+import IconInfo from './IconInfo';
+import styles from './HeaderIcons.module.css';
+
 const HeaderIcons = () => {
-  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.mainInfoReduser.visiterInfo.isAuth);
   const basket = useSelector(
     (state) => state.mainInfoReduser.visiterInfo.basket
   );
-  const auth = useSelector((state) => state.mainInfoReduser.visiterInfo.isAuth);
+  // function checking how many goods in basket
   const goods = checkGoods(basket);
+
   return (
     <div className={styles.icons_wrapper}>
       <NavLink
-        to={auth ? '.' : 'login'}
+        to={
+          auth
+            ? '/medical-laborathory/private-area'
+            : '/medical-laborathory/authorisation/login'
+        }
         end={auth ? true : false}
-        onClick={() => {
-          if (auth) {
-            dispatch(quitAuthAC());
-          }
-        }}
       >
         <IconInfo
-          text={auth ? 'Выход' : 'Регистрация / Вход'}
+          text={auth ? 'Личный кабинет' : 'Регистрация / Вход'}
           discription="register"
           toggleClass={styles.hidden}
+          basket={basket}
         />
       </NavLink>
       <div className={styles.basket_wrapper}>
@@ -37,13 +38,13 @@ const HeaderIcons = () => {
                 : 'Ваша корзина пуста'
             }
             discription="bag"
-            toggleClass={styles.hidden}
+            basket={basket}
           />
-          {
+          {/* {
             <div className={basket.length ? styles.basket_info : styles.hidden}>
               {basket.length}
             </div>
-          }
+          } */}
         </NavLink>
       </div>
     </div>

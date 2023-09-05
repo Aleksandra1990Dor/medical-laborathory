@@ -1,18 +1,13 @@
 import { BsChevronDown } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import { useToggleClass } from '../CustomHooks/UseToggle';
+import { useToggleClass } from '../../CustomHooks/UseToggle';
 import HiddenNavbarElement from './HiddenItem/HiddenNavbarElement';
 import styles from './Navbar.module.css';
 
-const NavbarItem = ({ text, links, index }) => {
+const NavbarItem = ({ text, links }) => {
   const navigate = useNavigate();
-
-  let hiddenClass = styles.moreInfo_middle;
-  if (index === 6) hiddenClass = styles.moreInfo_rightSide;
-  if (index === 0 || index === 4 || index === 2)
-    hiddenClass = styles.moreInfo_leftSide;
   const [toggleClassList, showItems, hideItems] = useToggleClass(
-    hiddenClass,
+    styles.moreInfo_middle,
     styles.hidden,
     styles.hideMore,
     450

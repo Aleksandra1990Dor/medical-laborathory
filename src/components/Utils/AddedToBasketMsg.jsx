@@ -1,4 +1,4 @@
 const AddedToBasketMsg = ({ toggleClass }) => {
-  return <div className={toggleClass}>услуга успешно добавлена в корзину</div>;
+  return <div className={toggleClass}>добавлено в корзину</div>;
 };
 export default AddedToBasketMsg;

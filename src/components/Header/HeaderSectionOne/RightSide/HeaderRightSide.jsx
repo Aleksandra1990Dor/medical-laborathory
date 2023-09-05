@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
-import Phones from '../RightSide/Phones';
+import Phones from './Phones/Phones';
+import City from './City/City';
 import styles from './HeaderRightSide.module.css';
-import City from './City';
+
 const HeaderRightSide = () => {
   const city = useSelector((state) => state.mainInfoReduser.visiterInfo.city);
   const phones = useSelector((state) => state.mainInfoReduser.phones);

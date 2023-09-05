@@ -1,18 +1,25 @@
-import InfoCard from './InfoCard';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import InfoCard from './InfoCard';
+import family from '../../../img/images/family.png';
+import privateArea from '../../../img/images/privateArea.png';
 import styles from './InfoCard.module.css';
-import family from '../../../img/family.png';
-import privateArea from '../../../img/privateArea.png';
 
 const InfoCardWrapper = () => {
+  const auth = useSelector((state) => state.mainInfoReduser.visiterInfo.isAuth);
   const navigate = useNavigate();
   return (
     <div className={styles.main_wrapper}>
       <InfoCard
         title="Личный кабинет"
         src={family}
-        onClick={() => navigate('private-area/')}
+        onClick={() =>
+          navigate(
+            auth ? 'private-area/' : '/medical-laborathory/authorisation/login'
+          )
+        }
         alt="личный кбинет"
+        dataAos="fade-up-right"
       >
         Заказывайе анализы, отслеживайте статус заказов и получайте результаты
         за пару кликов.
@@ -22,6 +29,7 @@ const InfoCardWrapper = () => {
         src={privateArea}
         onClick={() => navigate('about/dms')}
         alt="сдать по дмс"
+        dataAos="fade-up-left"
       >
         Анализы в Лабораторной службе Victoria можно выполнить по полису
         добровольного медицинского страхования (ДМС). Чтобы воспользоваться

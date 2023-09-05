@@ -1,53 +1,48 @@
-import { useEffect } from 'react';
-import styles from './PrCards.module.css';
+import { useNavigate } from 'react-router-dom';
+import { useToggle } from '../../../CustomHooks/UseToggle';
 import Button from '../../Utils/Button';
-import Preloader from '../../Utils/Preloader';
-import { useToggle } from '../../CustomHooks/UseToggle';
-const PrCard = ({ src, alt, text, price, activeStyle, href }) => {
+import styles from './PrCards.module.css';
+
+const PrCard = ({ src, alt, text, price, href }) => {
+  const navigate = useNavigate();
+  // animaton show or hide more
   const [toggleClassList, setToggleClassList] = useToggle(
-    styles.prCards__cardHidden,
+    styles.more_information,
     styles.hidden,
     styles.hide_info,
     600
   );
-  useEffect(() => {
-    if (activeStyle === true) {
-      setToggleClassList();
-    }
-  }, [activeStyle, setToggleClassList]);
+  const onClick = () => {
+    if (!price) {
+      navigate('/medical-laborathory/authorisation/login');
+    } else setToggleClassList();
+  };
   return (
     <div
-      className={styles.prCards__cardContainer}
-      onClick={setToggleClassList}
+      className={styles.card_wrapper}
+      onClick={onClick}
     >
-      {!!src ? (
-        <img
-          src={src}
-          className={styles.prCards__cardImg}
-          alt={alt}
-        />
-      ) : (
-        <Preloader />
-      )}
+      <img
+        src={src}
+        className={styles.img}
+        alt={alt}
+      />
+
       <div className={toggleClassList}>
-        <h6>
-          {price
-            ? 'Комплекс'
-            : 'Информация доступна только зарегестрированным пользователям'}
-        </h6>
+        {price && <h6>Комплекс</h6>}
         {text && <small>{text}</small>}
         {price && <h3>{price}</h3>}
         {price ? (
           <Button
             href={href}
             text="Заказать анализ"
-            toggleClass={styles.prCards__cardHidden_btn}
+            toggleClass={styles.brown_btn}
           />
         ) : (
           <Button
-            href="../login"
+            href="/medical-laborathory/authorisation/login"
             text="Войти в личный кабинет"
-            toggleClass={styles.prCards__cardHidden_btn_privat}
+            toggleClass={styles.brown_btn}
           />
         )}
       </div>

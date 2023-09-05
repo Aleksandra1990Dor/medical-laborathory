@@ -107,21 +107,23 @@ li {
 :root {
   --index: calc(1vw + 1vh);
   --brown: #37a42a;
-  --green: #2aa497;
-  --bg-green: #2aa49821;
-  --dark-green: #259084;
-  --light-green: #2aa48e;
-  --fv-green: #10a46d;
-  --grey: #737575;
+  --green: #13a6ab;
+  --bg-green: #dcebfb;
+  --dark-green: #1a9397;
+  --light-green: #0ebbc1;
+  --fv-green: #13ab64;
+  --grey: #507c99;
   --yellow: #f8c134;
-  --light-grey: #a3a3a3;
+  --light-grey: #90989a;
   --bg-color: #fcfcfe;
-  --bg-grey: #e8ecf8;
-  --red: #a45a2a;
-  --dark-grey: #606060;
-  --black: #2f2f2f;
+  --bg-color: #f5f9fc;
+  --bg-grey: #dfe8ee;
+  --bg-header: #f1f5f7;
+  --red: #7d490e;
+  --dark-grey: #455458;
+  --black: #333e41;
   --box-shadow: 0px 5px 10px var(--dark-grey);
-  --block-shadow: 0 0 20px var(--bg-grey);
+  --block-shadow: 0 0 10px var(--light-grey);
   --box-border: 2px solid var(--bg-grey);
   --title-fz: calc(var(--index) * 1.2);
 }

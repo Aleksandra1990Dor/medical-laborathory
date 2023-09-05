@@ -1,3 +1,4 @@
+/* wrapper */
 .footer_wrapper {
   background-color: #dddddd;
   padding: calc(var(--index) * 3) calc(var(--index) * 4);
@@ -5,60 +6,57 @@
   grid-template-columns: 20% 1fr;
   color: var(--black);
 }
-.footer_btn {
-  border: 1px solid #404040;
-  color: #404040;
-  padding: calc(var(--index) * 0.35);
-  font-weight: 900;
-  font-size: calc(var(--index) * 0.5);
-}
-.footer_btn:hover {
-  background-color: #404040;
-  color: var(--bg-color);
-}
-.footer_icon {
-  font-size: calc(var(--index) * 1.5);
-  margin-right: calc(var(--index) * 0.35);
-  fill: var(--bg-green);
-}
+/* phones */
 .footer_phones {
   margin-bottom: calc(var(--index) * 1.5);
 }
-.footer_phones h4 {
+/* phones title */
+.phones_title {
   color: #404040;
   font-weight: 600;
   margin-bottom: calc(var(--index) * 0.65);
 }
-.footer_phones h5 {
+/* phones item */
+.phones_item {
   font-size: calc(var(--index) * 1);
   color: #404040;
   font-weight: 900;
   margin-bottom: calc(var(--index) * 0.25);
   cursor: pointer;
 }
-.footer_phones h5:last-child {
+.phones_item:last-child {
   margin-bottom: 0;
 }
-.footer_phones h5:hover {
+.phones_item:hover {
   color: #2c2c2c;
 }
+/* right side with links */
 .footer_right {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
+/* all links wrapper */
+.footer_links_wrapper {
+  display: flex;
+}
+/* links container */
 .footer_links_container {
   font-weight: 600;
-  margin-right: calc(var(--index) * 1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.footer_links_container h4 {
+.footer_links_container:first-child {
+  margin-right: calc(var(--index) * 8);
+}
+/* right side  title */
+.links_title {
   color: #2c2c2c;
   font-weight: 600;
   font-size: calc(var(--index) * 0.8);
   margin-bottom: calc(var(--index) * 1.5);
 }
+/* link */
 .footer_links_container .footer_link {
   color: var(--dark-grey);
   margin-bottom: calc(var(--index) * 0.25);
@@ -67,14 +65,15 @@
 .footer_links_container .footer_link:hover {
   color: #2c2c2c;
 }
-
-.footer_links_wrapper {
-  display: flex;
+.footer_links_container .footer_link:active {
+  opacity: 0.4;
 }
+
 @media (max-width: 767px) {
   .footer_wrapper {
     width: 100%;
     display: block;
+    padding: 0;
     padding-bottom: 80px;
   }
   .footer_right {

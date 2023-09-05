@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AiFillStar } from 'react-icons/ai';
-import { useToggleClass } from '../../../../../CustomHooks/UseToggle';
+import { useToggleClass } from '../../../../../../CustomHooks/UseToggle';
 import {
   addCenterAC,
   deleteCenterAC,
-} from '../../../../../store/mainInfoReduser';
+} from '../../../../../../store/mainInfoReduser';
 import AddToFavoritesIconDescription from './AddToFavoritesIconDescription';
 import styles from '../MainContainer/AdressItem.module.css';
 
@@ -40,19 +40,19 @@ const AddAdressToFavorites = ({
     {
       text: 'Адрес успешно добавлен в избранное',
       className: adressAddedClassName,
-      style: { color: '#37a42a' },
+      style: { color: '#1a9397' },
     },
     {
       text: 'Адрес удален из избранного',
       className: adressDeletedClassName,
-      style: { color: '#10a46d' },
+      style: { color: '#1a9397' },
     },
   ];
 
   // function adding adress to favorites if user is authorized
   const addAdressToFavorites = () => {
     if (!auth) {
-      navigate('/medical-laborathory/login');
+      navigate('/medical-laborathory/authorisation/login');
     } else {
       if (adressDeletedClassName !== styles.hidden) {
         hideDeletedSign();

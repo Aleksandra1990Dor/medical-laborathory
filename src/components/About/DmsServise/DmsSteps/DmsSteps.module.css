@@ -1,0 +1,46 @@
+/* cards container */
+.steps_wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 calc(var(--index) * 2);
+  border-radius: calc(var(--index) * 2);
+  margin-bottom: calc(var(--index) * 3);
+}
+/* description after */
+.after {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 calc(var(--index) * 2);
+  margin-bottom: calc(var(--index) * 5);
+}
+.after_text {
+  color: var(--light-grey);
+  font-size: calc(var(--index) * 0.65);
+}
+@media (max-width: 768px) {
+  .steps_wrapper {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .after_text {
+    font-size: calc(var(--index) * 0.9);
+  }
+}
+@media (max-width: 425px) {
+  .steps_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .after {
+    width: 100%;
+    justify-content: center;
+    padding: 0 5px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .after_text {
+    font-size: 12px;
+  }
+}

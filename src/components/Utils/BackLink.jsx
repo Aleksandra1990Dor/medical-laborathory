@@ -7,7 +7,7 @@ const BackLink = () => {
         to="/medical-laborathory/"
         className={styles.back}
       >
-        На главную
+        Главная
       </NavLink>
     </div>
   );

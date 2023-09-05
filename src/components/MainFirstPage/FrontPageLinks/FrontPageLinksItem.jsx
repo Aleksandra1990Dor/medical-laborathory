@@ -5,10 +5,12 @@ import styles from './FrontPageLinks.module.css';
 
 const FronPageLinksItem = ({ link, city }) => {
   const navigate = useNavigate();
+
   return (
     <div
       className={city ? styles.block_wrapper_map : styles.block_wrapper}
       onClick={() => navigate(link.link)}
+      data-aos="fade-up"
     >
       <h3 className={styles.title}>{link.title}</h3>
       {city && (

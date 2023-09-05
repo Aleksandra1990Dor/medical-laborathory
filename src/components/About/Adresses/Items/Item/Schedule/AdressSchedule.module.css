@@ -19,6 +19,8 @@
 /* row in schedule */
 .row {
   display: flex;
+  color: var(--dark-grey);
+  font-weight: 600;
   padding: 0 calc(var(--index) * 0.75);
   margin-bottom: calc(var(--index) * 0.35);
 }
@@ -34,4 +36,16 @@
 }
 .visible {
   display: block;
+}
+@media (max-width: 425px) {
+  .schedule {
+    margin-bottom: 15px;
+    padding: 5px 0;
+  }
+  .icon_more {
+    font-size: 12px;
+  }
+  .row {
+    margin-bottom: 7px;
+  }
 }

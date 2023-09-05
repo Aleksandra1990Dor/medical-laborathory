@@ -1,3 +1,4 @@
+/* section wrapper */
 .wrapper {
   width: 100%;
   height: calc(var(--index) * 22);
@@ -7,10 +8,12 @@
   padding: calc(var(--index) * 3) calc(var(--index) * 5);
   overflow: hidden;
 }
+/* img */
 .bg_img {
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   opacity: 0.3;
@@ -20,78 +23,37 @@
 .wrapper:hover .bg_img {
   transform: scale(1.1);
 }
+/* main carusel wrapper */
 .carusel_wrapper {
   background-color: #ffffffe5;
   width: 90%;
   height: 100%;
-  padding: calc(var(--index) * 2);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: calc(var(--index) * 2);
   position: relative;
-  box-shadow: 0 0 5px var(--fv-green);
+  border: 1px solid var(--green);
+  box-shadow: var(--box-shadow);
 }
-
-.title {
-  color: var(--dark-grey);
-  margin-bottom: calc(var(--index) * 2);
-  font-size: calc(var(--index) * 1.5);
-  text-align: center;
-  font-weight: 700;
-  position: relative;
-}
-.title::after {
-  content: '';
+/* carusel window */
+.carusel_window {
+  overflow: hidden;
   width: 100%;
-  height: 2px;
-  bottom: -40%;
-  left: 0.2%;
-  background-color: var(--dark-green);
-  position: absolute;
-  opacity: 0.7;
+  height: 100%;
 }
-
-.title span {
-  color: var(--dark-green);
+/* carusel container */
+.all_items_container {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
 }
-.description {
-  font-size: calc(var(--index) * 0.7);
-  line-height: calc(var(--index) * 0.75);
-  color: var(--grey);
-  border-left: 2px solid #c9c9c9;
-  padding: 0 0 0 calc(var(--index) * 1.5);
-  border-color: var(--bg-green);
-}
-@media (max-width: 426px) {
-  .wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 25px;
-    height: auto;
-  }
-  .carusel_wrapper {
-    width: 70%;
-    height: auto;
-    padding: 25px;
-  }
-  .title {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .title::after {
-    height: 1px;
-  }
-  .description {
-    font-size: 8px;
-    line-height: 8px;
-  }
-}
+/* icons 'back' and 'forward' */
 .icon_wrapper_left,
 .icon_wrapper_right {
-  color: var(--green);
+  color: var(--dark-green);
   display: block;
   position: absolute;
   top: 45%;
@@ -118,4 +80,24 @@
 }
 .icon_wrapper_right {
   right: -7%;
+}
+@media (max-width: 425px) {
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 0;
+    padding-left: 30px;
+    height: auto;
+    margin-bottom: 0;
+  }
+  .carusel_wrapper {
+    width: 80%;
+    height: auto;
+  }
+  .all_items_container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+  }
 }

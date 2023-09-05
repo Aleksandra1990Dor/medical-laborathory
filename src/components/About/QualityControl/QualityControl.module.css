@@ -1,6 +1,7 @@
 .wrapper {
-  margin-bottom: calc(var(--index) * 2);
+  padding: calc(var(--index) * 1) calc(var(--index) * 4);
 }
+
 /* VOK section with text in the middle*/
 .info {
   font-size: calc(var(--index) * 1.2);
@@ -11,6 +12,7 @@
   margin: 0 auto;
   margin-bottom: calc(var(--index) * 5);
 }
+
 /* last section */
 .after {
   width: 85%;
@@ -18,5 +20,26 @@
   margin-bottom: calc(var(--index) * 5);
   font-size: calc(var(--index) * 0.9);
   font-weight: 600;
-  color: var(--grey);
+  color: var(--dark-grey);
+}
+@media (max-width: 768px) {
+  .after {
+    width: 90%;
+    padding: 0;
+  }
+}
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 10px;
+  }
+  .info {
+    font-size: 12px;
+    width: 95%;
+    margin-bottom: 40px;
+  }
+  .after {
+    padding: 0 10px;
+    font-size: 10px;
+    line-height: 12px;
+  }
 }

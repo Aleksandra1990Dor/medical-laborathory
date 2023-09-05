@@ -1,0 +1,22 @@
+/* row container */
+.merch {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.merch input:first-of-type {
+  margin-right: 5px;
+}
+.merch input:nth-child(1),
+.merch input:nth-child(3) {
+  margin-right: calc(var(--index) * 1);
+}
+@media (max-width: 425px) {
+  .merch {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .merch input:first-of-type {
+    margin-right: 0;
+  }
+}

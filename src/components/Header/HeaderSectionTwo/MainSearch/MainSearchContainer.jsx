@@ -1,23 +1,16 @@
-import styles from './MainSearch.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setResultsAC } from '../../../store/mainInfoReduser';
+import {
+  refreshFilterAC,
+  setResultsAC,
+} from '../../../../store/mainInfoReduser';
 import { analysisSearching } from '../../../Helpers/helpers';
+import { useToggleClass } from '../../../../CustomHooks/UseToggle';
 import MainSearch from './MainSearch';
-import { useToggleClass } from '../../../CustomHooks/UseToggle';
+import styles from './MainSearch.module.css';
 
 const MainSearchContainer = () => {
-  //get results and analysis from state
-  const searchFilter = useSelector(
-    (state) => state.mainInfoReduser.searchFilter
-  );
-  const analysis = useSelector((state) => state.analysisReduser);
-  //get dispatch
   const dispatch = useDispatch();
-  // filter data
-  const analysisFilterData = (value) => {
-    const results = analysisSearching(analysis, value);
-    dispatch(setResultsAC(results));
-  };
+  const analysis = useSelector((state) => state.analysisReduser);
   // show or hide searching results DIV
   const [toggleClassList, showItems, hideItems] = useToggleClass(
     styles.results_block,
@@ -25,8 +18,18 @@ const MainSearchContainer = () => {
     styles.hideInfo,
     300
   );
+  //get results and analysis from state
+  const searchFilter = useSelector(
+    (state) => state.mainInfoReduser.searchFilter
+  );
+  // filter data
+  const analysisFilterData = (value) => {
+    const results = analysisSearching(analysis, value);
+    dispatch(setResultsAC(results));
+  };
   //searching
   const searching = (value) => {
+    dispatch(refreshFilterAC());
     if (value) {
       analysisFilterData(value);
       if (value.length === 1) {

@@ -1,5 +1,4 @@
 /* main wrapper */
-
 .dialog_window {
   width: calc(var(--index) * 20);
   height: calc(var(--index) * 31);
@@ -8,12 +7,9 @@
   grid-template-rows: 13% 67% 20%;
   box-shadow: var(--box-shadow);
 }
-
-/* 
-dialogs header
- */
+/* heaer */
 .dialogs_header {
-  background-color: var(--fv-green);
+  background-color: var(--green);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +18,7 @@ dialogs header
   border-bottom: 2px solid var(--yellow);
   position: relative;
 }
+/* closing icon */
 .closeIcon {
   position: absolute;
   top: 20%;
@@ -36,13 +33,11 @@ dialogs header
   transform: scale(1.1);
   fill: #fff;
 }
-
-/*
- all messages (middle side)
-  */
+/* all messages main wrapper */
 .messages_main_container {
   overflow-y: scroll;
 }
+/* all messages wrapper */
 .messages_main_wrapper {
   display: grid;
   align-content: end;
@@ -51,6 +46,7 @@ dialogs header
   border-bottom: 1px solid var(--bg-green);
   min-height: 100%;
 }
+/* message wraper */
 .message_wrapper_lft,
 .message_wrapper_rght {
   width: 60%;
@@ -66,15 +62,16 @@ dialogs header
   font-size: calc(var(--index) * 0.7);
   box-shadow: var(--box-shadow);
 }
-
+/* left message */
 .message_wrapper_lft {
   justify-self: start;
-  background-color: var(--light-green);
+  background-color: var(--green);
 }
+/* tail after message */
 .message_wrapper_lft::after,
 .message_wrapper_rght::after {
   content: '';
-  width: 10%;
+  width: 10px;
   height: calc(var(--index) * 0.7);
   position: absolute;
   right: 0;
@@ -86,12 +83,9 @@ dialogs header
 .message_wrapper_lft::after {
   left: 0;
   clip-path: polygon(100% 0, 0 0, 0 100%);
-  background-color: var(--light-green);
+  background-color: var(--green);
 }
-
-/*
- create message
-  */
+/* textarea wrapper */
 .create_message_wrapper {
   background-color: var(--bg-green);
   border-top: 1px solid var(--bg-green);
@@ -100,6 +94,7 @@ dialogs header
   grid-template-columns: 80% 20%;
   grid-template-rows: 1fr;
 }
+/* textarea */
 .create_message_textarea {
   border: 1px solid var(--bg-green);
   padding: calc(var(--index) * 0.5);
@@ -108,9 +103,11 @@ dialogs header
   height: 90%;
   overflow-y: auto;
   font-size: calc(var(--index) * 0.8);
+  font-weight: 600;
   border-radius: calc(var(--index) * 0.5);
   resize: none;
 }
+/* placeholder */
 .create_message_textarea::placeholder {
   color: var(--light-grey);
   font-size: calc(var(--index) * 0.7);
@@ -128,45 +125,58 @@ dialogs header
   border-radius: 9em;
   box-shadow: inset 1px 1px 10px var(--light-green);
 }
+/* send message icon wrapper */
 .create_message_icon_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* send message icon */
 .create_message_icon {
   fill: var(--light-green);
   font-size: calc(var(--index) * 1.5);
   cursor: pointer;
   display: inline-block;
+  transition: all 0.2s ease;
+  will-change: auto;
 }
 .create_message_icon:hover {
-  fill: var(--fv-green);
+  fill: var(--dark-green);
   transform: scale(1.02);
 }
-@media (max-width: 767px) {
+@media (max-width: 926px) {
   .dialog_window {
     width: 60vw;
     height: 95vh;
+    border-radius: 10px;
   }
   .closeIcon {
     font-size: 16px;
   }
   .message_wrapper_lft,
   .message_wrapper_rght {
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
   }
   .create_message_textarea,
   .create_message_textarea::placeholder,
   .dialogs_header {
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .create_message_icon {
     font-size: 25px;
   }
+  .message_wrapper_lft::after,
+  .message_wrapper_rght::after {
+    bottom: -6%;
+  }
 }
 @media (max-width: 426px) {
   .dialog_window {
-    width: 90vw;
-    height: 90vh;
+    width: 98vw;
+    height: 88vh;
   }
 }

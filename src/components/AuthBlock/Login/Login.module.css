@@ -1,0 +1,92 @@
+/* main wrapper */
+.login_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #a3a3a3ec;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* container  */
+.container {
+  width: calc(var(--index) * 30);
+  padding: calc(var(--index) * 3);
+  background-color: #fff;
+  border-radius: calc(var(--index) * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+/* title */
+.container h1 {
+  font-weight: 700;
+  margin-bottom: calc(var(--index) * 1.2);
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: calc(var(--index) * 1);
+}
+/* button */
+.container button {
+  margin-bottom: calc(var(--index) * 0.75);
+}
+/* error div */
+.error {
+  text-transform: lowercase;
+  color: red;
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  margin-bottom: calc(var(--index) * 0.75);
+}
+/* navigate to registration */
+.container small {
+  font-size: calc(var(--index) * 0.65);
+  color: var(--light-grey);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.container small:hover {
+  color: var(--grey);
+}
+/* closing icon styles */
+.closing_icon {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+  fill: var(--light-grey);
+  font-size: calc(var(--index) * 0.8);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+.closing_icon:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 425px) {
+  .container {
+    width: 90vw;
+    min-height: 50vh;
+    border-radius: 10px;
+    padding: 40px;
+  }
+  .container h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .closing_icon {
+    font-size: 16px;
+  }
+  .error {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .container small {
+    font-size: 12px;
+  }
+}

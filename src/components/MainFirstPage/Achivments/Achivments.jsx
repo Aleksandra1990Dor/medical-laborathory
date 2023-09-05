@@ -1,10 +1,10 @@
+import { useSelector } from 'react-redux';
 import { AiFillExperiment, AiOutlineTrophy } from 'react-icons/ai';
 import { FaHandHoldingMedical } from 'react-icons/fa';
 import { GiHealing } from 'react-icons/gi';
 import { BiDonateBlood } from 'react-icons/bi';
 import AchivmentsItem from './AchivmentsItem';
 import styles from './Achivments.module.css';
-import { useSelector } from 'react-redux';
 
 const Achivments = ({ iconColor }) => {
   const toggleClass = `${styles.icon} ${iconColor}`;

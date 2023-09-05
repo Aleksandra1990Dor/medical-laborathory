@@ -3,6 +3,7 @@ import QualityControlStepItem from './QualityControlStepItem';
 import styles from './QualityControlSteps.module.css';
 
 const QualityControlSteps = () => {
+  // steps information from state
   const steps = useSelector(
     (state) => state.frontPageReduser.qualityControlSteps
   );

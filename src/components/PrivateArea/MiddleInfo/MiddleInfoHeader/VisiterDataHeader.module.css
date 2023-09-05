@@ -1,0 +1,66 @@
+/* greeting wrapper */
+.greeting {
+  text-align: center;
+  position: relative;
+  margin-bottom: calc(var(--index) * 2);
+}
+.greeting_title {
+  font-size: calc(var(--index) * 1);
+  color: var(--dark-green);
+  font-weight: 600;
+}
+/* yellow line */
+.greeting::after {
+  width: 20%;
+  height: 1px;
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: 40%;
+  background-color: var(--yellow);
+  z-index: 5;
+}
+/* information about visiter name */
+.user_wrapper {
+  margin-bottom: calc(var(--index) * 2);
+  display: flex;
+  align-items: center;
+}
+/* user icon */
+.user_icon {
+  fill: var(--black);
+  font-size: calc(var(--index) * 1);
+  margin-right: calc(var(--index) * 0.5);
+}
+/*   visiter name  */
+.user_name {
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 600;
+  color: var(--black);
+}
+/* link "change user" styles */
+.user_wrapper .user_name_link {
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 500;
+  color: var(--dark-green);
+}
+@media (max-width: 425px) {
+  .greeting {
+    margin-bottom: 20px;
+  }
+  .greeting_title {
+    font-size: 17px;
+  }
+  .greeting::after {
+    display: none;
+  }
+  .user_wrapper {
+    margin-bottom: 20px;
+  }
+  .user_name {
+    font-size: 12px;
+  }
+  .user_wrapper .user_name_link {
+    font-size: 10px;
+  }
+}

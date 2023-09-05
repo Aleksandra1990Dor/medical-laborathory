@@ -1,11 +1,11 @@
-/* parent div */
+/* wraper */
 .main_search {
   margin-right: calc(var(--index) * 1);
   margin-bottom: calc(var(--index) * 0.5);
   transition: transorm 0.3s ease;
   position: relative;
 }
-/* input style */
+/* input*/
 .search_input {
   display: block;
   border: 1px solid #12bb7d25;
@@ -13,17 +13,25 @@
   font-size: calc(var(--index) * 0.75);
   padding: calc(var(--index) * 0.62) calc(var(--index) * 1);
   width: calc(var(--index) * 30);
-  color: var(--light-grey);
+  color: var(--grey);
+  font-weight: 600;
   margin-bottom: 5px;
   margin-right: -1px;
   border-radius: calc(var(--index) * 0.5);
 }
+/* input focus */
+.search_input:focus {
+  border-color: #12bb7d62;
+  border-color: var(--light-green);
+  box-shadow: none;
+}
+/* placeholder not focus */
 .search_input:not(:placeholder-shown) ~ .main_search_placeholder  /* в input есть значение */ {
   position: absolute;
   top: 27%;
   left: 3%;
   font-size: calc(var(--index) * 0.75);
-  color: var(--light-grey);
+  color: #e0e9ef;
   background: #fff;
   transition: transform 200ms, color 200ms;
   z-index: 3;
@@ -31,41 +39,33 @@
   padding: 0.25% 1%;
   border-radius: calc(var(--index) * 0.5);
 }
-.search_input:focus ~ .main_search_placeholder  /* фокус на input */ {
+/* placeholder focus */
+.search_input:focus ~ .main_search_placeholder {
   transform: translateY(-125%) translateX(-10%) scale(0.85);
   color: var(--light-green);
   font-weight: 600;
 }
-.search_input:focus {
-  color: var(--dark-grey);
-  border-color: #12bb7d62;
-  border-color: var(--light-green);
-  box-shadow: none;
-}
 /* icon style */
 .search_icon {
   font-size: calc(var(--index) * 1.2);
-  fill: #12bb7d62;
+  fill: var(--bg-green);
   position: absolute;
   top: calc(var(--index) * 0.5);
   right: calc(var(--index) * 1);
   display: inline-block;
 }
 .search_icon:hover {
-  fill: var(--green);
+  fill: var(--light-green);
   cursor: pointer;
 }
 
 .search_input:focus .search_icon {
-  fill: var(--green);
+  fill: var(--light-green);
 }
 .search_icon_container {
   display: block;
 }
 /* results div */
-.hidden {
-  display: none;
-}
 .results_block {
   position: absolute;
   z-index: 50;
@@ -82,7 +82,7 @@
   font-weight: 600;
   animation: show-info 0.3s ease-in-out;
 }
-
+/* scroll */
 .results_block::-webkit-scrollbar {
   width: calc(var(--index) * 0.3);
   height: calc(var(--index) * 0.5);
@@ -91,20 +91,20 @@
 .results_block::-webkit-scrollbar-thumb {
   background-color: var(--bg-green);
   border-radius: 9em;
-  box-shadow: inset 1px 1px 10px var(--fv-green);
+  box-shadow: inset 1px 1px 10px var(--dark-green);
 }
-/* results items */
 .searching_item {
   display: block;
-  border-bottom: 1px solid var(--bg-green);
   padding: calc(var(--index) * 0.75);
 }
-.searching_item:hover {
-  background-color: var(--bg-color);
-  /* border-color: var(--green); */
-  color: var(--fv-green);
+/* class for hidden aniimation */
+.hidden {
+  display: none;
 }
-@media (max-width: 767px) {
+.hideInfo {
+  animation: hide-info 0.4s ease-in-out;
+}
+@media (max-width: 926px) {
   .main_search {
     margin-right: 0;
     width: 100%;
@@ -118,41 +118,37 @@
     padding: 10px;
     font-size: 16px;
     margin-bottom: 0;
-    border-radius: 7px;
-    border: 1px solid #87e1d7;
+    border-radius: 20px;
+    border: 1px solid var(--bg-green);
   }
   .search_input:focus {
-    border: 2px solid var(--dark-green);
+    border: 1px solid var(--light-green);
   }
   .search_input:not(:placeholder-shown) ~ .main_search_placeholder {
-    top: 25%;
-    left: 12%;
+    top: 26%;
+    left: 15px;
     font-size: 16px;
   }
   .search_input:focus ~ .main_search_placeholder  /* фокус на input */ {
-    transform: translateY(-115%) translateX(-5%) scale(0.85);
+    transform: translateY(-125%) translateX(-5%) scale(0.85);
+    font-size: 12px;
   }
   .search_icon {
-    top: 25%;
-    right: 15%;
+    top: 30%;
+    right: 15px;
     font-size: 16px;
   }
-}
-@media (max-width: 425px) {
-  .search_input {
-    width: 80%;
+  .results_block {
+    max-height: 40vh;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .searching_item {
+    padding: 15px;
   }
 }
-/* class for hidden aniimation */
-.hideInfo {
-  animation: hide-info 0.4s ease-in-out;
-}
 
-/*
-
- animations for show and hide blocks
- 
- */
+/* animations for show and hide block */
 
 /* show block */
 @keyframes show-info {

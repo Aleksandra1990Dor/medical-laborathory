@@ -1,0 +1,62 @@
+/* wrapper */
+.more_item {
+  display: block;
+  width: 100%;
+  padding: calc(var(--index) * 0.75) calc(var(--index) * 1);
+  line-height: calc(var(--index) * 1);
+  z-index: 50;
+  text-align: left;
+}
+.more_item:last-child {
+  margin-bottom: 0;
+}
+
+/* link */
+a.more_link {
+  font-weight: 600;
+  display: block;
+  font-size: calc(var(--index) * 0.8);
+  z-index: 60;
+  color: var(--black);
+  position: relative;
+  text-transform: none;
+}
+.more_item:hover a.more_link {
+  color: var(--light-green);
+}
+/* line befor item */
+a.more_link::after {
+  width: 2px;
+  height: 100%;
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: -10px;
+  background-color: var(--bg-green);
+  z-index: 55;
+  display: block;
+  opacity: 0;
+}
+.more_item:hover a.more_link::after {
+  background-color: var(--light-green);
+  opacity: 0.6;
+}
+/* arror icon */
+.test_block_icon {
+  position: absolute;
+  bottom: 10%;
+  right: 17%;
+  fill: var(--light-green);
+  font-size: calc(var(--index) * 0.7);
+  transform: scale(0.9) translateX(-10px);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.more_item:hover .test_block_icon {
+  opacity: 1;
+  transform: scale(1.4) translateX(30px);
+}
+.more_item:hover .more_item:active {
+  color: #dadada;
+  transform: scale(1);
+}

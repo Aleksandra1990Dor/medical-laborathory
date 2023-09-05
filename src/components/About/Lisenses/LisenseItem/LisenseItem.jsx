@@ -1,16 +1,18 @@
-import styles from './LisenseItem.module.css';
 import { BsFillStarFill } from 'react-icons/bs';
+import styles from './LisenseItem.module.css';
 
 const LicenseItem = ({ children, description, title }) => {
   return (
-    <div className={styles.license_block}>
-      <div className={styles.license_title}>
-        <BsFillStarFill className={styles.license_title_icon_star} />
+    <section className={styles.wrapper}>
+      <div className={styles.title}>
+        <div className={styles.icon_container}>
+          <BsFillStarFill className={styles.icon} />
+        </div>
         {title}
       </div>
-      <div className={styles.license_description}>{description}</div>
+      <div className={styles.description}>{description}</div>
       {children}
-    </div>
+    </section>
   );
 };
 export default LicenseItem;

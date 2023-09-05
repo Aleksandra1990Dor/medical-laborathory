@@ -1,0 +1,27 @@
+/* analys container style */
+.analys_item_wrapper {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
+  justify-content: space-between;
+  border-radius: calc(var(--index) * 0.5);
+  margin-bottom: calc(var(--index) * 0.75);
+  cursor: pointer;
+}
+.analys_item_wrapper:hover {
+  box-shadow: var(--block-shadow);
+}
+/* if there's no redirect */
+.no_link {
+  cursor: text;
+  box-shadow: var(--block-shadow);
+}
+/* mobile */
+@media (max-width: 425px) {
+  .analys_item_wrapper {
+    box-shadow: var(--block-shadow);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+}

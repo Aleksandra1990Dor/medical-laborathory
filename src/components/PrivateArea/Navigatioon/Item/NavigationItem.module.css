@@ -1,0 +1,77 @@
+/* item wrapper styles */
+.item_wrapper {
+  position: relative;
+  width: max-content;
+}
+/* link styles */
+.item_wrapper .nav_item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: calc(var(--index) * 3);
+  transition: transform 0.1s ease-in-out;
+  will-change: transform;
+}
+.item_wrapper:hover .nav_item {
+  transform: translateY(-1px);
+}
+.item_wrapper:hover .nav_item:active {
+  transform: translateY(1px);
+  opacity: 0.3;
+}
+/* active link style */
+.item_wrapper .nav_item_active {
+  font-size: calc(var(--index) * 0.75);
+}
+@media (max-width: 768px) {
+  .item_wrapper .nav_item {
+    font-size: calc(var(--index) * 0.6);
+  }
+  .item_wrapper .nav_item_active {
+    font-size: calc(var(--index) * 0.65);
+  }
+}
+.item_wrapper:hover .nav_item_active {
+  transform: none;
+  cursor: text;
+}
+/* line after item */
+.nav_item::after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  bottom: -90%;
+  right: 0;
+  background-color: #fff;
+  z-index: 5;
+  opacity: 0;
+}
+/* line on hover */
+.item_wrapper:hover .nav_item::after {
+  opacity: 0.8;
+  animation: hover-navigation 1s ease;
+}
+/* line in active style */
+.nav_item_active::after {
+  /* height: 1px; */
+  opacity: 0.8;
+  bottom: -50%;
+}
+.item_wrapper:hover .nav_item_active::after {
+  opacity: 0.5;
+  animation: none;
+}
+@keyframes hover-navigation {
+  0% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

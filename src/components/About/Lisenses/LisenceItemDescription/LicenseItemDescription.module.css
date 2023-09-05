@@ -1,0 +1,50 @@
+/* block main wrapper */
+.wrapper {
+  padding: 0 calc(var(--index) * 4);
+}
+/* block wrapper */
+.license_info_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 calc(var(--index) * 2);
+  background-color: var(--bg-grey);
+  border-radius: calc(var(--index) * 0.5);
+}
+/* descriotion */
+.license_info_description {
+  width: 70%;
+  color: var(--black);
+  font-size: calc(var(--index) * 0.75);
+  line-height: calc(var(--index) * 0.8);
+  font-weight: 600;
+}
+/* img */
+.license_info_img {
+  height: calc(var(--index) * 5);
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 calc(var(--index) * 2);
+  }
+  .license_info_description {
+    font-size: calc(var(--index) * 0.85);
+    line-height: calc(var(--index) * 0.95);
+  }
+}
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 0;
+  }
+  .license_info_wrapper {
+    padding: 20px;
+  }
+  .license_info_img {
+    display: none;
+  }
+  .license_info_description {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

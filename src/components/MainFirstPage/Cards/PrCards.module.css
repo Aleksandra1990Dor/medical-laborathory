@@ -1,3 +1,4 @@
+/* all cards wrapper */
 .prCards {
   z-index: 0;
   display: flex;
@@ -7,7 +8,8 @@
   cursor: pointer;
   width: 100%;
 }
-.prCards__cardContainer {
+/* card wrapper */
+.card_wrapper {
   width: calc(var(--index) * 17.78);
   height: calc(var(--index) * 13.3);
   overflow: hidden;
@@ -17,36 +19,25 @@
   z-index: 0;
   border-radius: 5%;
 }
-@media (max-width: 426px) {
-  .prCards {
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-  }
-  .prCards__cardContainer {
-    width: 95%;
-    height: 150px;
-    margin-bottom: 10px;
-    border-radius: 0;
-  }
-}
-.prCards__cardContainer:hover {
+.card_wrapper:hover {
   z-index: 0;
 }
-.prCards__cardContainer:last-child {
+.card_wrapper:last-child {
   margin-right: 0;
 }
-.prCards__cardImg {
+/* img */
+.img {
   width: 100%;
   height: 100%;
   transition: transform 0.7s ease;
   object-fit: cover;
 }
-.prCards__cardImg:hover {
+.img:hover {
   transform: scale(1.11);
   z-index: 0;
 }
-.prCards__cardHidden {
+/* wrapper of hidden information */
+.more_information {
   z-index: 0;
   position: absolute;
   height: 100%;
@@ -63,30 +54,8 @@
   animation: hidden-info-appears 0.7s ease-in-out;
   border-radius: 5%;
 }
-@keyframes hidden-info-appears {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.hide_info {
-  animation: hidden-info-hiding 0.7s ease-in-out;
-}
-@keyframes hidden-info-hiding {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-}
-.prCards__cardHidden::before {
+/* green bg */
+.more_information::before {
   z-index: -1;
   content: '';
   position: absolute;
@@ -97,23 +66,8 @@
   top: 0;
   left: 0;
 }
-.prCards__cardHidden h3 {
-  font-size: calc(var(--index) * 2);
-  font-weight: 700;
-  color: var(--bg-color);
-  text-shadow: 0 0 7px var(--dark-grey);
-  margin-bottom: calc(var(--index) * 1.2);
-  animation: hidden-info-appears 0.7s ease-in-out;
-}
-.hidden {
-  display: none;
-}
-.prCards__cardHidden h6 {
-  margin-bottom: calc(var(--index) * 0.2);
-  font-size: calc(var(--index) * 0.6);
-  animation: hidden-info-appears 0.7s ease-in-out;
-}
-.prCards__cardHidden small {
+/* pre title*/
+.more_information small {
   font-size: calc(var(--index) * 1);
   margin-bottom: calc(var(--index) * 1);
   text-shadow: 0 0 7px var(--dark-grey);
@@ -122,23 +76,37 @@
   font-weight: 600;
   animation: hidden-info-appears 0.7s ease-in-out;
 }
-.prCards__cardHidden small:hover {
+/* price */
+.more_information h3 {
+  font-size: calc(var(--index) * 2);
+  font-weight: 700;
   color: var(--bg-color);
-}
-.prCards__cardHidden_btn {
-  background-color: #a67244;
-  color: var(--bg-color);
-  padding: calc(var(--index) * 1.7) calc(var(--index) * 0.5);
-  border: 1px solid var(--bg-color);
-  border-radius: calc(var(--index) * 50);
-  border-radius: 50%;
+  text-shadow: 0 0 7px var(--dark-grey);
+  margin-bottom: calc(var(--index) * 1.2);
   animation: hidden-info-appears 0.7s ease-in-out;
 }
-.prCards__cardHidden_btn:hover {
-  background-color: var(--red);
+/* title */
+.more_information h6 {
+  margin-bottom: calc(var(--index) * 0.2);
+  font-size: calc(var(--index) * 0.6);
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+/* button */
+.brown_btn {
+  font-size: calc(var(--index) * 0.7);
+  background-color: #a67244;
+  color: var(--bg-color);
+  padding: calc(var(--index) * 0.45) calc(var(--index) * 0.5);
+  border: 1px solid var(--bg-color);
+  border-radius: calc(var(--index) * 0.5);
+  animation: hidden-info-appears 0.7s ease-in-out;
+}
+.brown_btn:hover {
+  background-color: #825935;
   color: #fefdfa;
 }
-.prCards__cardHidden .prCards__cardHidden_btn_privat {
+/* green button */
+.more_information .brown_btn_privat {
   background-color: var(--bg-color);
   border: 1px solid var(--green);
   color: var(--green);
@@ -146,8 +114,36 @@
   font-size: calc(var(--index) * 0.7);
   font-weight: 600;
 }
-.prCards__cardHidden_btn_privat:hover {
+.brown_btn_privat:hover {
   background-color: var(--bg-color);
   color: #10a46d;
   border-color: #10a46d;
+}
+/* classes for animaiton */
+.hidden {
+  display: none;
+}
+.hide_info {
+  animation: hidden-info-hiding 0.7s ease-in-out;
+}
+@keyframes hidden-info-appears {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hidden-info-hiding {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
 }

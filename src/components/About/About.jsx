@@ -4,8 +4,8 @@ import Licenses from './Lisenses/Licenses';
 import QualityControl from './QualityControl/QualityControl';
 import JobOpenigs from './JobOpenings/JobOpenigs';
 import AdressesPage from './Adresses/MainContainer/AdressesPage';
-import DmsServise from './DmsServise/DmsServise';
-import HomeServise from './HomeServise/HomeServise';
+import DmsServise from './DmsServise/MainContainer/DmsServise';
+import HomeServise from './HomeServise/MainContainer/HomeServise';
 
 const About = () => {
   return (

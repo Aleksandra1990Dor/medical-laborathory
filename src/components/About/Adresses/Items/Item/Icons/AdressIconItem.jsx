@@ -1,5 +1,5 @@
 import styles from './AdressIconItem.module.css';
-import { useToggleClass } from '../../../../../CustomHooks/UseToggle';
+import { useToggleClass } from '../../../../../../CustomHooks/UseToggle';
 
 const AdressIconItem = ({ icon }) => {
   // classes for show or hide icon description

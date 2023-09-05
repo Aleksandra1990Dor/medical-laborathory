@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  padding-top: calc(var(--index) * 1);
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 425px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+}

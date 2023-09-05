@@ -1,0 +1,9 @@
+.servises_wrapper {
+  margin-top: calc(var(--index) * 1);
+  min-height: 60vh;
+}
+@media (max-width: 425px) {
+  .servises_wrapper {
+    padding: 10px;
+  }
+}

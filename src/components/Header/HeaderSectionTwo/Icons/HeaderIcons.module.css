@@ -2,26 +2,54 @@
 .icons_wrapper {
   display: flex;
 }
-/* every icon container */
+/* wrapper for round basket info */
+.basket_wrapper {
+  position: relative;
+}
+/* how many goods in basket */
+.basket_info {
+  position: absolute;
+  font-size: 9px;
+  background-color: var(--fv-green);
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  top: -5px;
+  right: -5px;
+  animation: addToBasket 0.2s ease-in-out;
+}
+
+.basket_wrapper .icon {
+  margin-left: calc(var(--index) * 0.5);
+}
+/* 
+one icon
+*/
+/*  icon container */
 .icons_container {
   position: relative;
 }
-/* icon style */
+/* icon  */
 .icon {
   cursor: pointer;
   font-size: calc(var(--index) * 1.4);
-  fill: var(--grey);
+  fill: var(--light-grey);
   margin-bottom: calc(var(--index) * 0.5);
 }
 .icon:hover {
   transform: scale(1.05);
-  fill: #5a5a5a;
+  fill: var(--black);
 }
-/* hide icon discription */
+/* hidden class */
 .hidden {
   display: none;
 }
-/* show icon discription */
+/* icon discription */
 .icon_discription {
   z-index: 50;
   color: var(--green);
@@ -51,56 +79,35 @@
   width: 15%;
   height: 28%;
 }
-.media_icons_container {
-  display: none;
-}
-.basket_info {
-  position: absolute;
-  font-size: 9px;
-  background-color: var(--fv-green);
-  color: #fff;
-  width: 15px;
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-weight: 700;
-  top: -3px;
-  right: -4px;
-  animation: addToBasket 0.2s ease-in-out;
-}
-.basket_wrapper .icon {
-  margin-left: calc(var(--index) * 0.5);
-}
-@media (max-width: 767px) {
+
+/* on mobile */
+@media (max-width: 926px) {
+  .icon_discription,
   .icon_discription::before {
     display: none;
   }
-  .media_icons_container {
-    display: block;
-  }
   .icon {
-    font-size: 20px;
-    fill: var(--black);
+    font-size: 24px;
+    fill: var(--dark-green);
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 10px;
+    margin-right: 0;
   }
-  .basket_wrapper .icon {
-    margin-left: 0;
+  .icons_container:first-child {
+    margin-right: 10px;
   }
   .icon:hover {
     fill: var(--dark-green);
   }
+  .basket_wrapper .icon {
+    margin-left: 0;
+  }
   .basket_info {
-    right: 25%;
+    right: -15%;
+    background-color: var(--brown);
   }
 }
-.basket_wrapper {
-  position: relative;
-}
-
+/* animation */
 @keyframes addToBasket {
   0% {
     transform: scale(1);

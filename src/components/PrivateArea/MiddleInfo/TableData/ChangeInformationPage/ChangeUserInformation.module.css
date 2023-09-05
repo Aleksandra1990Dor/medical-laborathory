@@ -1,0 +1,58 @@
+/* form main container */
+.change_info_container {
+  position: relative;
+  background-color: #fff;
+  padding: calc(var(--index) * 2) calc(var(--index) * 2);
+  border: 2px solid var(--light-green);
+  box-shadow: var(--box-shadow);
+  border-radius: calc(var(--index) * 0.75);
+}
+/* form wrapper */
+.change_info_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* closing icon styles */
+.closing_icon {
+  position: absolute;
+  right: 4%;
+  top: 7%;
+  fill: var(--grey);
+  font-size: calc(var(--index) * 0.8);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+.closing_icon:hover {
+  transform: scale(1.2);
+}
+/* row with inputs */
+.merch {
+  display: flex;
+  width: 110%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.merch input:nth-child(1),
+.merch input:nth-child(3) {
+  margin-right: calc(var(--index) * 1);
+}
+@media (max-width: 425px) {
+  .change_info_container {
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+  }
+  .closing_icon {
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+  }
+  .merch {
+    flex-direction: column;
+    margin-right: 0;
+    width: 100%;
+  }
+}

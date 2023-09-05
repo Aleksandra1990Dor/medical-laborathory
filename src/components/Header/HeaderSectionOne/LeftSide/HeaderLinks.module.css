@@ -1,10 +1,11 @@
+/* wrapper */
 .header__links {
   display: flex;
   align-items: flex-end;
   position: relative;
 }
 
-/* Links styles */
+/* link*/
 a.link_item,
 .link_item {
   cursor: pointer;
@@ -12,7 +13,6 @@ a.link_item,
   font-size: calc(var(--index) * 0.6);
   margin-right: calc(var(--index) * 2.5);
   letter-spacing: calc(var(--index) * 0.07);
-  /* word-spacing: calc(var(--index) * 0.07); */
   color: var(--light-grey);
   text-transform: uppercase;
 }
@@ -22,22 +22,19 @@ a.link_item_active {
 }
 a.link_item:hover,
 .link_item:hover {
-  color: var(--dark-grey);
+  color: var(--red);
 }
 a.link_item_active:hover {
   color: var(--red);
 }
-/* icon 'show more contacts' style */
+/* icon 'show more contacts' */
 .link_icon {
   font-size: calc(var(--index) * 1.2);
   margin-bottom: -7px;
   padding: 3px;
   color: var(--light-grey);
 }
-/* hidden div styles */
-.hidden {
-  display: none;
-}
+/* hidden block more */
 .about {
   position: absolute;
   z-index: 30;
@@ -57,26 +54,26 @@ a.link_item_active:hover {
 .header__links .about a {
   color: var(--light-grey);
 }
-@media (max-width: 767px) {
-  .header__links {
-    width: 100%;
-    justify-content: space-around;
-    padding: 5px 0;
-  }
-  .link_item {
-    display: none;
-  }
-  a.link_item {
-    display: inline-block;
-    font-size: 10px;
-  }
-  .link_item:nth-child(3) {
-    margin-right: 0;
-  }
+/* classes for animation */
+.hidden {
+  display: none;
 }
 .hideMore {
   animation: hideMore 0.5s ease;
 }
+@media (max-width: 1180px) {
+  a.link_item,
+  .link_item {
+    margin-right: calc(var(--index) * 1);
+  }
+}
+/* on mibile */
+@media (max-width: 768px) {
+  .header__links {
+    display: none;
+  }
+}
+/* animation */
 @keyframes showMore {
   0% {
     opacity: 0;

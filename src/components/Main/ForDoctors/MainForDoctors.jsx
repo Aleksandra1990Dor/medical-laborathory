@@ -1,10 +1,10 @@
 import ForDoctorsPrCard from './ForDoctorsPrCard';
 import Achivments from '../../MainFirstPage/Achivments/Achivments';
-import styles from '../../MainFirstPage/Achivments/Achivments.module.css';
+import styles from './ForDoctors..module.css';
 
 const MainForDoctors = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <ForDoctorsPrCard />
       <Achivments iconColor={styles.icon_pink} />
     </div>

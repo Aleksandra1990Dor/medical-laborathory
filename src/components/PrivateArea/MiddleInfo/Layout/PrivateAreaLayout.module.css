@@ -1,0 +1,16 @@
+/* middle side wrapper */
+.wrapper {
+  padding: calc(var(--index) * 1) calc(var(--index) * 2);
+  margin-bottom: calc(var(--index) * 3);
+  min-height: 90vh;
+  position: relative;
+  overflow: visible;
+}
+@media (max-width: 425px) {
+  .wrapper {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    min-height: 50%;
+  }
+}
