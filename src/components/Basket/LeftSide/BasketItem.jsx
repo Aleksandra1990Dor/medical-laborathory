@@ -7,7 +7,7 @@ const BasketItem = ({ title, priceTitle, removeServis, id }) => {
       <div className={styles.basket_left}>
         <small>№{id}</small>
         <NavLink
-          to={`/medical-laborathory/analys/${id}`}
+          to={`/medical-laborathory/servises/analysis/analys/${id}`}
           className={styles.item_name}
         >
           {title}
